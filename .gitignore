@@ -1,6 +1,7 @@
 # Open files #
 ###################
 ~$*
+*.tmp
 
 
 # OS generated files #
