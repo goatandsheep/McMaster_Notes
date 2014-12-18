@@ -15,17 +15,11 @@ Please also over-write the PDF versions of each file before submitting each comm
 
 If you need to input an equation, I want to make it as easy as possible, so you may attach it and I will convert it to MathType afterwards. As long as the equation is clear. For example, you could include:
 
--a link to a formula
-  
--a page in a book
-  
--MathType (optimal)
-  
--scan of the equation on paper
-  
--more
-
------------------------
+* a link to a formula
+* a page in a book
+* MathType (optimal)
+* scan of the equation on paper
+* more
 
 Sincerely,
 
