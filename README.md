@@ -5,7 +5,7 @@ Here I will host course summary notes for the courses I am currently taking, as 
 
 If you simply wish to view the notes, open the PDF files to reduce potential compatability issues when viewing the Math objects.
 
-If you wish to collaborate, please request to be a collaborator by sending me an e-mail at [myusername]@gmail.com
+If you wish to collaborate, please do not fork this project. Instead, request to be a collaborator by sending me an e-mail at [myusername]@gmail.com, then *clone*!
 
 ---------------------
 
