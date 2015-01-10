@@ -18,7 +18,7 @@ If you simply wish to view the notes, open the PDF files (vs `.doc`) to reduce p
 3. [Learn how to use Markdown](http://markdowntutorial.com/), the formatting language for most of the documents.
 4. If the file is a Microsoft Word file:
  1. Save the file.
- 2. Re-save the file as a PDF in Microsoft Word ![wordpdf](images/save_pdf.png)
+ 2. Re-save the file as a PDF in Microsoft Word ![wordpdf](images/save_pdf.PNG)
 5. If the file is a markdown file (`*.md`), edit it using any text editor and it will work. 
 6. Right-Click the `git/McMaster_Notes` folder.
 7. Press `Fetch...` to get changes (in case someone else has changed stuff): ![git fetch](images/git_pull.png)
