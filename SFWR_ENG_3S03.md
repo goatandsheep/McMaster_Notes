@@ -8,7 +8,7 @@ SFWR ENG 3S03 Summary
 
 -----------------------------------
 
-![Requirements Hierarchy](images/Requirements_Hierarchy.png)
+![Requirements Hierarchy](images/Requirements_Hierarchy.PNG)
 
 ##Challenges of Software Testing
 
