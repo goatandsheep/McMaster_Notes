@@ -5,8 +5,6 @@ Here I will host course summary notes for the courses I am currently taking, as 
 
 If you simply wish to view the notes, open the PDF files (vs `.doc`) to reduce potential compatability issues when viewing the Math objects.
 
-If you wish to collaborate, please do not fork this project. Instead, request to be a collaborator by sending me an e-mail at [myusername]@gmail.com, then *clone*!
-
 ##Downloading the files
 
 1. Download [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download?tm=2).
