@@ -29,9 +29,62 @@ Types of keys:
 
 * **Superkey**:
 * **Candidate key**:
-* **Primary Key**: primary keys are <ins>underlined</ins>
+* **Primary Key**: primary keys are unique and <ins>underlined</ins>
 * **Foreign Key**: 
 
 `NULL`
 
 **Referential Integrity**: if all foreign key constraints are enforced, i.e. no *dangling references*
+
+###Foreign Key Constraints
+
+##Database Design
+
+**Conceptual Design**: what entities and and relationships are to be in the database
+
+**Entity**: 
+
+**Entity Set**: a collection of similar entities; think classes, objects 
+
+**Attribute**: a property of an entity set
+
+**Relationship Set**: useful for relating information between 3+ entities, but also works for less...
+
+Many-One relationship
+
+<table class="demo">
+	<thead>
+	<tr>
+		<th>Bars</th>
+		<th>Drinks</th>
+		<th>Beers</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Bob's bar</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Bob's Bar</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Sue's Bar</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Sue's bar</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Sue's Bar</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	</tbody>
+</table>
