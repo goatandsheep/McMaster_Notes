@@ -67,3 +67,4 @@ Processes and Threads
 One rule of precedence that allows you to remove brackets is that you execute from Right to Left
 
 `(x -> P | y -> Q)`: engages in either the first or second action, depending on the input that selects it
+

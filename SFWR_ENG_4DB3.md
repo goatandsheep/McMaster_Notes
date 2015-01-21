@@ -52,39 +52,46 @@ Types of keys:
 
 Many-One relationship
 
-<table class="demo">
-	<thead>
-	<tr>
-		<th>Bars</th>
-		<th>Drinks</th>
-		<th>Beers</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>Bob's bar</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Bob's Bar</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Sue's Bar</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Sue's bar</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Sue's Bar</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	</tbody>
-</table>
+##Data Definition Language
+
+**Data Definition Language (DDL)**: 
+
+**Data manipulation language (DML)**:
+
+**Assertions**: 
+
+###Violations
+
+Violations of constraints from `R` to `S`:
+
+1. Insert / update to `R` introduces values not found in `S`.
+2. Deletion / update in `S` causes dangling in `R`.
+
+Response to violations:
+
+1. 
+
+**Cascade**: 
+
+##SQL
+
+**Structured Query Language (SQL)**: 
+
+* `SELECT` <ins>attribute(s)</ins>: what attributes do you want to return?, could be `*`, i.e. all attributes
+* `FROM` <ins>database</ins>: which database?
+* `WHERE` <ins>condition</ins>: a non-mandatory condition on the results of your query
+
+Place single constant values in 'quotes'. Put double-quotes to indicate an actual quotation, like 'Murphy<ins>''</ins>s law'.
+
+###Saving query as object 
+
+Useful if you want to be able to differentiate between multiple similar queries:
+
+`SELECT t.name` instead of `SELECT name`
+
+`FROM Beers t` instead of `FROM Beers`
+
+`WHERE t.brewer = "Hobbits"` instead of `WHERE brewer = "Hobbits"`
+
+---------------------------------
+
