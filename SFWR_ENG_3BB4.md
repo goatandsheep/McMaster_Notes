@@ -42,6 +42,7 @@ Processes and Threads
  * Blue generally defines arbitrary states
  * Red generally defines the first state
 * An arrow without a head is still the standard for the beginning state, like from [2FA3](https://docs.google.com/document/d/12b0YsgYtB3cnhiu39eKqpl6b2guSE04wUk4Gg8G9nt4/edit)
+* Arrow is triggered by a condition and 
 
 **Trace**: a possible sequence of actions; there can be multiple traces for a given FSM
 
@@ -64,7 +65,21 @@ Processes and Threads
 
 `SWITCH = (on -> off -> SWITCH)`.
 
+----------------------
+
 One rule of precedence that allows you to remove brackets is that you execute from Right to Left
 
 `(x -> P | y -> Q)`: engages in either the first or second action, depending on the input that selects it
+
+**Concurrency**: 
+
+**Parallelism**: 
+
+*Are there shared actions?*
+
+**Labels**: (`label:Process` | e.g. `a:P`)
+
+**Prefix Labels**: useful for modelling shared resources (`{set of prefix labels}::Process` | e.g. `{a1,..,ax}::P`)
+
+*When you're implementing a parallel database, you need to make sure that you don't do half the re-saving/editing processes before you allow someone else to open the file.*
 

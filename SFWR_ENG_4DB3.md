@@ -95,3 +95,5 @@ Useful if you want to be able to differentiate between multiple similar queries:
 
 ---------------------------------
 
+Conditions: {`TRUE`, `FALSE`, `UNKNOWN`}
+
