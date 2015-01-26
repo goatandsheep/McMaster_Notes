@@ -7,53 +7,100 @@
 
 ---------
 
+[TOC]
+
 ##Introduction
 
-**Database Management System (DBMS)**: system that allows you to store, access, and organize data; complicated to set up, so only used for large data sets
-
-**Concurrent Execution**: one advantage of using a DBMS is that you can have multiple people accessing your database  and multiple processes running simultaneously 
+A **database** is an organized way of representing your data and information about your files (found in a **datastore**).
 
 Typically, we represent each set of related data in a *tuple*. Each tuple could describe information about a student, movie, etc. We call each of these sets **relations**.
 
-**Schema**: the description of the types of data you'll be saving, so the columns in the data tables. 
+####DBMS
+> **DataBase Management System:**
+> 
+> * system that allows you to store, access, and organize a database
+> * complicated to set up, so mainly used for large data sets
 
-**Attribute**: a characteristic defined in the database, e.g. student number, student name, etc.
+####Concurrent Execution
+> * multiple people accessing your database simultaneously
+> * multiple processes using the same database simultaneously
+> * an advantage of using a [DBMS](#DBMS)
+ 
+####Attribute
+: A characteristic defined in the database
 
-**Relational Database**: a database of tables
+> e.g. student number, student name, etc.
+
+####Schema
+: The description of the types of data you'll be saving
+
+> * i.e. the columns in the data tables
+> * i.e. all the [attributes](#Attribute)
+
+####Relational Database
+: A database of tables with a fixed [schema](#schema)
 
 ##Integrity Constraints
+: **IC**s limit the data that can be entered
 
-**Integrity Constraint**: limits the data that can be entered
+####Intra-relational constraint
+: A numerical range for attributes
 
-* **Intra-relational constraint**: a numerical range for attributes
-* **Inter-relational constraint**: a constraint that relies on the values of other data within the same table; e.g. if you're trying to sort students by name in a table, student.name(index=1) > student.name(index=2)
-* **Domain constraint**: what is the range of acceptable data?
-* **Tuple constraint**: if *attribute A* is *condition*, *attribute B* will have *this* range; e.g. students with major == engineering must have GPA > 4
+####Inter-relational constraint
+: A constraint that relies on the values of other data within the same tabl
+
+> e.g. if you're trying to sort students by name in a table,
+	> ```
+	> student.name(index=1)>student.name(index=2)
+	> ```
+
+####Domain constraint
+: What is the range of acceptable data?
+
+####Tuple constraint
+: If <kbd>attribute A</kbd> == <kbd>condition</kbd>, <kbd>attribute B</kbd> will have <ins>this</ins> range
+> e.g. for all `students`, where <kbd>major</kbd> == <kbd>engineering</kbd>, <kbd>GPA</kbd> > 4
 
 ##Keys
+: A set of 1/+ attributes of a relation with:
+> * No 2 distinct tuples have the same values in the fields in the key fields
+> * No subsets of the key are keys
+> * e.g. `{First name, Last Name}`
 
-**Key**: a set of 1/+ attributes of a relation that:
+####Unique identifier
+: Something that no other relation has that allows you to identify it as being distinct from other entries
 
-* No 2 distinct tuples have the same values in the key fields
-* No subsets of the key are keys
-* e.g. {First name, Last Name}
+###Types of keys
 
-Types of keys:
+####Superkey
+: When 1/+ subsets of your key is also a key
 
-* **Superkey**: when 1/+ subsets of your key is also a key
-* **Candidate key**: no subsets of the key are keys; default key type
-* **Primary Key**: <ins>underlined column name</ins>; does not allow for `NULL` values 
-* **Foreign Key**: 
+####Candidate key
+: No subsets of the key are keys
+> Default key type
 
-**Unique identifier**: something that no other relation has that allows you to identify it as being distinct from other entries
+####Primary Key
+: The key that's used to identify a tuple 
+> * one **primary key** per table
+> * <ins>underlined column names</ins>
+> * does not accept <kbd>NULL</kbd> values
 
-**Referential Integrity**: if all foreign key constraints are enforced, i.e. no *dangling references*
+####Foreign Key
+: The key that contains the primary key of a relation in another table that is used to identify the relation
 
 ###Foreign Key Constraints
+: When inputs violate constraints, reject the input.
+ 
+####Referential Integrity
+: When all foreign key constraints are enforced
+> * i.e. no <ins>dangling references</ins>
+> * i.e. no references to non-existent relations
 
 ##Database Design
 
-**Conceptual Design**: what entities and and relationships are to be in the database
+When designing your database, you need to consider:
+
+* What entities and and relationships are to be in the database
 
 **Entity**: 
 
@@ -63,7 +110,7 @@ Types of keys:
 
 **Relationship Set**: useful for relating information between 3+ entities, but also works for less...
 
-Many-One relationship
+**Many-One relationship**
 
 ##Data Definition Language
 
