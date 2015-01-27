@@ -56,14 +56,16 @@ Processes and Threads
 
 ###e.g.
 
-`SWITCH = OFF`,  
-`OFF = (on -> ON)`,  
-`ON = (off -> OFF)`.
+```
+SWITCH = OFF  
+OFF = (on -> ON),  
+ON = (off -> OFF).
 
-`SWITCH = OFF`,  
-`OFF = (on -> (off -> OFF))`.
+SWITCH = OFF,
+OFF = (on -> (off -> OFF)).
 
-`SWITCH = (on -> off -> SWITCH)`.
+SWITCH = (on -> off -> SWITCH).
+```
 
 ----------------------
 
@@ -83,3 +85,14 @@ One rule of precedence that allows you to remove brackets is that you execute fr
 
 *When you're implementing a parallel database, you need to make sure that you don't do half the re-saving/editing processes before you allow someone else to open the file.*
 
+##Shared Objects
+
+How do you allocate access to a resource among multiple processes?
+
+####Semaphor
+: Something that constricts when you can/cannot run a process
+> You can implement a *handshake* using multiple semaphors that allows you to toggle execution when sharing a resource
+
+**Race Conditions**: the process that gets to the resource the fastest goes first
+
+If you have multiple processes that need to be executed from a given processor that are waiting to be executed on a shared resource, you can push the processes onto a stack and wait, until the resource is free. Using this in conjunction with the semaphores will be nice.

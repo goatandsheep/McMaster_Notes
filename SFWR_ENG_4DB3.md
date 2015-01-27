@@ -58,7 +58,7 @@ Collections of entities are called **entity sets**.
 ####Inter-relational constraint
 : A constraint that relies on the values of other data within the same table
 
-> e.g. if you're trying to sort students by name in a table,
+> e.g. if you're trying to sort students by name in a table
 	> ```
 	> student.name(index=1)>student.name(index=2)
 	> ```
@@ -82,11 +82,10 @@ Collections of entities are called **entity sets**.
 ###Types of keys
 
 ####Superkey
-: When 1/+ subsets of your key is also a key
+: Any combination of column(s) for which that combination of values will be unique across all rows in a table.
 
 ####Candidate key
-: No subsets of the key are keys
-> Default key type
+: A [superkey](#superkey) which you cannot remove any fields.
 
 ####Primary Key
 : The key that's used to identify a tuple 
@@ -154,8 +153,7 @@ Response to violations:
 **Cascade**: 
 
 ##SQL
-
-**Structured Query Language (SQL)**:
+: Structured Query Language
 
 **Query**:
 
@@ -181,6 +179,8 @@ Response to violations:
 * `(<subquery>) UNION (<subquery>)`: require same schema
 * `(<subquery>) INTERSECT (<subquery>)`: require same schema
 * `(<subquery>) EXCEPT (<subquery>)`: aren't in both
+* `(<subquery>) DISTINCT (<subquery>)`: don't include the stuff in the second subquery
+* `(<subquery>) ORDER BY <attribute>`: 
 
 ###Saving query as object 
 
@@ -196,3 +196,32 @@ Useful if you want to be able to differentiate between multiple similar queries:
 
 Conditions: {`TRUE`, `FALSE`, `UNKNOWN`}
 
+###Modifying Databases
+
+Types of modification:
+
+* *[Insert](#insert)*: put new data into tables
+* *[Delete](#delete)*: remove data from table
+* *[Update](#update)*: change existing data
+
+####Insert
+
+	INSERT INTO <relation> VALUES(<list of values>);
+
+> Insert individual values.
+> 
+> e.g.
+> `INSERT INTO Likes VALUES('Bud','Miller');`
+
+	INSERT INTO <relation> VALUES(<subquery>);
+> Insert a subquery into the relation.
+> 
+> e.g.
+> `INSERT INTO ...;`
+
+####Delete
+	DELETE FROM <relation> WHERE <condition>
+
+####Update
+
+	UPDATE <relation> SET <attributes to change> = <value> WHERE <condition on tuples>;

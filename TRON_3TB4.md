@@ -5,8 +5,7 @@ TRON 3TB4 Summary
 * *Winter 2015*
 * McMaster University
 * *Primary Author*: Kemal Ahmed
-
--------------------------------
+> Written with [StackEdit](https://stackedit.io/).
 
 ##CanBUS
 
@@ -62,4 +61,24 @@ Message filtering:
 
 **ElectroMagnetic Interference (EMI)**:
 
-**
+![Transmission Gate Multiplexor](images/tgate_mux.png)
+
+##Verilog
+
+####Initial Block
+: Executed only once, providing initial values for system
+
+####Always Block
+: A block wired non-sequentially
+> * Infinitely repeated concurrently
+> * Can only have one always block
+
+####Blocking assignment
+: A block of code where statements *block* the execution of the following statement(s)
+> First statement must complete before the second statement
+> Identify in this format:
+	> ```
+	> begin
+	> <statements>;
+	> end
+	> ```
