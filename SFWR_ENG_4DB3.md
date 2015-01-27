@@ -13,13 +13,24 @@
 
 A **database** is an organized way of representing your data and information about your files (found in a **datastore**).
 
-Typically, we represent each set of related data in a *tuple*. Each tuple could describe information about a student, movie, etc. We call each of these sets **relations**.
+Typically, we represent each set of related data in a *tuple*. Each tuple could describe information about a student, movie, etc. The objects described by these tuples are called **entities**.
+
+Collections of entities are called **entity sets**.
+
+####Relations
+: Any associations between several entities
+
+**Relationship Set**: the set of relations associated with a tuple
 
 ####DBMS
 > **DataBase Management System:**
 > 
 > * system that allows you to store, access, and organize a database
 > * complicated to set up, so mainly used for large data sets
+> 
+> **Data independence:**
+> 
+> The way the data is stored does not affect the data stored in a system. Immunity from changes in the organization of the data is called **logical independence**. Immunity from changes in the storage structure is called **physical independence**.
 
 ####Concurrent Execution
 > * multiple people accessing your database simultaneously
@@ -28,12 +39,10 @@ Typically, we represent each set of related data in a *tuple*. Each tuple could 
  
 ####Attribute
 : A characteristic defined in the database
-
 > e.g. student number, student name, etc.
 
 ####Schema
 : The description of the types of data you'll be saving
-
 > * i.e. the columns in the data tables
 > * i.e. all the [attributes](#Attribute)
 
@@ -47,7 +56,7 @@ Typically, we represent each set of related data in a *tuple*. Each tuple could 
 : A numerical range for attributes
 
 ####Inter-relational constraint
-: A constraint that relies on the values of other data within the same tabl
+: A constraint that relies on the values of other data within the same table
 
 > e.g. if you're trying to sort students by name in a table,
 	> ```
@@ -100,17 +109,28 @@ Typically, we represent each set of related data in a *tuple*. Each tuple could 
 
 When designing your database, you need to consider:
 
-* What entities and and relationships are to be in the database
+* What entities and relationships are to be in the database
+* Poop
 
-**Entity**: 
+####Entity-Relationship Diagram
+: ER Diagrams are a way of representing a system
+> * **Entity Sets**: rectangles
+> * **[Attributes](#attribute)**: ovals
 
-**Entity Set**: a collection of similar entities; think classes, objects 
+```flow
+set=>operation: Entity Set
+att=>start: Attribute
 
-**Attribute**: a property of an entity set
+att->set
+```
 
-**Relationship Set**: useful for relating information between 3+ entities, but also works for less...
+#####Binary Relationship
 
-**Many-One relationship**
+
+**Many-One Relationship**: 
+
+**Many-Many Relationship**: 
+
 
 ##Data Definition Language
 
@@ -135,13 +155,32 @@ Response to violations:
 
 ##SQL
 
-**Structured Query Language (SQL)**: 
+**Structured Query Language (SQL)**:
 
-* `SELECT` <ins>attribute(s)</ins>: what attributes do you want to return?, could be `*`, i.e. all attributes
-* `FROM` <ins>database</ins>: which database?
-* `WHERE` <ins>condition</ins>: a non-mandatory condition on the results of your query
+**Query**:
 
-Place single constant values in 'quotes'. Put double-quotes to indicate an actual quotation, like 'Murphy<ins>''</ins>s law'.
+**Sub-query**: 
+
+> **Note**: Place single constant values in 'quotes'. Put double-quotes to indicate an actual quotation, like 'Murphy<ins>''</ins>s law'.
+
+###Operators
+: Can return:
+> * the tuples that satisfy the conditions
+> * `TRUE`/`FALSE` 
+
+* Usual operators, like `<`, `>`, `<=`,`>=`, `==`
+* `<>`: not equals, usually portrayed by `!=`
+* `x = ANY(<subquery>)`: returns `TRUE` iff there exists an element in the subquery that equals `x`
+  * Can also be written as `x IN <subquery>`
+* `EXISTS(<subquery>)`: returns `TRUE` iff the subquery is not empty
+* `ALL`:
+* `FROM <database>`: which database?
+* `JOIN`: 
+* `SELECT <attribute(s)>`: what attributes do you want to return?, could be `*`, i.e. all attributes
+* `WHERE <condition>`: a non-mandatory condition on the results of your query
+* `(<subquery>) UNION (<subquery>)`: require same schema
+* `(<subquery>) INTERSECT (<subquery>)`: require same schema
+* `(<subquery>) EXCEPT (<subquery>)`: aren't in both
 
 ###Saving query as object 
 

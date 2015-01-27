@@ -75,3 +75,6 @@ Often, it's not enough to simply say whether something is good or bad, so we def
 <ins>Khedri's words of wisdom</ins>: when the company at your internship is doing stuff in a non-systematic way, do what you can to change it.
 
 **COnstructive COst MOdel (COCOMO)**:
+
+##Boobs
+
