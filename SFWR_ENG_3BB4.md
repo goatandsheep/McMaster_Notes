@@ -1,6 +1,5 @@
 SFWR ENG 3BB4 Summary
 =====================
------------------------------------
 
 * Dr. Maibaum
 * *Winter 2015*
@@ -56,18 +55,14 @@ Processes and Threads
 
 ###e.g.
 
-```
-SWITCH = OFF  
-OFF = (on -> ON),  
-ON = (off -> OFF).
-
-SWITCH = OFF,
-OFF = (on -> (off -> OFF)).
-
-SWITCH = (on -> off -> SWITCH).
-```
-
-----------------------
+	SWITCH = OFF  
+	OFF = (on -> ON),  
+	ON = (off -> OFF).
+	
+	SWITCH = OFF,
+	OFF = (on -> (off -> OFF)).
+	
+	SWITCH = (on -> off -> SWITCH).
 
 One rule of precedence that allows you to remove brackets is that you execute from Right to Left
 
@@ -85,6 +80,8 @@ One rule of precedence that allows you to remove brackets is that you execute fr
 
 *When you're implementing a parallel database, you need to make sure that you don't do half the re-saving/editing processes before you allow someone else to open the file.*
 
+**Equivalent**: same trace
+
 ##Shared Objects
 
 How do you allocate access to a resource among multiple processes?
@@ -96,3 +93,19 @@ How do you allocate access to a resource among multiple processes?
 **Race Conditions**: the process that gets to the resource the fastest goes first
 
 If you have multiple processes that need to be executed from a given processor that are waiting to be executed on a shared resource, you can push the processes onto a stack and wait, until the resource is free. Using this in conjunction with the semaphores will be nice.
+
+##LTSA
+*Labelled Transition System Analyser*
+
+`ERROR`: predefined process to identify...error
+
+`acquire`
+
+`release`
+
+**livelock**: when processes are waiting for a process to stop using a resource that they are locked into using
+
+####Synchronized
+`synchronized`:
+
+`synchronized <object>`: only one person can access a method at a time

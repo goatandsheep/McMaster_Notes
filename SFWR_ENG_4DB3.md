@@ -231,3 +231,20 @@ Types of modification:
 ####Update
 
 	UPDATE <relation> SET <attributes to change> = <value> WHERE <condition on tuples>;
+
+###Aggregation
+: *Computing numerical results*
+
+* `SUM`
+* `AVG`
+* `COUNT`
+* `MIN`
+* `MAX`
+* `COUNT(*)`: number of tuples
+* `GROUP BY <attribute>, <attribute_n>`: specifies that the aggregation is repeated for every available attribute instead of being done on everything 
+
+> **Note**: `NULL` does nothing, unless everything is `NULL`, in which case returns `NULL`
+
+####Cross Product
+	{{query1.entity1},{query2.entity1}; {query1.entity1},{query2.entityn}}
+
