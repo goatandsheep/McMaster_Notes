@@ -9,14 +9,31 @@ TRON 3TB4 Summary
 
 ##CanBUS
 
-**CanBUS**:
+**CANBus**:
 
-* 2-wire protocol: `CAN_H` and `CAN_L`  
+> Controller Area Network
+
+* 2-wire protocol: `CAN_H` and `CAN_L` that allows microcontrollers and devices to communicate without a host computer
 * uses <ins>constructive arbitration</ins>
 * When both lines have same voltage, signal is *recessive*
 * If `CAN_H` - `CAN_L` > 0.9V, signal is *dominant*
 * No ground reference, i.e. no ground noise
 * Maximum transmission rate: 1 Megabit / s
+* Each device has its own priority
+  * If the controller is busy when a signal has been sent to it, it will be delayed until it has the highest priority
+
+####RZ
+> **Return to Zero mode**:
+> Pulses will always return to 0 even if there are consecutive pulses. 
+
+![consecutive pulses](images/rzcode.png)
+
+####NRZ
+> **Non-Return to Zero mode**:
+> Pulses will never return to 0
+
+![consecutive pulses](images/nrzcode.png)
+ 
 
 **Dominant node**: zeroes
 

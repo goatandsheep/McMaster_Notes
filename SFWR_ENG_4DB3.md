@@ -115,16 +115,22 @@ When designing your database, you need to consider:
 : ER Diagrams are a way of representing a system
 > * **Entity Sets**: rectangles
 > * **[Attributes](#attribute)**: ovals
+> * **[Relations](#relations)**: diamonds
+> * **Is a**: triangle
 
 ```flow
 set=>operation: Entity Set
 att=>start: Attribute
+rel=>condition: Relation
 
-att->set
+att->rel(no)->set
 ```
 
-#####Binary Relationship
+* Open arrow: exactly 1
+* Closed arrow: 0 or 1
+* None: 0-n
 
+#####Binary Relationship
 
 **Many-One Relationship**: 
 
