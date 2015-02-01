@@ -16,8 +16,11 @@ This course is about concurrency in systems.
 
 We represent models of concurrency using finite state machines.
 
-Processes and Threads
----------------------
+Threads
+-------
+: *<ins>active</ins> entities because they initiate actions*
+
+> Opposite of [monitors](#monitors)
 
 **Sequential process**:
 
@@ -83,11 +86,10 @@ One rule of precedence that allows you to remove brackets is that you execute fr
 **Equivalent**: same trace
 
 ##Shared Objects
-
-How do you allocate access to a resource among multiple processes?
+: *How do you allocate access to a resource among multiple processes?*
 
 ####Semaphor
-: Something that constricts when you can/cannot run a process
+: *Something that constricts when you can/cannot run a process*
 > You can implement a *handshake* using multiple semaphors that allows you to toggle execution when sharing a resource
 
 **Race Conditions**: the process that gets to the resource the fastest goes first
@@ -95,7 +97,7 @@ How do you allocate access to a resource among multiple processes?
 If you have multiple processes that need to be executed from a given processor that are waiting to be executed on a shared resource, you can push the processes onto a stack and wait, until the resource is free. Using this in conjunction with the semaphores will be nice.
 
 ##LTSA
-*Labelled Transition System Analyser*
+: *Labelled Transition System Analyser*
 
 `ERROR`: predefined process to identify...error
 
@@ -109,3 +111,19 @@ If you have multiple processes that need to be executed from a given processor t
 `synchronized`:
 
 `synchronized <object>`: only one person can access a method at a time
+
+##Monitors
+: *<ins>passive</ins> entities which respond to actions*  
+
+> * Opposite of a [thread](#threads)
+> * The early conception of an object
+> * Can be implemented in object-oriented languages, where its use makes it a *monitor*
+
+**Guarded Actions**: modelling by defining the range of the system monitors
+
+
+* `wait()`: sleeps thread, until notification from another thread
+* `notify()`: only runs one thread
+* `notifyAll()`: wakes up all waiting threads and the ones that don't get access get put to sleep
+	* overkill, so use `notify()` if you know you only have one thread
+	* operating system deals with the order in which threads are executed 

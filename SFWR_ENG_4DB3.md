@@ -156,7 +156,7 @@ Response to violations:
 
 1. 
 
-**Cascade**: 
+**Cascade**: when something has a foreign key of something else, a change in one will result in a change in the other
 
 ##SQL
 : Structured Query Language
@@ -166,6 +166,10 @@ Response to violations:
 **Sub-query**: 
 
 > **Note**: Place single constant values in 'quotes'. Put double-quotes to indicate an actual quotation, like 'Murphy<ins>''</ins>s law'.
+> 
+> Also, don't use the `terminate` command.
+
+**Weak Entity Set**: if the primary key is a foreign key 
 
 ###Operators
 : Can return:

@@ -93,9 +93,13 @@ $A=(A,F,R)$
 
 $h^{m_R}$ is a subset of P
 
-A structure is **algebraic** iff $R=0$.
+`(S,F,R)`
 
-A structure is relational iff $F=0$.
+A structure is **algebraic** iff $R=0$
+`(S,F)`
+
+A structure is **relational** iff $F=0$
+`(S,R)`
 
 ####e.g. Graphs
 
@@ -176,6 +180,22 @@ $\eta$ measures:
 
 $$F(t) = 1 - e^{-\left (N - i + 1 \right )at}$$
 
-####Measurement Scale
+###Measurement Scales
 
-Scale = 
+Scale =
+
+**Algebraic Difference Structure**:
+ 
+####Nominal
+: *oogachacka*
+
+####Ordinal
+: *transitivity*
+
+####Interval
+: *comparing stuff on the same interval*
+
+> * Obsolete system, but we should know it :unamused:
+
+####Ratio
+: *hee hee*
