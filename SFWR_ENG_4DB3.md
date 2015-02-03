@@ -159,7 +159,7 @@ Response to violations:
 **Cascade**: when something has a foreign key of something else, a change in one will result in a change in the other
 
 ##SQL
-: Structured Query Language
+: *Structured Query Language*
 
 **Query**:
 
@@ -249,6 +249,41 @@ Types of modification:
 
 > **Note**: `NULL` does nothing, unless everything is `NULL`, in which case returns `NULL`
 
+###Join Operation
+: *lala*
+
+####Outer join
+: *Allows for inclusion of dangling references by padding them with `NULL`*
+
+	R OUTER JOIN S
+
+> Degree:
+> 
+> * `FULL`: [default] allows for all columns and all rows
+> * `LEFT`: common rows / columns from `rel1`, all from `rel2`
+> * `RIGHT`: common rows / columns from `rel2`, all from `rel1`
+
+`Natural`: check for when there are shared values
+
+`ON <condition>`:
+
 ####Cross Product
 	{{query1.entity1},{query2.entity1}; {query1.entity1},{query2.entityn}}
 
+##Views
+: *A type of conceptual schema*
+
+	CREATE [MATERIALIZED] VIEW <name> AS <query>
+
+**Virtual**: not stored, pretty much just a query
+
+**Materialized**: stored in database
+
+##B+ Trees
+: *A type of database indexing structure that uses a binary tree*
+
+Each node is >50% full
+
+Leftward arrows: children are smaller
+
+Rightward arrows: children are larger 

@@ -47,9 +47,16 @@ The signal is bit-stuffed to keep its value, until the next pulse
 
 **Biphase Manchester**:
 
-**Dominant node**: zeroes
+###Dominant and Recessive Signals
 
-**Recessive node**: ones
+If you have multiple signals, the **dominant** signal will change everything and the **recessive** signal won't.
+
+> **Think**
+> : *What will be the output when both values are prevalent?* A good example when trying to conceptualize this is an `AND` gate. When one signal is `0` and the other is `1`, what will...*dominate*? The `0`.
+> 
+> : This can be extended to when you have multiple devices in series with the same power usage...won't change voltage 
+
+---------------------
 
 **Ethernet** uses <ins>destructive conflict resolution</ins>.
 
@@ -61,7 +68,7 @@ The signal is bit-stuffed to keep its value, until the next pulse
 
 RTR remote messages
 
-**Arbitration**:
+**Arbitration**: when you are trying to send multiple signals along the same wire and you need to figure out which one will go first, you choose the smallest one (i.e. 1011 before 1100)
 
 **Differential BUS**: when 2 wires travel along the same path, they experience the same external interference. To determine the message, you need to find the difference between the 2 wires, so you actually end up subtracting out the interference
 
@@ -101,6 +108,16 @@ Message filtering:
 : A block wired non-sequentially
 > * Infinitely repeated concurrently
 > * Can only have one always block
+> * Assignments can only be done to registers
+> * Last statement has the highest <ins>priority</ins>
+
+What is meant by priority:
+
+	x = 0
+	x = 4
+	x = 3
+	print x
+	 3
 
 ####Blocking assignment
 : A block of code where statements *block* the execution of the following statement(s)
@@ -111,3 +128,28 @@ Message filtering:
 	> <statements>;
 	> end
 	> ```
+
+####Number Representation
+
+`<number of bits>b<value with minimal prior 0s>`
+
+> e.g.
+> `8b1`: 00000001
+
+#Wiring Diagrams
+
+* Intermediate wires are given arbitrary names
+* The number of bits transmitted on each wire is labelled on each wire
+
+#Asynchronous Systems
+> A system that does not reset depending on the clock
+
+**Posedge**: 1 = high
+
+**Negedge**: 1 = low 
+
+#Timing Diagrams
+
+##Hints
+
+* Make sure you put a small delay

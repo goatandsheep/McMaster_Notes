@@ -10,6 +10,8 @@ SFWR ENG 3BB4 Summary
 
 This course is about concurrency in systems.
 
+[TOC]
+
 **Concurrent Software**: 
 
 **Distributed Software**:
@@ -88,13 +90,21 @@ One rule of precedence that allows you to remove brackets is that you execute fr
 ##Shared Objects
 : *How do you allocate access to a resource among multiple processes?*
 
-####Semaphor
-: *Something that constricts when you can/cannot run a process*
+**Mutual Exclusion**: when only one process can access a resource at a time
+
+###Semaphor
+: *Something that enables access to a resource*
 > You can implement a *handshake* using multiple semaphors that allows you to toggle execution when sharing a resource
 
 **Race Conditions**: the process that gets to the resource the fastest goes first
 
 If you have multiple processes that need to be executed from a given processor that are waiting to be executed on a shared resource, you can push the processes onto a stack and wait, until the resource is free. Using this in conjunction with the semaphores will be nice.
+
+Semaphors also count the number of processes waiting to use the resource
+
+When a resource is unavailable, the process can either wait or do a non-critical process.
+
+**Binary Semaphor**: enables and disables?? 
 
 ##LTSA
 : *Labelled Transition System Analyser*
@@ -127,3 +137,14 @@ If you have multiple processes that need to be executed from a given processor t
 * `notifyAll()`: wakes up all waiting threads and the ones that don't get access get put to sleep
 	* overkill, so use `notify()` if you know you only have one thread
 	* operating system deals with the order in which threads are executed 
+
+##Interference
+: *Interactions between processes trying to share a resource.*
+
+> * It can be good
+> * Controlled by [monitors](#monitors)
+
+**Feature interaction**: unwanted interference
+
+##Bounded Buffer
+: *A process queue for when there are multiple resources*
