@@ -136,20 +136,44 @@ What is meant by priority:
 > e.g.
 > `8b1`: 00000001
 
-#Wiring Diagrams
+##Wiring Diagrams
 
 * Intermediate wires are given arbitrary names
 * The number of bits transmitted on each wire is labelled on each wire
 
-#Asynchronous Systems
+##Asynchronous Systems
 > A system that does not reset depending on the clock
 
 **Posedge**: 1 = high
 
 **Negedge**: 1 = low 
 
-#Timing Diagrams
+##Timing Diagrams
 
-##Hints
+###Hints
 
 * Make sure you put a small delay
+
+##FPD
+: *Field Programmable Device*
+
+**Standard Chip**: inefficient
+
+###PLD
+: *A Programable Logic Device is a collection of programmable switches and general structures*
+
+e.g. EEPROM, PAL, PLA, CPLD, FPGA
+
+![pla](images/pla.png)
+
+####Macrocell
+: *Extra circuitry after PAL and PLA circuits*
+
+####CPLDs
+: *Complex Programmable Logic Device is several PAL / PLAs in series*
+
+####FPGA
+: *Field Programmable Gate Arrays can be re-programmed after they've been deployed*
+
+1. Calculate result and save
+2. Use inputs to select the result from table
