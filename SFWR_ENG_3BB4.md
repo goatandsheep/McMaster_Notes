@@ -148,3 +148,16 @@ When a resource is unavailable, the process can either wait or do a non-critical
 
 ##Bounded Buffer
 : *A process queue for when there are multiple resources*
+
+##Deadlock
+: *When multiple processes need multiple resources simultaneously to continue but it's not working*
+
+> **Think** if there is one chopstick on the left and one on the right of each person on a table, but you need 2 and everyone takes the right chopstick, nobody can eat because you need 2
+ 
+#Safety & Liveness property
+
+**Termination**: every program should end
+
+###Progress Properties
+
+Testing our models
