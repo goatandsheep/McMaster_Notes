@@ -21,10 +21,25 @@ TRON 3TB4 Summary
 * Each device has its own priority
   * If the controller is busy when a signal has been sent to it, it will be delayed until it has the highest priority
 
+![CAN Data frame](images/can_data_frame.png)
+
+CAN uses non-destructive bitwise [arbitration](#arbitration)
+
+Each CANBUS Node has:
+
+* **Host processor**: generates messages to be sent; deciphers received messages
+* **CAN Controller**: takes messages from host and transmits them to the bus
+* **Transceiver**:
+
 ##Bit Stuffing
 > Inserting extra non-data bits into data signals. The extra bits are removed upon being received.
  
-This is important for increasing bit rates when they're too slow 
+This is useful for:
+
+* increasing bit rates when they're too slow
+* Preventing information from being interpreted as control information
+	* For example, in X.25 protocol, 6 ones parses each message, so if the actual message has 6 ones, stuff a 0 after the 5th 1
+
 
 ####RZ
 > **Return to Zero mode**:
@@ -38,7 +53,7 @@ The signal is bit-stuffed with 0's
 > **Non-Return to Zero mode**:
 > Pulses will never return to 0
 
-The signal is bit-stuffed to keep its value, until the next pulse
+The signal is bit-stuffed to keep its value, until the next pulse. If there are too many consecutive 1s, clock synchronization can be lost, so maximum of 5 1s in a row.
 
 ![consecutive pulses](images/nrzcode.png)
 
@@ -47,7 +62,7 @@ The signal is bit-stuffed to keep its value, until the next pulse
 
 **Biphase Manchester**:
 
-###Dominant and Recessive Signals
+##Dominant and Recessive Signals
 
 If you have multiple signals, the **dominant** signal will change everything and the **recessive** signal won't.
 
@@ -58,7 +73,7 @@ If you have multiple signals, the **dominant** signal will change everything and
 
 ---------------------
 
-**Ethernet** uses <ins>destructive conflict resolution</ins>.
+**Ethernet** uses <ins>destructive conflict resolution</ins> / destructive bitwise [arbitration](#arbitration).
 
 **Prototols**: how to interpret/represent a set of inputs
 
@@ -68,21 +83,17 @@ If you have multiple signals, the **dominant** signal will change everything and
 
 RTR remote messages
 
-**Arbitration**: when you are trying to send multiple signals along the same wire and you need to figure out which one will go first, you choose the smallest one (i.e. 1011 before 1100)
-
 **Differential BUS**: when 2 wires travel along the same path, they experience the same external interference. To determine the message, you need to find the difference between the 2 wires, so you actually end up subtracting out the interference
 
-![CAN Data frame](images/can_data_frame.png)
+###Arbitration
+: *What will happen when you try to send multiple signals along the same wire?*
 
-Each CANBUS Node has:
+* **Non-destructive**: the smallest one will go first(i.e. 1011 before 1100), well...think dominant, not smaller
+* **Destructive**: no messages will be transmitted, so you need to retry a random number of times until you get it right
 
-* **Host processor**: generates messages to be sent; deciphers received messages
-* **CAN Controller**: takes messages from host and transmits them to the bus
-* **Transceiver**:
+**Start Of Message (SOM) Bit**: generally `0`
 
-**Start Of Message (SOM) Bit**:
-
-**Polling**: 
+###Polling 
 
 * **Normal mode**: 
 * **Loopback mode**: sends TX from controller to RX; don't need acknowledgements
@@ -94,6 +105,9 @@ Each CANBUS Node has:
 Message filtering:
 
 * Software
+* Hardware
+
+**Shannon Capacity**:
 
 **ElectroMagnetic Interference (EMI)**:
 

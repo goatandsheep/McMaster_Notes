@@ -285,6 +285,30 @@ Types of modification:
 
 Each node is >50% full
 
-Leftward arrows: children are smaller
+**Leftward arrows**: children are smaller
 
-Rightward arrows: children are larger 
+**Rightward arrows**: children are larger
+
+-----------
+
+**Indexes**: speed up important queries, but requires additional maintenance
+
+##Relational Algebra
+: *lol*
+
+$\sigma$
+
+**Projection**: select certain attributes
+$R_1 := \Pi_L(R_2)$ 
+
+**Theta-join**: don't combine repeated attributes
+	Query1 $\bowtie_\text{condition}$ Query2 
+
+**Natural join**: combine repeated attributes
+	Query1 $\bowtie$ Query2
+
+**Union Compatible**: attributes are exactly the same (number, names, types)
+
+**Bag**: (or *multiset*) set where values can be repeated
+
+**Relational Calculus**: 

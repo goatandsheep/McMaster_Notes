@@ -182,10 +182,12 @@ $$F(t) = 1 - e^{-\left (N - i + 1 \right )at}$$
 
 ###Measurement Scales
 
-Scale =
+Scale = (, mapping)
 
-**Algebraic Difference Structure**:
- 
+**Algebraic Difference Structure**: 
+
+**Admissible transformation**: allows you to move from scale-to-scale
+
 ####Nominal
 : *oogachacka*
 
@@ -199,3 +201,5 @@ Scale =
 
 ####Ratio
 : *hee hee*
+
+**Quotient Structure**: MyHill-
