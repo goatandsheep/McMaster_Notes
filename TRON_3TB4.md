@@ -115,6 +115,10 @@ Message filtering:
 
 ##Verilog
 
+###Keywords
+
+`default`: catch-all for when none of the conditions are satisfied
+
 ####Initial Block
 : Executed only once, providing initial values for system
 
@@ -158,9 +162,13 @@ What is meant by priority:
 ##Asynchronous Systems
 > A system that does not reset depending on the clock
 
-**Posedge**: 1 = high
+**Posedge**: 1 marks the beginning of a high signal
 
-**Negedge**: 1 = low 
+**Negedge**: 1 marks the beginning of a low signal
+
+**Minterms**: use Sum of Products when the output is 1; 1 is pos, 0 is neg
+
+**Maxterms**: use Product of Sums when the output is 0; 0 is pos, 1 is neg 
 
 ##Timing Diagrams
 

@@ -203,3 +203,13 @@ Scale = (, mapping)
 : *hee hee*
 
 **Quotient Structure**: MyHill-
+
+MCC
+
+**BSEQ**:
+
+**BALT**:
+
+**RSEQ**: $\text(RSEQ)(R_1, R_2) = $
+
+$\mu (x) = \frac{1}{\mu'(x)}$
