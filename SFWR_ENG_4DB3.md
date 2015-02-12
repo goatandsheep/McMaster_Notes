@@ -170,7 +170,7 @@ Response to violations:
 > 
 > Also, don't use the `terminate` command.
 
-**Weak Entity Set**: if the primary key is a foreign key 
+**Weak Entity Set**: if the primary key is a foreign key, many many-one relationships
 
 ###Operators
 : Can return:
