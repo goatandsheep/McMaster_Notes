@@ -10,7 +10,8 @@ SFWR ENG 3S03 Summary
 
 ![Requirements Hierarchy](images/Requirements_Hierarchy.PNG)
 
-##Challenges of Software Testing
+Challenges of Software Testing
+-----------------------------------
 
 * Budget pressure
  * Project planner underestimates costs of a stage
@@ -30,7 +31,8 @@ SFWR ENG 3S03 Summary
  * More languages
  * More layers
 
-##Measurement
+Measurement
+-----------------------------------
 
 **Metric**: a quantitative attribute 
 
@@ -56,7 +58,8 @@ Sometimes you want to measure something that is a combination of attributes.
 
 **Inductive**: determined by putting different deduced information together
 
-##Models for testing
+Models for testing
+-----------------------------------
 
 Often, it's not enough to simply say whether something is good or bad, so we define a model that scores it using a combination of metrics that give a quantitative score. That includes:
 
@@ -213,3 +216,11 @@ MCC
 **RSEQ**: $\text(RSEQ)(R_1, R_2) = $
 
 $\mu (x) = \frac{1}{\mu'(x)}$
+
+Writing a Testing Plan
+-----------------------------------
+
+* Make sure you don't use illegal software
+* If it's free, there's probably a license associated with it, so read that license.
+* Implied warranty
+* Be specific of inputs
