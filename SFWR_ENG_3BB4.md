@@ -16,7 +16,7 @@ This course is about concurrency in systems.
 
 **Distributed Software**:
 
-We represent models of concurrency using finite state machines.
+We represent models of concurrency using finite state machines (a.k.a. FSP).
 
 Threads
 -------

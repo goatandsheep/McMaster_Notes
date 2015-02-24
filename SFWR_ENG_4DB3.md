@@ -162,11 +162,21 @@ Response to violations:
 ##SQL
 : *Structured Query Language*
 
-**Query**:
+###Query
+: *A command to fetch a specific set of data*
+
+* Each is separated by `;`
+* Comments are done using `#`
+* 3 Parts:
+	* `SELECT <attribute(s)>`: what attributes do you want to return?, could be `*`, i.e. all attributes
+	* `FROM <database>`: which database?
+	* `WHERE <condition>`: a non-mandatory condition on the results of your query
+	* When you only want certain attributes from a row, delimit using commas, i.e. `SELECT <attribute1>, <attribute2>` 
 
 **Sub-query**: 
 
-> **Note**: Place single constant values in 'quotes'. Put double-quotes to indicate an actual quotation, like 'Murphy<ins>''</ins>s law'.
+> **Note**: Place single constant values in 'quotes'. Put double-quotes to indicate an actual quotation, 
+>  'Murphy<ins>''</ins>s law'.
 > 
 > Also, don't use the `terminate` command.
 
@@ -183,15 +193,19 @@ Response to violations:
   * Can also be written as `x IN <subquery>`
 * `EXISTS(<subquery>)`: returns `TRUE` iff the subquery is not empty
 * `ALL`:
-* `FROM <database>`: which database?
 * `JOIN`: 
-* `SELECT <attribute(s)>`: what attributes do you want to return?, could be `*`, i.e. all attributes
-* `WHERE <condition>`: a non-mandatory condition on the results of your query
 * `(<subquery>) UNION (<subquery>)`: require same schema
 * `(<subquery>) INTERSECT (<subquery>)`: require same schema
 * `(<subquery>) EXCEPT (<subquery>)`: aren't in both
 * `(<subquery>) DISTINCT (<subquery>)`: don't include the stuff in the second subquery
 * `(<subquery>) ORDER BY <attribute>`: 
+
+###String Patterns
+
+* Format: `<attribute> LIKE '<pattern>'`
+* Any string: `%`
+* Any character: `_`
+
 
 ###Saving query as object 
 
@@ -206,6 +220,8 @@ Useful if you want to be able to differentiate between multiple similar queries:
 ---------------------------------
 
 Conditions: {`TRUE`, `FALSE`, `UNKNOWN`}
+
+`YEAR(<YYYY-MM-DD>)`
 
 ###Modifying Databases
 
@@ -240,6 +256,8 @@ Types of modification:
 ###Aggregation
 : *Computing numerical results*
 
+Format: `Aggregation(<query>)` 
+
 * `SUM`
 * `AVG`
 * `COUNT`
@@ -248,7 +266,13 @@ Types of modification:
 * `COUNT(*)`: number of tuples
 * `GROUP BY <attribute>, <attribute_n>`: specifies that the aggregation is repeated for every available attribute instead of being done on everything 
 
-> **Note**: `NULL` does nothing, unless everything is `NULL`, in which case returns `NULL`
+> **Hints**
+> 
+> * `NULL` does nothing, unless everything is `NULL`, in which case returns `NULL`
+> * If any aggregation is used, then each element of the `SELECT` list must be either:
+>   * Aggregated, or
+>   * An attribute on the GROUP BY list. 
+
 
 ###Join Operation
 : *lala*
@@ -292,6 +316,10 @@ Each node is >50% full
 -----------
 
 **Indexes**: speed up important queries, but requires additional maintenance
+
+**Hash index**: think about what a hash is and realize that it works better with specific equalities
+
+**Tree Index**: ranges are fine
 
 ##Relational Algebra
 : *lol*

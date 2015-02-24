@@ -199,3 +199,11 @@ e.g. EEPROM, PAL, PLA, CPLD, FPGA
 
 1. Calculate result and save
 2. Use inputs to select the result from table
+
+Changing the clock frequency
+
+$t_{cq}$
+
+$t_h$
+
+$t_{su}$
