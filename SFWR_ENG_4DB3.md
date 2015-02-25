@@ -196,7 +196,7 @@ Response to violations:
 * `JOIN`: 
 * `(<subquery>) UNION (<subquery>)`: require same schema
 * `(<subquery>) INTERSECT (<subquery>)`: require same schema
-* `(<subquery>) EXCEPT (<subquery>)`: aren't in both
+* `(<subquery>) EXCEPT (<subquery>)`: duplicates are eliminated
 * `(<subquery>) DISTINCT (<subquery>)`: don't include the stuff in the second subquery
 * `(<subquery>) ORDER BY <attribute>`: 
 
@@ -233,12 +233,12 @@ Types of modification:
 
 ####Insert
 
-	INSERT INTO <relation> VALUES(<list of values>);
+	INSERT INTO <relation>(<attributes updated (optional)>) VALUES(<list of values>);
 
 > Insert individual values.
 > 
 > e.g.
-> `INSERT INTO Likes VALUES('Bud','Miller');`
+> `INSERT INTO Likes(beer, drinker) VALUES('Bud','Sally');`
 
 	INSERT INTO <relation> VALUES(<subquery>);
 > Insert a subquery into the relation.
@@ -264,7 +264,14 @@ Format: `Aggregation(<query>)`
 * `MIN`
 * `MAX`
 * `COUNT(*)`: number of tuples
-* `GROUP BY <attribute>, <attribute_n>`: specifies that the aggregation is repeated for every available attribute instead of being done on everything 
+* `GROUP BY <attribute
+*  <attribute_n>`: specifies that the aggregation is repeated for every available attribute instead of being done on everything 
+
+`HAVING`: 
+: May refer to attributes only if they are either
+ 
+* A grouping attribute, or
+* Aggregated
 
 > **Hints**
 > 
@@ -337,6 +344,6 @@ $R_1 := \Pi_L(R_2)$
 
 **Union Compatible**: attributes are exactly the same (number, names, types)
 
-**Bag**: (or *multiset*) set where values can be repeated
+**Bag**: (or *multiset*) subset where values can be repeated
 
 **Relational Calculus**: 

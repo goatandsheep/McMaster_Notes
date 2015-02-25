@@ -12,7 +12,7 @@ TRON 3TB4 Summary
 > Controller Area Network
 
 * 2-wire protocol: `CAN_H` and `CAN_L` that allows microcontrollers and devices to communicate without a host computer
-* uses <ins>constructive arbitration</ins>
+* uses <ins>constructive arbitration</ins> (a.k.a. non-destructive)
 	*  Since 2 wires travel the same length, they experience the same external noise, so you can just remove the noise 
 * When both lines have same voltage, signal is *recessive*
 * If `CAN_H` - `CAN_L` > 0.9V, signal is *dominant*
@@ -20,6 +20,10 @@ TRON 3TB4 Summary
 * Maximum transmission rate: 1 Megabit / s
 * Each device has its own priority
   * If the controller is busy when a signal has been sent to it, it will be delayed until it has the highest priority
+* **Cyclic Redundancy Check (CRC)**: error detection of whether you got the right signal. There are multiple methods:
+	* send the same message back and forth a couple times
+	* *Hash*: mod the first half and the second half and send them together, do the same to the message when it has been received
+* **Remote Transmission Request (RTR)**: are you sending data? sending: 0, no: 1
 
 ![CAN Data frame](images/can_data_frame.png)
 
@@ -30,6 +34,7 @@ Each CANBUS Node has:
 * **Host processor**: generates messages to be sent; deciphers received messages
 * **CAN Controller**: takes messages from host and transmits them to the bus
 * **Transceiver**:
+
 
 ##Bit Stuffing
 > Inserting extra non-data bits into data signals. The extra bits are removed upon being received.
@@ -79,9 +84,7 @@ If you have multiple signals, the **dominant** signal will change everything and
 
 **Slew Rate**: rate of change of voltage / s; how jagged are your square waves?
 
-**Baud Rate**: number of signals; 1/period
-
-RTR remote messages
+**Baud Rate**: number of signals; 1/period; clock frequency / L * P, L = length of signal = sync bit (i.e. 1) + segment1 + segment2, P = Prescaler
 
 **Differential BUS**: when 2 wires travel along the same path, they experience the same external interference. To determine the message, you need to find the difference between the 2 wires, so you actually end up subtracting out the interference
 
@@ -137,6 +140,9 @@ What is meant by priority:
 	print x
 	 3
 
+**Sequential block**: blocking, one thing at a time
+**Combinational Logic**: only dependant on the logic
+
 ####Blocking assignment
 : A block of code where statements *block* the execution of the following statement(s)
 > First statement must complete before the second statement
@@ -170,6 +176,26 @@ What is meant by priority:
 
 **Maxterms**: use Product of Sums when the output is 0; 0 is pos, 1 is neg 
 
+###Boolean Algebra Axioms
+
+1. $0\cdot0 = 0$
+	1. 1+1 = 1
+2. $1\cdot1 = 1$
+	1. 0+0 = 0
+3. $0\cdot1 = 1\cdot0 = 0$
+	1. 1+0 = 0 + 1 = 1
+3. If x = 0, then $\bar{x} = 1$
+	1. If x = 1, then $\bar{x} = 0$
+5. $x \cdot 0 = 0$
+	1. x + 1 = 1
+6. $x \cdot 1 = x$
+	1. x + 0 = x
+7. $x \cdot x = x$
+	1. x + x = x
+8. $x \cdot \bar{x} = 0$
+	1. $x + \bar{x} = 1$
+9. $\bar{\bar{x}} = x$
+
 ##Timing Diagrams
 
 ###Hints
@@ -187,6 +213,13 @@ What is meant by priority:
 e.g. EEPROM, PAL, PLA, CPLD, FPGA
 
 ![pla](images/pla.png)
+
+$f_1 = x_1x_2 + x_1\bar{x}_3 + \bar{x}_1\bar{x}_2x_3$
+$f_2 = x_1x_2 + \bar{x}_1\bar{x}_2x_3 + x_1x_3$
+
+LUT chart
+
+Put 
 
 ####Macrocell
 : *Extra circuitry after PAL and PLA circuits*
