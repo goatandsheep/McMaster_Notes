@@ -115,18 +115,24 @@ $R = \{E\}$
 
 $h \left ( f\left ( a_1,...,a_{n_y} \right ) \right ) = g \left (h^{n_f} \left ( a_1,..., a_{n_y} \right ) \right )$
 
-####Bijection
-: *A function + injective + subjective*
-> Every definition is reached once
-
 ####Surjective
-: *lala*
+: *Nothing goes unmapped*
 > * Not [injective](#injective)
 > * Could be a <ins>measurement mapping</ins>
 
+![moo](images/surjection.png)
+
 ####Injective
-: *noonoo*
+: *No overlap*
 > Not [surjective](#surjective)
+
+![moo](images/injection.png)
+
+####Bijection
+: *A function + injective + surjective*
+> Every definition is reached once
+
+![moo](images/bijection.png)
 
 ###Evaluating software
 
@@ -138,9 +144,6 @@ $h \left ( f\left ( a_1,...,a_{n_y} \right ) \right ) = g \left (h^{n_f} \left (
 
 ####Verbal Frequency
 : Select failure frequency from the set of {`Always`, `Often`, `Sometimes`, `Seldom`, `Never`}.
-
-####Ordinal Software
-: brb
 
 ####Comparative Scale
 : Pick integer from 1---*n* from `Superior` to `Inferior`
@@ -191,23 +194,44 @@ Scale = (, mapping)
 
 **Admissible transformation**: allows you to move from scale-to-scale
 
+##Concatenating Scales
+
 ####Nominal
-: *oogachacka*
+* <ins>no order</ins>
+* pick from set of categorized responses
+* e.g. gender, colour, relgion, etc.
 
 ####Ordinal
-: *transitivity*
+* <ins>ordered</ins>
+* non-linear scale
+* Arbitrary distance between values
+* e.g. satisfaction from 1-4
+	* Difference between 1-2 ≠ diff 3-4
 
 ####Interval
-: *comparing stuff on the same interval*
-
-> * Obsolete system, but we should know it :unamused:
+* ordered
+* <ins>linear scale</ins>
+* arbitrary zero value
 
 ####Ratio
-: *hee hee*
+* ordered
+* linear scale
+* <ins>zero identifies absence</ins>
+
+##Empirical Scale
+: *derived through experimentation and observation, not theory*
+
+Analyzing the difference between reality and mathematical scales
+
+1. Define your empirical relation. It could be any symbol you want. `>>`, `+`, `o`, etc.
+
+$sc = $ 
+
+##Other Stuff again
 
 **Quotient Structure**: MyHill-
 
-MCC
+MCC**:
 
 **BSEQ**:
 
@@ -224,3 +248,4 @@ Writing a Testing Plan
 * If it's free, there's probably a license associated with it, so read that license.
 * Implied warranty
 * Be specific of inputs
+

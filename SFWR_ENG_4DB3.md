@@ -331,10 +331,14 @@ Each node is >50% full
 ##Relational Algebra
 : *lol*
 
-$\sigma$
+**Selection**: select tuples with conditions on attributes
+$\sigma_c(R)$
 
 **Projection**: select certain attributes
 $R_1 := \Pi_L(R_2)$ 
+
+**Renaming**:
+$\rho_{R_1(A_1,...,A_n)}(R_2)$
 
 **Theta-join**: don't combine repeated attributes
 	Query1 $\bowtie_\text{condition}$ Query2 
@@ -347,3 +351,21 @@ $R_1 := \Pi_L(R_2)$
 **Bag**: (or *multiset*) subset where values can be repeated
 
 **Relational Calculus**: 
+
+**Duplicate Elimination**: `DISTINCT` $\sigma$
+
+**Grouping and Aggregation**: `AGG(A)` or `GROUP BY` $\gamma_L(R)$
+
+| A |B | C|
+|---|--|--|
+| 1 | 2| 3|
+| 4 | 5| 6|
+| 1 | 2| 5|
+
+becomes
+
+| A |B | C|
+|---|--|--|
+| 1 | 2| 3|
+| 1 | 2| 5|
+| 4 | 5| 6|
