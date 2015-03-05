@@ -73,6 +73,10 @@ Often, it's not enough to simply say whether something is good or bad, so we def
  * **Productivity**: 
 * etc.
 
+product: physical entity, e.g. 
+process: observable at run-time, e.g. complexity
+resource: hr stuff, manpower, e.g. productivity
+
 Models demonstrate:
 
 1. Things whose effects are neglected
@@ -194,6 +198,8 @@ Scale = (, mapping)
 
 **Admissible transformation**: allows you to move from scale-to-scale
 
+**Halstead**: 
+
 ##Concatenating Scales
 
 ####Nominal
@@ -217,6 +223,12 @@ Scale = (, mapping)
 * ordered
 * linear scale
 * <ins>zero identifies absence</ins>
+
+####Absolute
+* ordered
+* linear scale
+* zero identifies absence
+* <ins>cannot be negative</ins>
 
 ##Empirical Scale
 : *derived through experimentation and observation, not theory*
@@ -249,3 +261,33 @@ Writing a Testing Plan
 * Implied warranty
 * Be specific of inputs
 
+###Parts
+
+1. **Specifications**: correct input and output, i.e. pre- & post-conditions
+2. **Methods & Constraints**: 
+3. **Methodology**: 
+4. **Test tools**
+5. **Extent**: how much of the code and why
+6. **Data Recording**: 
+7. **Constraints**: 
+8. **Evaluation**: 
+
+###Project Management
+
+* Unit description
+* Milestones (a.k.a. dates)
+* Budget
+* Test approach
+* Functions not tested
+* Test constraints
+
+###Principles
+
+* *Developers should avoid testing their own programs (still debug, tho)*: dev's perspective is different from users' perspective
+* *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
+
+Testing
+: Finding the errors in a program, **NOT** proving its correctness
+
+Fault Seeding
+: Predicting where your program will fail

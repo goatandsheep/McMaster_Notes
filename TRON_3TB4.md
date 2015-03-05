@@ -1,11 +1,12 @@
 TRON 3TB4 Summary
 =================
 
-* Instructor: Dr. Lawford 
+* Instructor: Dr. Bokhari
 * *Winter 2015*
 * McMaster University
 * *Primary Author*: Kemal Ahmed
-> Written with [StackEdit](https://stackedit.io/).
+
+[TOC]
 
 ##CanBUS
 
@@ -36,7 +37,7 @@ Each CANBUS Node has:
 * **Transceiver**:
 
 
-##Bit Stuffing
+##Bit-Stuffing
 > Inserting extra non-data bits into data signals. The extra bits are removed upon being received.
  
 This is useful for:
@@ -67,7 +68,7 @@ The signal is bit-stuffed to keep its value, until the next pulse. If there are 
 
 **Biphase Manchester**:
 
-##Dominant and Recessive Signals
+##Dominant/Recessive
 
 If you have multiple signals, the **dominant** signal will change everything and the **recessive** signal won't.
 
@@ -80,21 +81,26 @@ If you have multiple signals, the **dominant** signal will change everything and
 
 **Ethernet** uses <ins>destructive conflict resolution</ins> / destructive bitwise [arbitration](#arbitration).
 
-**Prototols**: how to interpret/represent a set of inputs
+Prototols
+: how to interpret/represent a set of inputs
 
-**Slew Rate**: rate of change of voltage / s; how jagged are your square waves?
+Slew Rate
+: rate of change of voltage / s; how jagged are your square waves?
 
-**Baud Rate**: number of signals; 1/period; clock frequency / L * P, L = length of signal = sync bit (i.e. 1) + segment1 + segment2, P = Prescaler
+Baud Rate
+: number of signals; 1/period; clock frequency / L * P, L = length of signal = sync bit (i.e. 1) + segment1 + segment2, P = Prescaler
 
-**Differential BUS**: when 2 wires travel along the same path, they experience the same external interference. To determine the message, you need to find the difference between the 2 wires, so you actually end up subtracting out the interference
+Differential BUS
+: when 2 wires travel along the same path, they experience the same external interference. To determine the message, you need to find the difference between the 2 wires, so you actually end up subtracting out the interference
 
 ###Arbitration
-: *What will happen when you try to send multiple signals along the same wire?*
+> *What will happen when you try to send multiple signals along the same wire?*
 
 * **Non-destructive**: the smallest one will go first(i.e. 1011 before 1100), well...think dominant, not smaller
 * **Destructive**: no messages will be transmitted, so you need to retry a random number of times until you get it right
 
-**Start Of Message (SOM) Bit**: generally `0`
+Start Of Message (SOM) Bit
+: generally denoted by a `0`
 
 ###Polling 
 
@@ -144,14 +150,14 @@ What is meant by priority:
 **Combinational Logic**: only dependant on the logic
 
 ####Blocking assignment
-: A block of code where statements *block* the execution of the following statement(s)
-> First statement must complete before the second statement
-> Identify in this format:
-	> ```
-	> begin
-	> <statements>;
-	> end
-	> ```
+> A block of code where statements *block* the execution of the following statement(s), i.e. first statement must complete before the second statement
+
+Identify in this format:
+```
+begin
+<statements>;
+end
+```
 
 ####Number Representation
 
@@ -168,13 +174,17 @@ What is meant by priority:
 ##Asynchronous Systems
 > A system that does not reset depending on the clock
 
-**Posedge**: 1 marks the beginning of a high signal
+Posedge
+: 1 marks the beginning of a high signal
 
-**Negedge**: 1 marks the beginning of a low signal
+Negedge
+: 1 marks the beginning of a low signal
 
-**Minterms**: use Sum of Products when the output is 1; 1 is pos, 0 is neg
+Minterms
+: use Sum of Products when the output is 1; 1 is pos, 0 is neg
 
-**Maxterms**: use Product of Sums when the output is 0; 0 is pos, 1 is neg 
+Maxterms
+: use Product of Sums when the output is 0; 0 is pos, 1 is neg 
 
 ###Boolean Algebra Axioms
 
@@ -198,17 +208,16 @@ What is meant by priority:
 
 ##Timing Diagrams
 
-###Hints
-
-* Make sure you put a small delay
+Hint
+: Make sure you put a small delay between the clock and gate changes
 
 ##FPD
-: *Field Programmable Device*
+> *Field Programmable Device*
 
-**Standard Chip**: inefficient
+Standard Chips are inefficient
 
 ###PLD
-: *A Programable Logic Device is a collection of programmable switches and general structures*
+> *A Programable Logic Device is a collection of programmable switches and general structures*
 
 e.g. EEPROM, PAL, PLA, CPLD, FPGA
 
@@ -228,7 +237,7 @@ Put
 : *Complex Programmable Logic Device is several PAL / PLAs in series*
 
 ####FPGA
-: *Field Programmable Gate Arrays can be re-programmed after they've been deployed*
+> *Field Programmable Gate Arrays can be re-programmed after they've been deployed*
 
 1. Calculate result and save
 2. Use inputs to select the result from table
@@ -240,3 +249,7 @@ $t_{cq}$
 $t_h$
 
 $t_{su}$
+
+You can write your own peripherals or use built in peripherals.
+
+

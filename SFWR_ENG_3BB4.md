@@ -38,7 +38,8 @@ Threads
 <ins>FSPs follow algebraic rules, such as:</ins>
 
 * Associativity: order of which operations to perform is sometimes irrelevant
-* Communitivity: *x + y = y + x*
+* Communitivity: `x || y = y || x`
+* Associativity: `x || (y || z) = (x || y) || z = (x || z) ||y`
 
 <ins>State Machine Details:</ins>
 
@@ -123,13 +124,13 @@ When a resource is unavailable, the process can either wait or do a non-critical
 `synchronized <object>`: only one person can access a method at a time
 
 ##Monitors
-: *<ins>passive</ins> entities which respond to actions*  
+> *<ins>passive</ins> entities which respond to actions (a.k.a. humans)*
 
-> * Opposite of a [thread](#threads)
-> * The early conception of an object
-> * Can be implemented in object-oriented languages, where its use makes it a *monitor*
+* Opposite of a [thread](#threads)
+* The early conception of an object
+* Can be implemented in object-oriented languages, where its use makes it a *monitor*
 
-**Guarded Actions**: modelling by defining the range of the system monitors
+**Guarded Actions**: modelling by defining the range of the system monitors, identified by `when`
 
 
 * `wait()`: sleeps thread, until notification from another thread

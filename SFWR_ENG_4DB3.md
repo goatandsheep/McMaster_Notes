@@ -48,7 +48,14 @@ Collections of entities are called **entity sets**.
 > * i.e. all the [attributes](#Attribute)
 
 ####Relational Database
-: A database of tables with a fixed [schema](#schema)
+
+> A database of tables with a fixed [schema](#schema)
+
+**Advantages**:
+
+* no redundancy
+* deletion / updating 
+
 
 ##Integrity Constraints
 : **IC**s limit the data that can be entered
@@ -168,8 +175,9 @@ Response to violations:
 * Each is separated by `;`
 * Comments are done using `#`
 * 3 Parts:
-	* `SELECT <attribute(s)>`: what attributes do you want to return?, could be `*`, i.e. all attributes
-	* `FROM <database>`: which database?
+	* `SELECT <relation>.<attribute(s)>`: what attributes do you want to return? could be `*`; relation is an optional tag
+	*  attributes
+	* `FROM <database>`: which database tables are we pulling stuff from?
 	* `WHERE <condition>`: a non-mandatory condition on the results of your query
 	* When you only want certain attributes from a row, delimit using commas, i.e. `SELECT <attribute1>, <attribute2>` 
 
@@ -281,8 +289,12 @@ Format: `Aggregation(<query>)`
 >   * An attribute on the GROUP BY list. 
 
 
-###Join Operation
-: *lala*
+##Joins
+: *When you want to query columns from multiple tables, you need to join the tables first*
+
+There are multiple types of joins:
+
+[![source](images/Visual_SQL_JOINS.jpg)](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
 
 ####Outer join
 : *Allows for inclusion of dangling references by padding them with `NULL`*
@@ -311,7 +323,10 @@ Format: `Aggregation(<query>)`
 
 **Materialized**: stored in database
 
-##B+ Trees
+##Indexing Structure
+: *Each index type is useful for tuning the database to the fastest speed for the data you want*
+
+###B+ Trees
 : *A type of database indexing structure that uses a binary tree*
 
 Each node is >50% full
@@ -320,7 +335,7 @@ Each node is >50% full
 
 **Rightward arrows**: children are larger
 
------------
+###Index Hash
 
 **Indexes**: speed up important queries, but requires additional maintenance
 
@@ -369,3 +384,29 @@ becomes
 | 1 | 2| 3|
 | 1 | 2| 5|
 | 4 | 5| 6|
+
+##FD
+**Functional Dependencies (FD)**: `X -> Y`
+
+Splitting the FD: only for right side; left-side is the independent part
+
+> `ABC -> DEF =/= AB -> DEF & C -> DEF`
+
+A set of FDs can help identify the superkey in a relation `X -> R`
+
+DBMS cannot identify FDs nor optimize them
+
+###Minimal Basis
+
+> A set of FDs without redundancy
+
+* No repeats
+* Removing an FD will no longer retain the same meaning
+* Increases performance
+* A.K.A. **minimal cover**
+
+####Finding Minimal Basis
+
+1. Remove FDs where entities refer to themselves
+2. Try looking at each FD and tracing through to see if there is an that results in the same answer, **e.g.** in {`A->B`, `B->C`, `A->C`}, you can remove `A->C`.
+
