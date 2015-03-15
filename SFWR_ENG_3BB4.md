@@ -88,6 +88,13 @@ One rule of precedence that allows you to remove brackets is that you execute fr
 
 **Equivalent**: same trace
 
+####Action hiding
+
+`P = (C -juice-> J,`
+	J -return-> P ) \{return}
+
+this hides the return function
+
 ##Shared Objects
 : *How do you allocate access to a resource among multiple processes?*
 
@@ -159,6 +166,13 @@ When a resource is unavailable, the process can either wait or do a non-critical
 
 **Termination**: every program should end
 
+**Liveness**: 
+
 ###Progress Properties
 
 Testing our models
+
+Dynamic Systems
+---------------
+
+You can only model these with a static version of these with specific parameters.

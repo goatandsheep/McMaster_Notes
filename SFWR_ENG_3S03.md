@@ -161,7 +161,7 @@ $h \left ( f\left ( a_1,...,a_{n_y} \right ) \right ) = g \left (h^{n_f} \left (
 ###More...
 
 ####Homomorphism
-: A **homomorphism** or **representation** is a mapping from $A$ to $B$ that reserves the operations of $A$ to the corresponding in $B$. It also weakly reserves the relations in $A$ to their corresponding in $B$.
+: A **homomorphism** or **representation** is a mapping from $A$ to $B$ that preserves the operations of $A$ to the corresponding in $B$. It also weakly preserves the relations in $A$ to their corresponding in $B$.
 > i.e. a structure from $A$ to $B$ that satisfies rule 2 (function) and 3 (relation).
 > $$h: A  \rightarrow  B$$
 
@@ -179,12 +179,7 @@ $\eta$ measures:
 * Range: 0-10
 
 ####Direct Measurement
-
->**Direct Measurement**:
 > ga
-> 
-> Examples:
-> * 
 
 ####Reliability Model
 
@@ -196,7 +191,12 @@ Scale = (, mapping)
 
 **Algebraic Difference Structure**: 
 
-**Admissible transformation**: allows you to move from scale-to-scale
+**Admissible transformation**: allows you to move from scale-to-scale when the attributes and scale are the same
+
+* integral scale: $g(x) = \alpha\mu(x) + p$
+* Ratio scale: $g(x) = \alpha\mu(x)$
+* ordinal scale: strictly monotonic scale
+* nominal: one-to-one mapping
 
 **Halstead**: 
 
@@ -205,7 +205,7 @@ Scale = (, mapping)
 ####Nominal
 * <ins>no order</ins>
 * pick from set of categorized responses
-* e.g. gender, colour, relgion, etc.
+* e.g. gender, colour, religion, etc.
 
 ####Ordinal
 * <ins>ordered</ins>
@@ -260,6 +260,8 @@ Writing a Testing Plan
 * If it's free, there's probably a license associated with it, so read that license.
 * Implied warranty
 * Be specific of inputs
+
+**Meaningful transformation**:  
 
 ###Parts
 

@@ -238,6 +238,7 @@ Types of modification:
 * *[Insert](#insert)*: put new data into tables
 * *[Delete](#delete)*: remove data from table
 * *[Update](#update)*: change existing data
+* `ALTER`: change the column names
 
 ####Insert
 
@@ -275,8 +276,8 @@ Format: `Aggregation(<query>)`
 * `GROUP BY <attribute
 *  <attribute_n>`: specifies that the aggregation is repeated for every available attribute instead of being done on everything 
 
-`HAVING`: 
-: May refer to attributes only if they are either
+`HAVING`
+> Like `WHERE` for attributes only if they are either
  
 * A grouping attribute, or
 * Aggregated
@@ -286,8 +287,7 @@ Format: `Aggregation(<query>)`
 > * `NULL` does nothing, unless everything is `NULL`, in which case returns `NULL`
 > * If any aggregation is used, then each element of the `SELECT` list must be either:
 >   * Aggregated, or
->   * An attribute on the GROUP BY list. 
-
+>   * An attribute on the GROUP BY list.
 
 ##Joins
 : *When you want to query columns from multiple tables, you need to join the tables first*
@@ -409,4 +409,44 @@ DBMS cannot identify FDs nor optimize them
 
 1. Remove FDs where entities refer to themselves
 2. Try looking at each FD and tracing through to see if there is an that results in the same answer, **e.g.** in {`A->B`, `B->C`, `A->C`}, you can remove `A->C`.
+
+**Closure**: the values that are connected using the FDs without repeating
+
+**Anomaly**: bad design, redundancy
+
+####Information Loss
+
+* Too much data
+* Too little data
+
+**FD Loss**:
+
+**Join loss**: 
+
+##Concurrency
+> CP: multiple users accessing a database simultaneously
+
+* **Interleaved processing**: asynchronous, 2/+ per CPU, each process runs segmented
+* **Parallel processing**: one process / CPU
+
+###Transaction
+> 
+
+* `Commit`: finalize the change (changes can be made to database even if commit has not been made)
+* `Abort`: 
+
+####Airline example
+
+When multiple people are trying to book the same seats. The second person who books the seat should be notified that the spot has been taken.
+
+###Transaction Properties
+
+* **Atomicity**: transaction acts as a whole or not at all
+* **Consistent**: information
+* **Isolation**: should operate as only transaction
+* **Durability**: each committed change should persist even if system fails before all changes are reflected on disk
+
+Schedule
+
+Conflict
 

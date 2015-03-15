@@ -253,3 +253,4 @@ $t_{su}$
 You can write your own peripherals or use built in peripherals.
 
 
+**Avalon switch fabric**: a slave-side arbitration scheme, lets multiple masters operate simultaneously
