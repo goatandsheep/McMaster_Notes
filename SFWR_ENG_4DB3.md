@@ -448,5 +448,49 @@ When multiple people are trying to book the same seats. The second person who bo
 
 Schedule
 
-Conflict
+##Conflicts
 
+**Write-write conflict**: 
+
+###Serializable 
+
+> Proven using a *precedence graph*
+
+**Recoverable**:
+
+**(ACA)**:
+
+**Conflict Equivalent**: 
+
+###Locks
+
+> Think *semaphor*. A transaction must acquire a lock before reading / writing. A lock can only be obtained by one transaction at a time. However, transactions can lock onto multiple objects at the same time.
+
+It does this by either:
+
+* **Aborting**: cancels changes, wasting work
+* **Blocking**: restricts read access
+
+####Two-phase locking
+> **2PL** is a system where a release of any of the locks prohibits all future acquiring of locks. The name comes because it results in 2 phases: a **growing phase** and a **shrinking phase**
+
+**Strict 2PL**:
+
+###Phantom Problem
+
+**Phantoms**: tuples that are invisible for only part of the transaction execution
+
+> Solutions:
+>
+> * Lock the entire table
+> * Lock the affected column(s)
+> * Note: the above are resource heavy
+
+###Isolation Levels
+
+Settings that define the level of concurrency
+
+* **Read Uncommitted**: no read locks
+* **Read committed**: short duration read locks
+* **Repeatable read**: 
+* **[Serializable](#serializable)**: worst at concurrency and performance-wise
