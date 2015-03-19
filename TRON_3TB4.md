@@ -129,10 +129,11 @@ Message filtering:
 `default`: catch-all for when none of the conditions are satisfied
 
 ####Initial Block
-: Executed only once, providing initial values for system
+> Executed only once, providing initial values for system
 
 ####Always Block
-: A block wired non-sequentially
+> A block wired non-sequentially
+> 
 > * Infinitely repeated concurrently
 > * Can only have one always block
 > * Assignments can only be done to registers
@@ -231,10 +232,10 @@ LUT chart
 Put 
 
 ####Macrocell
-: *Extra circuitry after PAL and PLA circuits*
+> *Extra circuitry after PAL and PLA circuits*
 
 ####CPLDs
-: *Complex Programmable Logic Device is several PAL / PLAs in series*
+> *Complex Programmable Logic Device is several PAL / PLAs in series*
 
 ####FPGA
 > *Field Programmable Gate Arrays can be re-programmed after they've been deployed*
@@ -252,5 +253,75 @@ $t_{su}$
 
 You can write your own peripherals or use built in peripherals.
 
-
 **Avalon switch fabric**: a slave-side arbitration scheme, lets multiple masters operate simultaneously
+
+##Digital Signal Processing
+
+Sample purposes of DSPs:
+
+* **Filtering**: isolate useful noise
+* **Compression**: efficient storage
+* Audio / video processing (*e.g. voice pitch or colour changes*)
+
+**Sampling**: recording periodic values
+
+**Sampling frequency**:  samples/s
+$f_s > 2 f_{max}$
+
+**Nyquist frequency**: $f_{max} = \frac{f_s}{2}$
+
+**Shannon's Sampling Theorem**: frequencies should be sampled at a frequency > 2f
+
+**Aliasing**: If $f_s < 2 f_{max}$, it causes problems during reconstruction. Usually, you put an **anti-aliasing** filter on the frequencies that are above the nyquist frequency to avoid aliasing
+
+###Fourier
+
+> Really this is [2MX3 review](https://drive.google.com/open?id=0BxW61uJyyN8TQmM5SFY2eGpzV0E&authuser=0), but...
+> *Any periodic signal can be decomposed into an infinite sum of sine waves.*
+> $x(t) = \sum\limits_{n = 1}^\infty  {\left( {{a_n \cos(n\omega t) + b_n \sin(n\omega t)}} \right)} $
+> $\omega = 2 \pi f$
+
+**Fourier Transform**: time domain --> frequency
+
+**Taps**: wires multiplexors
+
+##Numbers
+
+16 bit * 16 bit = 32 bit
+
+**General Fixed Point Numbers**: when you want to represent a small range over the entire range of numbers possible. For example, if you want to represent -15 < x < 15 using -32768 to 32768,
+
+$32768/15 = 2184.53 \approx 2048 = 2^{11}$
+
+Or a better way of doing it is rounding 15 up to 16, or $2^4$ and finding out what the max # of numbers ($2^{15}$) is. take 15 - 4 = 11 and you get 2^{11}. This way is probably better because you get Q4.11
+
+**General Fixed Point Notation**: $Qm.n$
+
+* *m* is the number of bits representing the integer as 2's complement and the (#+1)$^{th}$ bit is the signed bit
+* *n* is the fraction
+* Minimum = $−2^m$
+* Maximum = $2^m − 2^{−n}$
+* Resolution = $2^{−n}$
+
+Default value of m is 0, i.e. Q0.n = Q.n = Qn
+
+Converting from x to Qn $=x  \times 2^n$
+
+Note: the number of digits = m+n + 1, for sign
+
+###Tri-state buffers
+
+![Buffers](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Tristate_buffer.svg/343px-Tristate_buffer.svg.png)
+
+|  A |  B | C  |
+|:--:|:--:|:--:|
+|  0 | 1  | 0  |
+|  1 | 1  | 1  |
+|  X | 0  | Z  |
+
+*Z*: high impedence
+
+> a short circuit may occur when one device outputs to the bus a logic “1”, the supply voltage, while another is set at logic level “0” or ground
+
+###Hold Time Violation
+When a flipflop is sampling the data, there is a certain amount of time that the data should not change after the clock edge if you want the data to be consistent. That is called the hold time. If you change the data value before the end of the hold time, you get a hold time violation.
