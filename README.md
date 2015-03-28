@@ -7,9 +7,10 @@ If you simply wish to view the notes, open the PDF files (vs `.doc`) to reduce p
 
 ##Downloading the files
 
-1. Download [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download?tm=2).
-2. Make a folder in `Documents` called `git`.
-3. Right-click the folder and hit `Git Clone`. ![how it looks](images/git_clone.png)
+1. Download [Git for Windows](git-scm.com/download/win).
+2. Download [TortoiseGit](https://code.google.com/p/tortoisegit/wiki/Download?tm=2).
+3. Make a folder in `Documents` called `git`.
+4. Right-click the folder and hit `Git Clone`. ![how it looks](images/git_clone.png)
 
 ##Making Changes
 
