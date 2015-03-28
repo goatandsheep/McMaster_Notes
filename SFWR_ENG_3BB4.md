@@ -176,3 +176,9 @@ Dynamic Systems
 ---------------
 
 You can only model these with a static version of these with specific parameters.
+
+synchronous: 
+
+asynchronous: 
+
+Rendezvous: bidirectional

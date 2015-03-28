@@ -293,3 +293,15 @@ Testing
 
 Fault Seeding
 : Predicting where your program will fail
+
+Ideal test set
+----------------
+> A set that shows an error wherever there is an error
+
+[P is correct OR $\exists$ (d | e T : P is incorrect for d)] ⇒ T is ideal
+
+[P is NOT correct AND $\forall$ ...
+
+###Criterion
+
+For a correct program, <ins>any test set is ideal</ins>.

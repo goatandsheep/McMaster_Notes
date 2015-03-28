@@ -325,3 +325,6 @@ Note: the number of digits = m+n + 1, for sign
 
 ###Hold Time Violation
 When a flipflop is sampling the data, there is a certain amount of time that the data should not change after the clock edge if you want the data to be consistent. That is called the hold time. If you change the data value before the end of the hold time, you get a hold time violation.
+
+ADDI
+: add immediate

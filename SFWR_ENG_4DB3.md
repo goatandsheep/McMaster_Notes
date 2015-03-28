@@ -494,3 +494,25 @@ Settings that define the level of concurrency
 * **Read committed**: short duration read locks
 * **Repeatable read**: 
 * **[Serializable](#serializable)**: worst at concurrency and performance-wise
+
+**Thrashing**: when the number of transactions increases beyond a certain threshold, the amount of data going through the system decreases
+
+##Performance hints
+
+* *Lock the smallest-sized object*: reduces the likelihood that 2 transactions will need the same lock
+* *Reduce the time transactions can hold locks*
+* *Reduce **hotspots***, i.e. places where there is a lot of activity
+* If a transaction has been prolonged for too long, abort, in hopes of eliminating deadlock
+
+**Granularity**: size of data items to lock, i.e. coarse granularity -> larger, fewer locks
+
+**Waits-for graph**: a graph that helps detect deadlock by outlining where the methods need to wait for a resource from a limited number of transactions
+
+**Victim**: 
+
+**Wait-Die**: when a lock is being held by one transaction, a second transaction will be aborted, unless it has a higher priority
+
+**Wound-wait**: when a lock is being held by a transaction, a second transaction can abort the running transaction if it has higher priority
+
+Priority in this case is dependent on the time it began
+
