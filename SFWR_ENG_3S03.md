@@ -305,3 +305,38 @@ Ideal test set
 ###Criterion
 
 For a correct program, <ins>any test set is ideal</ins>.
+
+##JUnit
+
+What:
+An open source Java testing framework to automate testing
+
+I'm using NetBeans
+
+For each class you want to test:
+
+1. Open the class / bring it into view
+2. `Tools` > `Create/Update Tests`: Select the latest JUnit edition and use default settings. This will generate a test file.
+3. Scroll down to the function in that test file with `@Test` above it.
+4. The other four functions:
+	1. `@BeforeClass`: at the beginning of the test cycle, i.e. all the tests
+	2. `@Before`: at the beginning of each test
+		1. Maybe you'll want to initialize stuff
+	3. `@After`: at the end of each test
+		1. Maybe you'll want to reset values between tests
+	4. `@AfterClass`: at the end of the test cycle
+5. You'll notice that each test function will have a `fail` command by default. That is just to make sure you edit the function. Remove it.
+6. Put the paramaters of your test and expected output into the variables and press `Run` > `Run File`.
+7. If you want to make another test, copy and paste the test function, change the name of the function, and put different values in the variables, i.e. none of the method names matter.
+
+You may want to organize your test file. The convention for comments is using a pound symbol `#`. You also have to manually add something that ignores the comments.
+
+	if (line.startsWith("#")){ //Ignore comments
+		continue;
+	}
+
+##Security
+
+> Some suggestions on where people usually break systems
+
+I don't know if this information will even be recent...

@@ -8,6 +8,8 @@ TRON 3TB4 Summary
 
 [TOC]
 
+Two's complement: flip everything after the first 1 from right to left
+
 ##CanBUS
 
 > Controller Area Network
@@ -212,6 +214,18 @@ Maxterms
 Hint
 : Make sure you put a small delay between the clock and gate changes
 
+Memory cannot look at the address and command and supply the data immediately, so you need to insert **wait states** that give the program time.
+
+The bacon strip symbols mean
+
+Ignore the grey parts - they mean the input is invalid.
+
+`chipselect`: equivalent to “bus enable”
+
+`readdata`: data returned by slave
+
+`waitrequest`: slave
+
 ##FPD
 > *Field Programmable Device*
 
@@ -272,7 +286,13 @@ $f_s > 2 f_{max}$
 
 **Shannon's Sampling Theorem**: frequencies should be sampled at a frequency > 2f
 
-**Aliasing**: If $f_s < 2 f_{max}$, it causes problems during reconstruction. Usually, you put an **anti-aliasing** filter on the frequencies that are above the nyquist frequency to avoid aliasing
+###Aliasing
+
+* If $f_s < 2 f_{max}$, it causes problems during reconstruction
+* Usually, you put an **anti-aliasing** filter on the frequencies that are above the nyquist frequency to avoid aliasing
+* waves at different frequencies can share data at different points
+* The frequencies are not noise / unwanted, but rather they cannot be sampled properly. They come out as lower frequencies than they actually are.
+* a type of low-pass filter
 
 ###Fourier
 
@@ -311,6 +331,8 @@ Note: the number of digits = m+n + 1, for sign
 
 ###Tri-state buffers
 
+Like a valve, where B can only be 1 bit and A can be many bits.
+
 ![Buffers](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Tristate_buffer.svg/343px-Tristate_buffer.svg.png)
 
 |  A |  B | C  |
@@ -326,5 +348,77 @@ Note: the number of digits = m+n + 1, for sign
 ###Hold Time Violation
 When a flipflop is sampling the data, there is a certain amount of time that the data should not change after the clock edge if you want the data to be consistent. That is called the hold time. If you change the data value before the end of the hold time, you get a hold time violation.
 
-ADDI
-: add immediate
+##ASIP Assembly
+
+ASIP
+: Application Specific Instruction Processor
+
+Register 3: delay between stepper motor steps
+
+**Byteenable**
+: how to address specific bytes to write to within a given word address. The number of bytes writing to is the number of bits.
+
+> e.g. for a 32-bit slave (i.e. 4 bytes):
+> * `1111` writes full 32 bits
+> * `0011` writes lower 2 bytes
+> * `1100` writes upper 2 bytes
+> * `0001` writes byte 0 only
+> * `0010` writes byte 1 only
+> * `0100` writes byte 2 only
+> * `1000` writes byte 3 only
+
+**Chip Select**:
+(CE) Enables a memory device for reading or writing. Generally low true
+
+**Refresh**
+: one way of storing data is in capacitors. When there are too many accesses or the power leaks, the voltage may go too low to be noticeable. Thus, refreshing re-charges the capacitors.  
+
+###Commands
+
+`ADDI reg, imm3`
+> Add the 3-bit unsigned immediate operand to the specified register; store the result into the register
+
+`BR imm5`
+> Branch (unconditionally) to PC+imm5, where PC is current program counter and imm5 is signed 5-bit immediate
+
+`BRZ imm5`
+> If register R0 is zero, branch to PC+imm5, where PC is current program counter and imm5 is signed 5-bit immediate
+
+`CLR reg`
+> Clear (i.e. set to 0) the specified register
+
+`MOV regd, regs`
+> Move the content of the regs (source) register into regd (destination) register
+
+`MOVR reg`
+> Move the motor by a number of full steps specified in the register. The number in the register is signed, so the motor can move in either direction. After each step, wait for the amount of time specified in the delay register before proceeding
+
+`MOVRHS reg`
+> Move the motor by a number of half-steps specified in a register. All other requirements are the same as for `MOVR`
+
+`PAUSE`
+> Wait for the amount of time specified inside the delay register
+
+`SR0 imm4`
+> Set (fill) 4 lower bits of register 0 with the 4-bit immediate operand
+
+`SRH0 imm4`
+> Set (fill) 4 higher bits of register 0 with the 4-bit immediate operand
+
+`SUBI reg, imm3`
+> Subtract the 3-bit unsigned immediate operand from the specified register; store the result into the register
+
+##FSMD
+
+FSMD
+: *F*inite *S*tate *M*achine with *D*atapath 
+
+* An FSM that can handles different data types and variables
+* Formal definition: F <S, I, O, V, F, H, $s_0$>
+	* S: set of states, ${s_0,s_1,...,s_i}$
+	* I: set of inputs, ${i_0,..., i_m}$
+	* O: set of outputs, ${o_0,..., o_n}$
+	* V: set of variables, ${v_0,...,v_n}$
+	* F: transition function mapping states & inputs & variables to states
+	* H: action function mapping current state to outputs and variables, (S → O + V )
+	* $s_0$: initial state

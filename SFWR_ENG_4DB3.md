@@ -11,7 +11,6 @@
 
 ##Introduction
 
-
 A **database** is an organized way of representing your data and information about your files (found in a **datastore**).
 
 Typically, we represent each set of related data in a *tuple*. Each tuple could describe information about a student, movie, etc. The objects described by these tuples are called **entities**.
