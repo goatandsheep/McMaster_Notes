@@ -39,7 +39,9 @@ Each CANBUS Node has:
 * **Transceiver**:
 
 
-##Bit-Stuffing
+Bit-Stuffing
+--------------
+
 > Inserting extra non-data bits into data signals. The extra bits are removed upon being received.
  
 This is useful for:
@@ -70,7 +72,8 @@ The signal is bit-stuffed to keep its value, until the next pulse. If there are 
 
 **Biphase Manchester**:
 
-##Dominant/Recessive
+Dominant/Recessive
+------------------
 
 If you have multiple signals, the **dominant** signal will change everything and the **recessive** signal won't.
 
@@ -408,7 +411,8 @@ Register 3: delay between stepper motor steps
 `SUBI reg, imm3`
 > Subtract the 3-bit unsigned immediate operand from the specified register; store the result into the register
 
-##FSMD
+FSMD
+--------
 
 FSMD
 : *F*inite *S*tate *M*achine with *D*atapath 
@@ -422,3 +426,12 @@ FSMD
 	* F: transition function mapping states & inputs & variables to states
 	* H: action function mapping current state to outputs and variables, (S → O + V )
 	* $s_0$: initial state
+
+Cache
+-----
+
+**Thrashing**
+: 
+
+**Associative**
+: 

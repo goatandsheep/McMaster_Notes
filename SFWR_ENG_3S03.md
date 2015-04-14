@@ -306,6 +306,36 @@ Ideal test set
 
 For a correct program, <ins>any test set is ideal</ins>.
 
+**Statement Coverage**: tries all true conditions, minimizes test conditions
+
+**Edge cases**: tries around conditions as to break the system
+
+**Path Coverage**: (a.k.a. branch coverage) testing edge cases
+
+##Testing
+
+###Extent
+
+**Partial Testing**: not testing in every possible domain of inputs
+
+**Total Testing**: testing in every possible domain of inputs
+
+###Types
+
+**Functional testing**: does the program follow the requirements
+
+**Stress Testing**: testing the boundaries of the program, i.e. can systems function under large volumes of inputs. This can also be done by exposing systems to inputs for long periods of time 
+
+**Execution Testing**: performance testing in terms of speed
+
+**Recovery Testing**: ability to continue after integrity of system is compromised. Revert to a point where the integrity of the system is known and reprocess.
+
+**Operations Testing**: completion of documentation, training, etc.
+
+**Compliance Testing**: complies to standards, procedures, and guidelines
+
+**Security Testing**: ensuring confidentiality and integrity of private information
+
 ##JUnit
 
 What:
