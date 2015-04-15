@@ -27,24 +27,34 @@ Collections of entities are called **entity sets**.
 > 
 > * system that allows you to store, access, and organize a database
 > * complicated to set up, so mainly used for large data sets
-> 
-> **Data independence:**
-> 
-> The way the data is stored does not affect the data stored in a system. Immunity from changes in the organization of the data is called **logical independence**. Immunity from changes in the storage structure is called **physical independence**.
+
+**Data independence:**
+: The way the data is stored does not affect the data stored in a system. Immunity from changes in the organization of the data is called **logical independence**. Immunity from changes in the storage structure is called **physical independence**.
+
+**Partial Dependence**
+: 
+
+**Transitive Dependence**
+: 
 
 ####Concurrent Execution
-> * multiple people accessing your database simultaneously
-> * multiple processes using the same database simultaneously
-> * an advantage of using a [DBMS](#DBMS)
+
+* multiple people accessing your database simultaneously
+* multiple processes using the same database simultaneously
+* an advantage of using a [DBMS](#DBMS)
  
 ####Attribute
-: A characteristic defined in the database
+
+> A characteristic defined in the database
+> 
 > e.g. student number, student name, etc.
 
 ####Schema
-: The description of the types of data you'll be saving
-> * i.e. the columns in the data tables
-> * i.e. all the [attributes](#Attribute)
+
+> The description of the types of data you'll be saving
+
+* i.e. the columns in the data tables
+* i.e. all the [attributes](#Attribute)
 
 ####Relational Database
 
@@ -57,14 +67,17 @@ Collections of entities are called **entity sets**.
 
 
 ##Integrity Constraints
-: **IC**s limit the data that can be entered
+
+> (IC): limit the data that can be entered
 
 ####Intra-relational constraint
-: A numerical range for attributes
+
+> A numerical range for attributes
 
 ####Inter-relational constraint
-: A constraint that relies on the values of other data within the same table
 
+> A constraint that relies on the values of other data within the same table
+>
 > e.g. if you're trying to sort students by name in a table
 	> ```
 	> student.name(index=1)>student.name(index=2)
@@ -74,7 +87,9 @@ Collections of entities are called **entity sets**.
 : What is the range of acceptable data?
 
 ####Tuple constraint
-: If <kbd>attribute A</kbd> == <kbd>condition</kbd>, <kbd>attribute B</kbd> will have <ins>this</ins> range
+
+> If <kbd>attribute A</kbd> == <kbd>condition</kbd>, <kbd>attribute B</kbd> will have <ins>this</ins> range
+> 
 > e.g. for all `students`, where <kbd>major</kbd> == <kbd>engineering</kbd>, <kbd>GPA</kbd> > 4
 
 ##Keys
@@ -89,16 +104,21 @@ Collections of entities are called **entity sets**.
 ###Types of keys
 
 ####Superkey
-: Any combination of column(s) for which that combination of values will be unique across all rows in a table.
+
+> Any combination of column(s) for which that combination of values will be unique across all rows in a table.
 
 ####Candidate key
-: A [superkey](#superkey) which you cannot remove any fields.
+
+> A [superkey](#superkey) which you cannot remove any fields.
 
 ####Primary Key
-: The key that's used to identify a tuple 
-> * one **primary key** per table
-> * <ins>underlined column names</ins>
-> * does not accept <kbd>NULL</kbd> values
+
+> The key that's used to identify a tuple 
+
+* one **primary key** per table
+* <ins>underlined column names</ins>
+* does not accept <kbd>NULL</kbd> values
+* a.k.a. prime attribute, i.e. other attributes are non-prime
 
 ####Foreign Key
 : The key that contains the primary key of a relation in another table that is used to identify the relation
@@ -107,9 +127,14 @@ Collections of entities are called **entity sets**.
 : When inputs violate constraints, reject the input.
  
 ####Referential Integrity
-: When all foreign key constraints are enforced
-> * i.e. no <ins>dangling references</ins>
-> * i.e. no references to non-existent relations
+
+> When all foreign key constraints are enforced
+
+* no <ins>dangling references</ins>
+* no references to non-existent relations
+
+**Composite Key**
+: requires multiple keys to uniquely identify it
 
 ##Database Design
 
@@ -197,7 +222,7 @@ SQL
 
 ###Operators
 
-: Can return:
+> Can return:
 > * the tuples that satisfy the conditions
 > * `TRUE`/`FALSE` 
 
@@ -219,7 +244,6 @@ SQL
 * Format: `<attribute> LIKE '<pattern>'`
 * Any string: `%`
 * Any character: `_`
-
 
 ###Saving query as object 
 
@@ -404,10 +428,10 @@ becomes
 | 1 | 2| 5|
 | 4 | 5| 6|
 
-FD
----
+Functional Dependencies
+-----------------------
 
-**Functional Dependencies (FD)**: `X -> Y`
+**(FD)**: `X -> Y`
 
 Splitting the FD: only for right side; left-side is the independent part
 
@@ -431,9 +455,35 @@ DBMS cannot identify FDs nor optimize them
 1. Remove FDs where entities refer to themselves
 2. Try looking at each FD and tracing through to see if there is an that results in the same answer, **e.g.** in {`A->B`, `B->C`, `A->C`}, you can remove `A->C`.
 
-**Closure**: the values that are connected using the FDs without repeating
+**Closure**
+: the set of values that are connected using the FDs without repeating, identified by $set^+$
 
-**Anomaly**: bad design, redundancy
+**Anomaly**: unmatched or missing information, caused by limitations or flaws within a given database. Anomalies can often cause redundancy
+
+###Armstrong's Axioms
+
+* Reﬂexivity: If Y ⊆ X, then X → Y .
+* Augmentation: If X → Y, then XZ → YZ for any Z.
+* Transitivity: If X → Y and Y → Z, then X → Z.
+* Union: If X → Y and X → Z, then X → YZ.
+* Decomposition: If X → YZ, then X → Y and X → Z.
+
+###Normalization
+
+**Atomic Values**: attributes in their most divided form that retain their meaning; simply put, a single-valued attribute (somewhat oversimplified, tho)
+
+**Normal Form** (NF): no redundant data
+
+####Types:
+
+* First NF (1NF): each attribute only contains atomic values, i.e. single-valued
+* Second NF (2NF): 1NF characteristics + no partial dependencies on the primary key
+	* Violated if any proper subset of each key contains a non-prime attribute in its closure
+* Third NF (3NF): 2NF + 
+	* most normalized
+* Boyce Codd NF (BCNF): 3NF + no non-trivial functional dependencies of attributes on anything other than a superset of a candidate key
+	* a.k.a. 3.5NF
+	* exception: 3NF tables with 2/+ overlapping composite, candidate keys aren't BCNF
 
 ####Information Loss
 
@@ -442,7 +492,7 @@ DBMS cannot identify FDs nor optimize them
 
 **FD Loss**:
 
-**Join loss**: 
+**Join loss**: lossless join
 
 Concurrency
 -----------
@@ -468,7 +518,11 @@ When multiple people are trying to book the same seats. The second person who bo
 * **Isolation**: should operate as only transaction
 * **Durability**: each committed change should persist even if system fails before all changes are reflected on disk
 
-Schedule
+**Schedule**
+: the order of events in the context of transactions, 
+
+**Strict Schedule**
+:  a value written or changed by T1 is not read or overwritten by other T2 until T1 aborts or commits
 
 Conflicts
 ---------
@@ -477,13 +531,17 @@ Conflicts
 
 ###Serializable 
 
-> Proven using a *precedence graph*
+> Proven using a *precedence graph* (example seen below)
 
-**Recoverable**:
+![Example precedence graph](https://upload.wikimedia.org/math/2/0/1/20181cd3dbfd74266bcd887ef98f595b.png)
 
-**(ACA)**:
+**Recoverable**: 
+
+**Avoid cascading abort (ACA)**: 
 
 **Conflict Equivalent**: 
+
+**Conflict Serializable**: 
 
 ###Locks
 
@@ -498,7 +556,7 @@ It does this by either:
 
 > **2PL** is a system where a release of any of the locks prohibits all future acquiring of locks. The name comes because it results in 2 phases: a **growing phase** and a **shrinking phase**
 
-**Strict 2PL**:
+**Strict 2PL**: 
 
 ###Phantom Problem
 
