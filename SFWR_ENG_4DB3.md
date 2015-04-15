@@ -119,8 +119,10 @@ When designing your database, you need to consider:
 * Poop
 
 ####Entity-Relationship Diagram
-: ER Diagrams are a way of representing a system
-> * **Entity Sets**: rectangles
+
+ER Diagrams are a way of representing a system
+
+* **Entity Sets**: rectangles
 > * **[Attributes](#attribute)**: ovals
 > * **[Relations](#relations)**: diamonds
 > * **Is a**: triangle
@@ -144,7 +146,8 @@ att->rel(no)->set
 **Many-Many Relationship**: 
 
 
-##Data Definition Language
+Data Definition Language
+------------------------
 
 **Data Definition Language (DDL)**: 
 
@@ -165,11 +168,14 @@ Response to violations:
 
 **Cascade**: when something has a foreign key of something else, a change in one will result in a change in the other
 
-##SQL
-: *Structured Query Language*
+SQL
+---
+
+> *Structured Query Language*
 
 ###Query
-: *A command to fetch a specific set of data*
+
+> *A command to fetch a specific set of data*
 
 * Each is separated by `;`
 * Comments are done using `#`
@@ -190,6 +196,7 @@ Response to violations:
 **Weak Entity Set**: if the primary key is a foreign key, many many-one relationships
 
 ###Operators
+
 : Can return:
 > * the tuples that satisfy the conditions
 > * `TRUE`/`FALSE` 
@@ -255,6 +262,7 @@ Types of modification:
 > `INSERT INTO ...;`
 
 ####Delete
+
 	DELETE FROM <relation> WHERE <condition>
 
 ####Update
@@ -262,7 +270,8 @@ Types of modification:
 	UPDATE <relation> SET <attributes to change> = <value> WHERE <condition on tuples>;
 
 ###Aggregation
-: *Computing numerical results*
+
+> *Computing numerical results*
 
 Format: `Aggregation(<query>)` 
 
@@ -288,15 +297,18 @@ Format: `Aggregation(<query>)`
 >   * Aggregated, or
 >   * An attribute on the GROUP BY list.
 
-##Joins
-: *When you want to query columns from multiple tables, you need to join the tables first*
+Joins
+-----
+
+> *When you want to query columns from multiple tables, you need to join the tables first*
 
 There are multiple types of joins:
 
 [![source](images/Visual_SQL_JOINS.jpg)](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
 
 ####Outer join
-: *Allows for inclusion of dangling references by padding them with `NULL`*
+
+> *Allows for inclusion of dangling references by padding them with `NULL`*
 
 	R OUTER JOIN S
 
@@ -311,10 +323,13 @@ There are multiple types of joins:
 `ON <condition>`:
 
 ####Cross Product
+
 	{{query1.entity1},{query2.entity1}; {query1.entity1},{query2.entityn}}
 
-##Views
-: *A type of conceptual schema*
+Views
+-----
+
+> *A type of conceptual schema*
 
 	CREATE [MATERIALIZED] VIEW <name> AS <query>
 
@@ -322,11 +337,14 @@ There are multiple types of joins:
 
 **Materialized**: stored in database
 
-##Indexing Structure
-: *Each index type is useful for tuning the database to the fastest speed for the data you want*
+Indexing Structure
+------------------
+
+> *Each index type is useful for tuning the database to the fastest speed for the data you want*
 
 ###B+ Trees
-: *A type of database indexing structure that uses a binary tree*
+
+> *A type of database indexing structure that uses a binary tree*
 
 Each node is >50% full
 
@@ -342,8 +360,10 @@ Each node is >50% full
 
 **Tree Index**: ranges are fine
 
-##Relational Algebra
-: *lol*
+Relational Algebra
+------------------
+
+> *lol*
 
 **Selection**: select tuples with conditions on attributes
 $\sigma_c(R)$
@@ -384,7 +404,9 @@ becomes
 | 1 | 2| 5|
 | 4 | 5| 6|
 
-##FD
+FD
+---
+
 **Functional Dependencies (FD)**: `X -> Y`
 
 Splitting the FD: only for right side; left-side is the independent part
@@ -422,14 +444,15 @@ DBMS cannot identify FDs nor optimize them
 
 **Join loss**: 
 
-##Concurrency
+Concurrency
+-----------
+
 > CP: multiple users accessing a database simultaneously
 
 * **Interleaved processing**: asynchronous, 2/+ per CPU, each process runs segmented
 * **Parallel processing**: one process / CPU
 
 ###Transaction
-> 
 
 * `Commit`: finalize the change (changes can be made to database even if commit has not been made)
 * `Abort`: 
@@ -447,7 +470,8 @@ When multiple people are trying to book the same seats. The second person who bo
 
 Schedule
 
-##Conflicts
+Conflicts
+---------
 
 **Write-write conflict**: 
 
@@ -471,6 +495,7 @@ It does this by either:
 * **Blocking**: restricts read access
 
 ####Two-phase locking
+
 > **2PL** is a system where a release of any of the locks prohibits all future acquiring of locks. The name comes because it results in 2 phases: a **growing phase** and a **shrinking phase**
 
 **Strict 2PL**:
@@ -496,7 +521,8 @@ Settings that define the level of concurrency
 
 **Thrashing**: when the number of transactions increases beyond a certain threshold, the amount of data going through the system decreases
 
-##Performance hints
+Performance hints
+-----------------
 
 * *Lock the smallest-sized object*: reduces the likelihood that 2 transactions will need the same lock
 * *Reduce the time transactions can hold locks*

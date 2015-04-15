@@ -26,7 +26,11 @@ Two's complement: flip everything after the first 1 from right to left
 * **Cyclic Redundancy Check (CRC)**: error detection of whether you got the right signal. There are multiple methods:
 	* send the same message back and forth a couple times
 	* *Hash*: mod the first half and the second half and send them together, do the same to the message when it has been received
+* Uses [NRZ](#NRZ)
+* **ACKnowledgement slot (ACK)**: 
 * **Remote Transmission Request (RTR)**: are you sending data? sending: 0, no: 1
+	* *remote frame*: if RTR = 1
+	* *data frame*: if RTR = 0
 
 ![CAN Data frame](images/can_data_frame.png)
 
@@ -57,15 +61,15 @@ This is useful for:
 
 The signal is bit-stuffed with 0's
 
-![consecutive pulses](images/rzcode.png)
+![consecutive pulses](images/RZcode.png)
 
 ####NRZ
 > **Non-Return to Zero mode**:
 > Pulses will never return to 0
 
-The signal is bit-stuffed to keep its value, until the next pulse. If there are too many consecutive 1s, clock synchronization can be lost, so maximum of 5 1s in a row.
+The signal is bit-stuffed to keep its value, until the next pulse. If there are too many consecutive 1s or 0s, clock synchronization can be lost, so maximum of 5 1s or 0s in a row. There will automatically be an interruption every 5 consecutive data values whether or not it will become 6
 
-![consecutive pulses](images/nrzcode.png)
+![consecutive pulses](images/NRZcode.png)
 
 ###Manchester Coding
 > A.K.A. **Phase encoding**
@@ -86,16 +90,16 @@ If you have multiple signals, the **dominant** signal will change everything and
 
 **Ethernet** uses <ins>destructive conflict resolution</ins> / destructive bitwise [arbitration](#arbitration).
 
-Prototols
+**Prototols**
 : how to interpret/represent a set of inputs
 
-Slew Rate
+**Slew Rate**
 : rate of change of voltage / s; how jagged are your square waves?
 
-Baud Rate
+**Baud Rate**
 : number of signals; 1/period; clock frequency / L * P, L = length of signal = sync bit (i.e. 1) + segment1 + segment2, P = Prescaler
 
-Differential BUS
+**Differential BUS**
 : when 2 wires travel along the same path, they experience the same external interference. To determine the message, you need to find the difference between the 2 wires, so you actually end up subtracting out the interference
 
 ###Arbitration
@@ -110,7 +114,7 @@ Start Of Message (SOM) Bit
 ###Polling 
 
 * **Normal mode**: 
-* **Loopback mode**: sends TX from controller to RX; don't need acknowledgements
+* **Loopback mode**: sends Transmit line (TX) from controller to Receive line (RX); don't need acknowledgements
 * **Silent mode**: sends RX to TX; more checking if messages are spam
 * **Silent-loopback mode**: 
 
@@ -212,14 +216,15 @@ Maxterms
 	1. $x + \bar{x} = 1$
 9. $\bar{\bar{x}} = x$
 
-##Timing Diagrams
+Timing Diagrams
+---------------
 
 Hint
 : Make sure you put a small delay between the clock and gate changes
 
 Memory cannot look at the address and command and supply the data immediately, so you need to insert **wait states** that give the program time.
 
-The bacon strip symbols mean
+The bacon strip symbols mean an unknown amount where everything stays in the same state.
 
 Ignore the grey parts - they mean the input is invalid.
 
@@ -245,8 +250,6 @@ $f_1 = x_1x_2 + x_1\bar{x}_3 + \bar{x}_1\bar{x}_2x_3$
 $f_2 = x_1x_2 + \bar{x}_1\bar{x}_2x_3 + x_1x_3$
 
 LUT chart
-
-Put 
 
 ####Macrocell
 > *Extra circuitry after PAL and PLA circuits*
@@ -287,7 +290,15 @@ $f_s > 2 f_{max}$
 
 **Nyquist frequency**: $f_{max} = \frac{f_s}{2}$
 
+**Normalized frequency**: $\omega = \frac{f}{f_{max}}$
+
+**Gain**: $1 - \omega$
+
 **Shannon's Sampling Theorem**: frequencies should be sampled at a frequency > 2f
+
+$$x = k\times(\sin / \cos\left( 2 \times \pi \times f \times t \right))$$
+
+$$y = gain \times k\times(\sin / \cos\left( 2 \times \pi \times f \times t \right))$$
 
 ###Aliasing
 
@@ -308,7 +319,8 @@ $f_s > 2 f_{max}$
 
 **Taps**: wires multiplexors
 
-##Numbers
+Numbers
+---------
 
 16 bit * 16 bit = 32 bit
 
@@ -320,7 +332,7 @@ Or a better way of doing it is rounding 15 up to 16, or $2^4$ and finding out wh
 
 **General Fixed Point Notation**: $Qm.n$
 
-* *m* is the number of bits representing the integer as 2's complement and the (#+1)$^{th}$ bit is the signed bit
+* *m* is the number of bits representing the integer as 2's complement and the (m+1)$^{th}$ bit is the signed bit
 * *n* is the fraction
 * Minimum = $−2^m$
 * Maximum = $2^m − 2^{−n}$
@@ -374,7 +386,7 @@ Register 3: delay between stepper motor steps
 (CE) Enables a memory device for reading or writing. Generally low true
 
 **Refresh**
-: one way of storing data is in capacitors. When there are too many accesses or the power leaks, the voltage may go too low to be noticeable. Thus, refreshing re-charges the capacitors.  
+: one way of storing data is in capacitors. When there are too many accesses or the power leaks, the voltage may go too low to be noticeable. Thus, refreshing re-charges the capacitors. This is primarily used for re-writable DRAM (Dynamic RAM)
 
 ###Commands
 
@@ -393,8 +405,11 @@ Register 3: delay between stepper motor steps
 `MOV regd, regs`
 > Move the content of the regs (source) register into regd (destination) register
 
+`MOVA reg`
+> Move the motor by an absolute number of full steps specified in the register. The number in the register is signed, so the motor can move in either direction. After each step, wait for the amount of time specified in the delay register (3 in ASIP) before proceeding
+
 `MOVR reg`
-> Move the motor by a number of full steps specified in the register. The number in the register is signed, so the motor can move in either direction. After each step, wait for the amount of time specified in the delay register before proceeding
+> Move the motor by a relative number of full steps specified in the register
 
 `MOVRHS reg`
 > Move the motor by a number of half-steps specified in a register. All other requirements are the same as for `MOVR`
@@ -426,12 +441,22 @@ FSMD
 	* F: transition function mapping states & inputs & variables to states
 	* H: action function mapping current state to outputs and variables, (S → O + V )
 	* $s_0$: initial state
+* zero is never read
+* `A`ddress
+* `D`ata
+
+###States
+
+* One state to fetch instructions
 
 Cache
 -----
 
 **Thrashing**
-: 
+: When the cache is always changing because you put something in cache and the next thing you replace everything in the cache, but then you need the previous thing. In other words, you're changing what's in the cache so often you can't even take advantage of it, so you're getting constant cache misses.
 
-**Associative**
+**Set Associative**
+: Breaking lines into sets, i.e. number of lines is divisible by sets
+
+**Direct Mapping**
 : 
