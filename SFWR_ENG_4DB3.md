@@ -328,7 +328,7 @@ Joins
 
 There are multiple types of joins:
 
-[![source](images/Visual_SQL_JOINS.jpg)](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
+![Joins](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
 
 ####Outer join
 
@@ -342,9 +342,9 @@ There are multiple types of joins:
 > * `LEFT`: common rows / columns from `rel1`, all from `rel2`
 > * `RIGHT`: common rows / columns from `rel2`, all from `rel1`
 
-`Natural`: check for when there are shared values
+`Natural`: outputs only when there are shared values
 
-`ON <condition>`:
+`ON <condition>`: 
 
 ####Cross Product
 
@@ -387,15 +387,19 @@ Each node is >50% full
 Relational Algebra
 ------------------
 
+$\pi_\rm{conditions}\sigma_\rm{attributes}(Table_1 \times Table_2 \times etc.)$
+
+$\pi_\rm{WHERE}\sigma_\rm{SELECT}(FROM)$
+
 *L*: list of attributes of *R*
 
-**Selection**: select tuples with conditions on attributes
+**Selection**: `WHERE` select tuples with conditions on attributes
 $\sigma_c(R)$
 
-**Projection**: select certain attributes
+**Projection**: `SELECT` certain attributes
 $R_1 := \Pi_L(R_2)$ 
 
-**Renaming**: for making more relevant information
+**Rename**: when you are joining multiple tables and you have attributes that share the same name, you need to rename them something like `a.attribute` and `b.attribute`
 $\rho_{R_1(A_1,...,A_n)}(R_2)$
 
 **Product**: Cartesian product (cross-product) $R_1 \times R_2$
@@ -484,11 +488,18 @@ DBMS cannot identify FDs nor optimize them
 * First NF (1NF): each attribute only contains atomic values, i.e. single-valued
 * Second NF (2NF): 1NF characteristics + non-key attributes depend on the primary key
 	* Violated if any proper subset of each key contains a non-prime attribute in its closure
-* Third NF (3NF): 2NF + 
-	* most normalized
-* Boyce Codd NF (BCNF): 3NF + no non-trivial functional dependencies of attributes on anything other than a superset of a candidate key
+* Third NF (3NF): 2NF + non-key attributes don't have dependencies on non-prime keys
+	* Decomposition:
+		* Lossless Join: satisfied
+		* No anomalies: <ins>not satisfied</ins>
+		* Dependency Preservation: satisfied
+* Boyce Codd NF (BCNF): 3NF + no non-trivial (i.e. redundant) functional dependencies of attributes on anything other than a superset of a candidate key
 	* a.k.a. 3.5NF
 	* exception: 3NF tables with 2/+ overlapping composite, candidate keys aren't BCNF
+	* Decomposition:
+		* Lossless Join: satisfied
+		* No anomalies: satisfied
+		* Dependency Preservation: <ins>not satisfied</ins>
 
 ####Information Loss
 
@@ -498,6 +509,8 @@ DBMS cannot identify FDs nor optimize them
 **FD Loss**: splitting a relation on a dependency that is no longer there
 
 **Join loss**: lossless join
+
+**Dependency preservation**: when the original FD’s are satisﬁed after a join
 
 Concurrency
 -----------
@@ -542,7 +555,12 @@ Conflicts
 
 **Recoverable**: 
 
-**Avoid cascading abort (ACA)**: 
+**Avoid cascading abort (ACA)**: making sure changes in T1 that are aborted don't affect changes in T2. The following has a problem:
+
+![aca](https://upload.wikimedia.org/math/4/4/c/44ceb372adb54067c8e56893840b29a6.png)
+
+ACA compliance avoid this by disallowing transactions from reading 
+uncommitted changes from another transactions in the same schedule.
 
 **Serial Schedule**
 : a schedule in which transactions are executed consecutively
