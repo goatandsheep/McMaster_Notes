@@ -107,9 +107,12 @@ Collections of entities are called **entity sets**.
 
 > Any combination of column(s) for which that combination of values will be unique across all rows in a table.
 
-####Candidate key
 
-> A [superkey](#superkey) which you cannot remove any fields.
+**Candidate key**
+: A superkey which you cannot remove any fields.
+
+**Composite Key**
+: requires multiple keys to uniquely identify it
 
 ####Primary Key
 
@@ -132,9 +135,6 @@ Collections of entities are called **entity sets**.
 
 * no <ins>dangling references</ins>
 * no references to non-existent relations
-
-**Composite Key**
-: requires multiple keys to uniquely identify it
 
 ##Database Design
 
@@ -387,7 +387,7 @@ Each node is >50% full
 Relational Algebra
 ------------------
 
-> *lol*
+*L*: list of attributes of *R*
 
 **Selection**: select tuples with conditions on attributes
 $\sigma_c(R)$
@@ -395,8 +395,10 @@ $\sigma_c(R)$
 **Projection**: select certain attributes
 $R_1 := \Pi_L(R_2)$ 
 
-**Renaming**:
+**Renaming**: for making more relevant information
 $\rho_{R_1(A_1,...,A_n)}(R_2)$
+
+**Product**: Cartesian product (cross-product) $R_1 \times R_2$
 
 **Theta-join**: don't combine repeated attributes
 	Query1 $\bowtie_\text{condition}$ Query2 
@@ -411,6 +413,9 @@ $\rho_{R_1(A_1,...,A_n)}(R_2)$
 **Relational Calculus**: 
 
 **Duplicate Elimination**: `DISTINCT` $\sigma$
+
+**Sorting**: sort by the first attribute in L
+$R_1 = \tau_L(R_2)$
 
 **Grouping and Aggregation**: `AGG(A)` or `GROUP BY` $\gamma_L(R)$
 
@@ -477,7 +482,7 @@ DBMS cannot identify FDs nor optimize them
 ####Types:
 
 * First NF (1NF): each attribute only contains atomic values, i.e. single-valued
-* Second NF (2NF): 1NF characteristics + no partial dependencies on the primary key
+* Second NF (2NF): 1NF characteristics + non-key attributes depend on the primary key
 	* Violated if any proper subset of each key contains a non-prime attribute in its closure
 * Third NF (3NF): 2NF + 
 	* most normalized
@@ -490,7 +495,7 @@ DBMS cannot identify FDs nor optimize them
 * Too much data
 * Too little data
 
-**FD Loss**:
+**FD Loss**: splitting a relation on a dependency that is no longer there
 
 **Join loss**: lossless join
 
@@ -539,9 +544,22 @@ Conflicts
 
 **Avoid cascading abort (ACA)**: 
 
-**Conflict Equivalent**: 
+**Serial Schedule**
+: a schedule in which transactions are executed consecutively
 
-**Conflict Serializable**: 
+**Conflict**: schedules are conflicting if:
+
+* Both belong to separate transactions
+* Both access the same data item(s)
+* At least one of them is "write" operation
+
+**Conflict Equivalent**: a schedule is considered *conflict equivalent* to another if:
+
+* when the two schedules of S1 and S2 involve <ins>the same</ins> set of transactions
+* ordering of actions within each transaction is <ins>the same</ins>
+
+**Conflict Serializable**
+: a schedule that is *conflict equivalent* to a *serial schedule*
 
 ###Locks
 
