@@ -92,11 +92,15 @@ Collections of entities are called **entity sets**.
 > 
 > e.g. for all `students`, where <kbd>major</kbd> == <kbd>engineering</kbd>, <kbd>GPA</kbd> > 4
 
-##Keys
-: A set of 1/+ attributes of a relation with:
-> * No 2 distinct tuples have the same values in the fields in the key fields
-> * No subsets of the key are keys
-> * e.g. `{First name, Last Name}`
+Keys
+----
+
+**Key**:
+
+* A set of 1/+ attributes of a relation with:
+* No 2 distinct tuples have the same values in the fields in the key fields
+* No subsets of the key are keys
+* e.g. `{First name, Last Name}`
 
 ####Unique identifier
 : Something that no other relation has that allows you to identify it as being distinct from other entries
@@ -450,6 +454,8 @@ A set of FDs can help identify the superkey in a relation `X -> R`
 
 DBMS cannot identify FDs nor optimize them
 
+To find out if something is a [key](#keys), see if you can put all the elements on the right side of the relation.  
+
 ###Minimal Basis
 
 > A set of FDs without redundancy
@@ -465,7 +471,9 @@ DBMS cannot identify FDs nor optimize them
 2. Try looking at each FD and tracing through to see if there is an that results in the same answer, **e.g.** in {`A->B`, `B->C`, `A->C`}, you can remove `A->C`.
 
 **Closure**
-: the set of values that are connected using the FDs without repeating, identified by $set^+$
+: the set of values that are connected using the FDs without repeating, identified by $\rm{set}^+$
+
+The order of elements in the set does not matter
 
 **Anomaly**: unmatched or missing information, caused by limitations or flaws within a given database. Anomalies can often cause redundancy
 
@@ -476,6 +484,8 @@ DBMS cannot identify FDs nor optimize them
 * Transitivity: If X → Y and Y → Z, then X → Z.
 * Union: If X → Y and X → Z, then X → YZ.
 * Decomposition: If X → YZ, then X → Y and X → Z.
+
+Decomposing XY → Z can be done by looking at $X^+$ and $Y^+$. If $X^+$ contains Y you can remove Y and vice versa.  
 
 ###Normalization
 
@@ -510,6 +520,10 @@ DBMS cannot identify FDs nor optimize them
 
 **Join loss**: lossless join
 
+Loss test: A (binary) decomposition of `R = (R, F)` into `R1 = (R1, F1)` and `R2 = (R2, F2)`
+
+1. 
+
 **Dependency preservation**: when the original FD’s are satisﬁed after a join
 
 Concurrency
@@ -537,7 +551,9 @@ When multiple people are trying to book the same seats. The second person who bo
 * **Durability**: each committed change should persist even if system fails before all changes are reflected on disk
 
 **Schedule**
-: the order of events in the context of transactions, 
+: the order of events in the context of transactions
+
+![Example precedence graph](https://upload.wikimedia.org/math/2/0/1/20181cd3dbfd74266bcd887ef98f595b.png)
 
 **Strict Schedule**
 :  a value written or changed by T1 is not read or overwritten by other T2 until T1 aborts or commits
@@ -551,9 +567,9 @@ Conflicts
 
 > Proven using a *precedence graph* (example seen below)
 
-![Example precedence graph](https://upload.wikimedia.org/math/2/0/1/20181cd3dbfd74266bcd887ef98f595b.png)
+![precedence graph](https://web.archive.org/web/20140718153403/http://db.grussell.org/img/pres2.gif)
 
-**Recoverable**: 
+**Recoverable**: if you can revert any of the commits and have the same data set you had before the schedule
 
 **Avoid cascading abort (ACA)**: making sure changes in T1 that are aborted don't affect changes in T2. The following has a problem:
 
@@ -583,6 +599,12 @@ uncommitted changes from another transactions in the same schedule.
 
 > Think *semaphor*. A transaction must acquire a lock before reading / writing. A lock can only be obtained by one transaction at a time. However, transactions can lock onto multiple objects at the same time.
 
+Types:
+
+* **[S]hared lock**: [R]ead lock
+* **e[X]clusive lock**: [W]rite lock
+* Generic [L]ock: S + X
+
 It does this by either:
 
 * **Aborting**: cancels changes, wasting work
@@ -590,9 +612,14 @@ It does this by either:
 
 ####Two-phase locking
 
-> **2PL** is a system where a release of any of the locks prohibits all future acquiring of locks. The name comes because it results in 2 phases: a **growing phase** and a **shrinking phase**
+> **(2PL)** is a system where a release (i.e. [U]nlock) of any of the locks prohibits all future acquiring of locks
 
-**Strict 2PL**: 
+2 phases:
+
+* **growing phase**:
+* **shrinking phase**:
+
+**Strict 2PL**: release all locks at the same time, at commit
 
 ###Phantom Problem
 
@@ -618,6 +645,10 @@ Settings that define the level of concurrency
 Performance hints
 -----------------
 
+**Deadlock**: cycle of transactions waiting for locks to be released by each other
+
+> e.g. if both T1 and T2 need A & B to run, but T1 snagged X(A) and T2 snagged X(B) 
+
 * *Lock the smallest-sized object*: reduces the likelihood that 2 transactions will need the same lock
 * *Reduce the time transactions can hold locks*
 * *Reduce **hotspots***, i.e. places where there is a lot of activity
@@ -629,9 +660,37 @@ Performance hints
 
 **Victim**: 
 
-**Wait-Die**: when a lock is being held by one transaction, a second transaction will be aborted, unless it has a higher priority
+**Wait-Die**: when a lock is being held by `T2`, `T1` <ins>aborts itself</ins>, unless `T1` has a higher priority, where <ins>`T1` will wait</ins>
 
-**Wound-wait**: when a lock is being held by a transaction, a second transaction can abort the running transaction if it has higher priority
+**Wound-wait**: when a lock is being held by `T2`, `T1` <ins>waits</ins>, unless `T1` has a higher priority, where <ins>`T2` is aborted</ins>
 
 Priority in this case is dependent on the time it began
 
+Data Cleaning
+-------------
+
+> **Problem**: people enter data in wrong, bugs in system may save data incorrectly, join operation problems, corruption, etc.
+
+Solutions:
+
+* Programs only accept certain ranges of data
+* Data cleaning crawlers fix data that may be incorrect / doesn't fit in the recommended ranges
+	* Use FDs
+
+Characteristics of good data:
+
+* **Pattern**: a set of attributes that satisfy an FD
+* **Frequency**: the number of tuples from a given *pattern*
+* **Distribution**: graphing frequencies for each pattern
+
+Different distributions have different performance levels
+
+* Uniform: equal frequencies
+* Random
+* Zipfian: i dunno
+* Normal: like in stats
+
+![Normal distribution](https://upload.wikimedia.org/wikipedia/commons/a/a9/Empirical_Rule.PNG)
+
+* Precision: percentage of suggestions that are correct
+* Recall: percentage of correct suggestions retrieved
