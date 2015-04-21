@@ -292,13 +292,16 @@ Writing a Testing Plan
 
 ###Principles
 
-1. *Developers should avoid testing their own programs (still debug, tho)*: dev's perspective is different from users' perspective
-2. *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
-3. lal
-4. lala
+1. Include an expected output for each test
+2. *Developers should avoid testing their own programs (still debug, tho)*:
+	1. dev's perspective is different from users' perspective
+	2. Mistakes will be repeated from building to testing
+3. *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
+4. lal
 5. lala
-6. Try to make test cases that you can use for multiple programs
-7. Test to prove the program has errors rather than prove it is clean.
+6. lala
+7. Try to make test cases that you can use for multiple programs
+8. Test to prove the program has errors rather than prove it is clean.
 
 * Testing should help locate errors, not just detect their presence.
 * Tests should be organized in a way that helps isolate errors
@@ -354,6 +357,14 @@ Things to look for:
 * Complex criteria
 * Nested loops
 
+**Fault Seeding**: a.k.a. *bebugging*, a method of estimating the number of faults in a system. It involves taking the set of errors that you get from one part of a system and retrying it on a different part of the program. 
+
+* [N]: number of initial errors
+* [M]: number of new errors
+* [M']: number of initial errors that come up again
+
+$$\rm{ratio} = (M - M')\times \frac{N}{M'}$$
+
 Note: random test cases are usually not useful
 
 **Response Time**: total time that a job takes (think external, including connection issues, etc.)
@@ -377,6 +388,14 @@ To make this section easier to read, I'm going to use symbols to summarize what 
 * Documentation [D]
 * User interactions [U]
 
+**Dynamic Analysis**: run the program (requires that you simulate the environment)
+
+**Static Analysis**: syntax checking
+
+####Structural Testing
+
+> Is the system stable?
+
 **Stress Testing** [C]: testing the boundaries of the program, i.e. can systems function under large volumes of inputs. This can also be done by exposing systems to inputs for long periods of time 
 
 **Execution Testing** [C]: performance testing in terms of speed
@@ -389,7 +408,9 @@ To make this section easier to read, I'm going to use symbols to summarize what 
 
 **Security Testing** [C]: ensuring confidentiality and integrity of private information
 
-**Functional testing** [C]: does the program follow the requirements
+####Functional Testing
+
+> Does the program follow the requirements
 
 **Regression Testing** [C,D]: re-testing after a change, usually with your previously saved unit tests
 
