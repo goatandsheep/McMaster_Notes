@@ -255,6 +255,11 @@ MCC**:
 
 $\mu (x) = \frac{1}{\mu'(x)}$
 
+System Risks
+------------
+
+Events that may cause the system to perform in a way that it is not supposed to.
+
 Writing a Testing Plan
 -----------------------------------
 
@@ -315,17 +320,45 @@ For all output ranges, the test is correct if the program outputs something from
 
 For a correct program, <ins>any test set is ideal</ins>.
 
-**Statement Coverage**: tries all true conditions, minimizes test conditions
+**Edge cases**
+: tries around conditions as to break the system
 
-**Edge cases**: tries around conditions as to break the system
+**Compound Conditions**
+: Multiple conditions in one conditional or nested loops, e.g. what if `test2()` never runs, it will pass all *path coverage*, but not all *condition coverage* tests
 
-**Path Coverage**: (a.k.a. branch coverage) testing edge cases
+```
+if ((test1() || test2()) {
+    invoke_some_latent_bug_only_if_test1_is_false;
+}
+else {
+    do_something_benign;
+}
+```
 
 **Fine**: a test criteria is finer than another if it has stricter criteria
 
+**Statement Coverage**: runs all conditional statements, minimizes test conditions
+
+**Path Coverage**: (a.k.a. branch coverage) testing edge cases
+
 **Complete Coverage**: a test that covers at least one test case from each of the domains of potential inputs
 
-**Condition Coverage**: all edges, all compound conditions, pretty much branch
+**Condition Coverage**
+: almost the same as *statement coverage*, but includes all *compound conditions*
+
+Things to look for:
+
+* Loops that execute zero times or a minimum number of loops
+* Loops that have a maximum number of items
+* Loops that execute an average number of times
+* Complex criteria
+* Nested loops
+
+Note: random test cases are usually not useful
+
+**Response Time**: total time that a job takes (think external, including connection issues, etc.)
+
+**Turnaround Time**: internal within a system
 
 Testing
 -------
@@ -338,25 +371,35 @@ Testing
 
 ###Types
 
-**Functional testing**: does the program follow the requirements
+To make this section easier to read, I'm going to use symbols to summarize what each test is dealing with:
 
-**Stress Testing**: testing the boundaries of the program, i.e. can systems function under large volumes of inputs. This can also be done by exposing systems to inputs for long periods of time 
+* Code [C]
+* Documentation [D]
+* User interactions [U]
 
-**Execution Testing**: performance testing in terms of speed
+**Stress Testing** [C]: testing the boundaries of the program, i.e. can systems function under large volumes of inputs. This can also be done by exposing systems to inputs for long periods of time 
 
-**Recovery Testing**: ability to continue after integrity of system is compromised. Revert to a point where the integrity of the system is known and reprocess.
+**Execution Testing** [C]: performance testing in terms of speed
 
-**Operations Testing**: completion of documentation, training, etc.
+**Recovery Testing** [C,D,U]: ability to continue after integrity of system is compromised. Revert to a point where the integrity of the system is known and reprocess.
 
-**Compliance Testing**: complies to standards, procedures, and guidelines
+**Operations Testing** [D,U]: completion of documentation, training, etc.
 
-**Security Testing**: ensuring confidentiality and integrity of private information
+**Compliance Testing** [C,D]: complies to standards, procedures, and guidelines
 
-**Random Testing**: most occasions random tests won't be good
+**Security Testing** [C]: ensuring confidentiality and integrity of private information
 
-**Response Time**: total time that a job takes (think external, including connection issues, etc.)
+**Functional testing** [C]: does the program follow the requirements
 
-**Turnaround Time**: internal within a system
+**Regression Testing** [C,D]: re-testing after a change, usually with your previously saved unit tests
+
+**Error-Handling Testing** [C]: ensuring most reasonable errors correct themselves
+
+**Manual-Support Testing** [D,U]:  a type of operations testing, ensuring people can still use your program after changes, including documentation changes
+
+**Intersystem Testing** [C,D]: testing changes to the system after applications used by the system are updated
+
+**Control Testing** [U]: making sure the system administrative controls can handle/counter risks 
 
 JUnit
 -----
