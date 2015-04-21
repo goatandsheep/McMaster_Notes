@@ -32,17 +32,19 @@ Challenges of Software Testing
  * More layers
 
 Measurement
------------------------------------
+-----------
 
 **Metric**: a quantitative attribute 
 
-**Measurement**:
+**Measurement**: 
 
 **Benchmark**: a standard unit of measurement 
 
 **Measure**: to determine the measurements of something
 
 **Symbol**: a short representation of a unit of measurement
+
+**Manipulate**: combining measurements
 
 ###What to measure?
 
@@ -285,8 +287,16 @@ Writing a Testing Plan
 
 ###Principles
 
-* *Developers should avoid testing their own programs (still debug, tho)*: dev's perspective is different from users' perspective
-* *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
+1. *Developers should avoid testing their own programs (still debug, tho)*: dev's perspective is different from users' perspective
+2. *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
+3. lal
+4. lala
+5. lala
+6. Try to make test cases that you can use for multiple programs
+7. Test to prove the program has errors rather than prove it is clean.
+
+* Testing should help locate errors, not just detect their presence.
+* Tests should be organized in a way that helps isolate errors
 
 Testing
 : Finding the errors in a program, **NOT** proving its correctness
@@ -296,11 +306,10 @@ Fault Seeding
 
 Ideal test set
 ----------------
+
 > A set that shows an error wherever there is an error
 
-[P is correct OR $\exists$ (d | e T : P is incorrect for d)] ⇒ T is ideal
-
-[P is NOT correct AND $\forall$ ...
+For all output ranges, the test is correct if the program outputs something from all ranges of outputs
 
 ###Criterion
 
@@ -312,7 +321,14 @@ For a correct program, <ins>any test set is ideal</ins>.
 
 **Path Coverage**: (a.k.a. branch coverage) testing edge cases
 
-##Testing
+**Fine**: a test criteria is finer than another if it has stricter criteria
+
+**Complete Coverage**: a test that covers at least one test case from each of the domains of potential inputs
+
+**Condition Coverage**: all edges, all compound conditions, pretty much branch
+
+Testing
+-------
 
 ###Extent
 
@@ -336,7 +352,14 @@ For a correct program, <ins>any test set is ideal</ins>.
 
 **Security Testing**: ensuring confidentiality and integrity of private information
 
-##JUnit
+**Random Testing**: most occasions random tests won't be good
+
+**Response Time**: total time that a job takes (think external, including connection issues, etc.)
+
+**Turnaround Time**: internal within a system
+
+JUnit
+-----
 
 What:
 An open source Java testing framework to automate testing
@@ -365,7 +388,8 @@ You may want to organize your test file. The convention for comments is using a 
 		continue;
 	}
 
-##Security
+Security
+--------
 
 > Some suggestions on where people usually break systems
 

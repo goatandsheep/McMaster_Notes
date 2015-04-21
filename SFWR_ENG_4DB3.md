@@ -193,8 +193,6 @@ Violations of constraints from `R` to `S`:
 
 Response to violations:
 
-1. 
-
 **Cascade**: when something has a foreign key of something else, a change in one will result in a change in the other
 
 SQL
@@ -391,9 +389,9 @@ Each node is >50% full
 Relational Algebra
 ------------------
 
-$\pi_\rm{conditions}\sigma_\rm{attributes}(Table_1 \times Table_2 \times etc.)$
+relation name := $\pi_\rm{conditions}\sigma_\rm{attributes}(Table_1 \times Table_2 \times etc.)$
 
-$\pi_\rm{WHERE}\sigma_\rm{SELECT}(FROM)$
+relation name := $\pi_\rm{WHERE}\sigma_\rm{SELECT}(FROM)$
 
 *L*: list of attributes of *R*
 
@@ -440,6 +438,13 @@ becomes
 | 1 | 2| 3|
 | 1 | 2| 5|
 | 4 | 5| 6|
+
+Precedence of relational operators:
+
+1. $\sigma, \Pi, \rho$
+2. $\times, \bowtie$
+3. $\cap$
+4. $\cup, -$
 
 Functional Dependencies
 -----------------------
@@ -619,7 +624,11 @@ It does this by either:
 * **growing phase**:
 * **shrinking phase**:
 
+![2PL](https://web.archive.org/web/20150316172555im_/http://www.tutorialspoint.com/dbms/images/2PL.png)
+
 **Strict 2PL**: release all locks at the same time, at commit
+
+![Strict 2PL](https://web.archive.org/web/20150316172555im_/http://www.tutorialspoint.com/dbms/images/strict_2PL.png)
 
 ###Phantom Problem
 
