@@ -297,11 +297,12 @@ Writing a Testing Plan
 	1. dev's perspective is different from users' perspective
 	2. Mistakes will be repeated from building to testing
 3. *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
-4. lal
-5. lala
-6. lala
-7. Try to make test cases that you can use for multiple programs
-8. Test to prove the program has errors rather than prove it is clean.
+4. Thoroughly inspect the results of each test.
+5. Test cases must be written for input conditions that are
+invalid and unexpected, as well as for those that are valid
+and expected.
+6. Try to make test cases that you can re-use for other programs
+7. Test to prove the program has errors rather than prove it is clean.
 
 * Testing should help locate errors, not just detect their presence.
 * Tests should be organized in a way that helps isolate errors
