@@ -36,7 +36,7 @@ Measurement
 
 **Metric**: a quantitative attribute 
 
-**Measurement**: 
+**Measurement**: a mapping from the empirical world to the formal, relational world
 
 **Benchmark**: a standard unit of measurement 
 
@@ -91,8 +91,6 @@ Models demonstrate:
 
 **COnstructive COst MOdel (COCOMO)**:
 
-------------------
-
 ```sequence
 A->B: h^{nf}
 A->B: h
@@ -126,19 +124,19 @@ $h \left ( f\left ( a_1,...,a_{n_y} \right ) \right ) = g \left (h^{n_f} \left (
 > * Not [injective](#injective)
 > * Could be a <ins>measurement mapping</ins>
 
-![moo](images/surjection.png)
+![moo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Surjection.svg/200px-Surjection.svg.png)
 
 ####Injective
 : *No overlap*
 > Not [surjective](#surjective)
 
-![moo](images/injection.png)
+![moo](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Injection.svg/200px-Injection.svg.png)
 
 ####Bijection
 : *A function + injective + surjective*
 > Every definition is reached once
 
-![moo](images/bijection.png)
+![moo](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bijection.svg/200px-Bijection.svg.png)
 
 ###Evaluating software
 
@@ -232,8 +230,10 @@ Scale = (, mapping)
 * zero identifies absence
 * <ins>cannot be negative</ins>
 
-##Empirical Scale
-: *derived through experimentation and observation, not theory*
+Empirical Scale
+---------------
+
+> derived through experimentation and observation, not theory
 
 Analyzing the difference between reality and mathematical scales
 
@@ -259,6 +259,10 @@ System Risks
 ------------
 
 Events that may cause the system to perform in a way that it is not supposed to.
+
+**Correctness**: accuracy
+
+**Integrity**: ensuring your files have not been tampered with, saved, or changed, in an unwanted way
 
 Writing a Testing Plan
 -----------------------------------
@@ -341,14 +345,16 @@ else {
 
 **Fine**: a test criteria is finer than another if it has stricter criteria
 
-**Statement Coverage**: runs all conditional statements, minimizes test conditions
-
-**Path Coverage**: (a.k.a. branch coverage) testing edge cases
-
 **Complete Coverage**: a test that covers at least one test case from each of the domains of potential inputs
 
+**Statement Coverage**: runs every single line
+
+**Branch Coverage**: (a.k.a. *edge coverage*) runs true for all conditions
+
+**Path Coverage**: an extension of *branch coverage*, where you try true AND false for everything
+
 **Condition Coverage**
-: almost the same as *statement coverage*, but includes all *compound conditions*
+: (a.k.a. *predicate coverage*) almost the same as *statement coverage*, but tries, true/false for each *compound condition* (one is true, the second is true, neither are true; short-circuiting takes care of both being true)
 
 Things to look for:
 
