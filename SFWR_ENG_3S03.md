@@ -75,9 +75,9 @@ Often, it's not enough to simply say whether something is good or bad, so we def
  * **Productivity**: 
 * etc.
 
-product: physical entity, e.g. 
-process: observable at run-time, e.g. complexity
-resource: hr stuff, manpower, e.g. productivity
+* Product: stuff support team measures, e.g. corrective maintenance, usability
+* Process: observable at run-time, e.g. complexity, errors
+* Resource: hr stuff, manpower, e.g. productivity
 
 Models demonstrate:
 
@@ -193,10 +193,11 @@ Scale = (, mapping)
 
 **Admissible transformation**: allows you to move from scale-to-scale when the attributes and scale are the same
 
-* integral scale: $g(x) = \alpha\mu(x) + p$
+* Integral scale: $g(x) = \alpha\mu(x) + p$
 * Ratio scale: $g(x) = \alpha\mu(x)$
-* ordinal scale: strictly monotonic scale
-* nominal: one-to-one mapping
+* Ordinal scale: strictly monotonic scale
+	* 
+* Nominal: one-to-one mapping
 
 **Halstead**: 
 
@@ -302,9 +303,7 @@ Writing a Testing Plan
 	2. Mistakes will be repeated from building to testing
 3. *Organizations should avoid testing their own programs*: people have stresses like time that makes people within an organization accept certain mistakes
 4. Thoroughly inspect the results of each test.
-5. Test cases must be written for input conditions that are
-invalid and unexpected, as well as for those that are valid
-and expected.
+5. Test cases must be written for input conditions that are invalid and unexpected, as well as for those that are valid and expected.
 6. Try to make test cases that you can re-use for other programs
 7. Test to prove the program has errors rather than prove it is clean.
 
@@ -332,29 +331,29 @@ For a correct program, <ins>any test set is ideal</ins>.
 : tries around conditions as to break the system
 
 **Compound Conditions**
-: Multiple conditions in one conditional or nested loops, e.g. what if `test2()` never runs, it will pass all *path coverage*, but not all *condition coverage* tests
+: Multiple conditions in one conditional or nested loops, e.g. what if `test==2` is always tested, but never `test>4`, it will pass all *path coverage*, but not all *condition coverage* tests. This is different than `if`/`elseif`.
 
 ```
-if ((test1() || test2()) {
-    invoke_some_latent_bug_only_if_test1_is_false;
+if ((test==2 || test>4) {
+    invoke_something
 }
 else {
     do_something_benign;
 }
 ```
 
-**Fine**: a test criteria is finer than another if it has stricter criteria
+**Fine**: a test criteria is *finer* than another if it has stricter criteria
 
 **Complete Coverage**: a test that covers at least one test case from each of the domains of potential inputs
 
 **Statement Coverage**: runs every single line
 
-**Branch Coverage**: (a.k.a. *edge coverage*) runs true for all conditions
+**Branch Coverage**: (a.k.a. *edge coverage*) runs `TRUE` for each conditional
 
-**Path Coverage**: an extension of *branch coverage*, where you try true AND false for everything
+**Path Coverage**: an extension of *branch coverage*, where you try every single combination of `TRUE`s and `FALSE`s, e.g. (`TRUE`,`FALSE`,`FALSE`), (`TRUE`,`TRUE`,`FALSE`),(`FALSE`,`TRUE`,`FALSE`), etc.
 
 **Condition Coverage**
-: (a.k.a. *predicate coverage*) almost the same as *statement coverage*, but tries, true/false for each *compound condition* (one is true, the second is true, neither are true; short-circuiting takes care of both being true)
+: tries, true/false for each *compound condition* (one is true, the second is true, neither are true; short-circuiting takes care of both being true)
 
 Things to look for:
 
@@ -419,7 +418,9 @@ To make this section easier to read, I'm going to use symbols to summarize what 
 
 > Does the program follow the requirements
 
-**Regression Testing** [C,D]: re-testing after a change, usually with your previously saved unit tests
+**Regression Testing** [C,D]: after a change of one component of a system, checking that <ins>other components</ins> still run the same, usually with your previously saved unit tests; this includes updates to documentation
+
+**Parallel Testing** [C]: after a change of one component of a system, checking that <ins>the same component</ins> still runs the same
 
 **Error-Handling Testing** [C]: ensuring most reasonable errors correct themselves
 
@@ -464,4 +465,10 @@ Security
 
 > Some suggestions on where people usually break systems
 
-I don't know if this information will even be recent...
+* Prevent buffer overflows in C/C++ using `strncpy` and `strncat`
+* Metacharacters like `;`
+	* Allows for command injection
+* Automatically created variables in PHP
+* Languages that require virtual machines are safer, like Java/C#
+* Lack of error handling allows hackers to make their own exceptions
+* Symbolic linking: hackers can change the link to their own file
