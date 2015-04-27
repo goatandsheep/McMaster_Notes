@@ -176,7 +176,9 @@ Interference
 
 ###Progress Properties
 
-Testing our models
+**High Priority** [<<]:
+
+**Low Priority** [>>]:  
 
 Dynamic Systems
 ---------------
@@ -193,11 +195,8 @@ Rendezvous: bidirectional
 
 **Connectors**: (a.k.a. *pipes*) define interaction between components in the architecture
 
-Timed Systems
--------------
-
-Linda Tuple Spaces
-------------------
+Linda
+-----
 
 **Linda Model**: a method of parallel execution that works like a messy table (shared tuple space) of tasks / resources (tuples), where workers can take tasks any in any order and it won't mess up the program execution. If you have operations that need to go after, you would put them in a later tuple.
 
@@ -209,10 +208,16 @@ Linda Tuple Spaces
 
 **Data tuples**: (a.k.a. *passive tuples*) `("tag", )`
 
+**Blocking** if there are no matches, the program will wait until there is a match
+
+**Nonblocking**: returns false if no matches
+
 Operations:
 
-* `in(template)`: removes a tuple from tuple space
-* `rd(template)`: reads the values in a tuple in tuple space without affecting it
+* `in(template)` (<ins>blocking</ins>): removes a tuple from tuple space
+	* <ins>Nonblocking</ins> version: `inp`
+* `rd(template)` (<ins>blocking</ins>): reads the values in a tuple in tuple space without affecting it 
+	* <ins>Nonblocking</ins> version: `rdp`
 * `out(data tuple)`: inserts a data tuple in tuple space
 * `eval(process tuple)`: creates a process tuple
 
@@ -230,8 +235,12 @@ Operations:
 	* The types, values, and length of all *actuals* in the template are the same as the those of the corresponding fields in the tuple
 	* The types and lengths of all *formals* in the template match the types and lengths of the corresponding fields in the tuple.
 * When a matching tuple is found, then the variable *i* will be assigned the value in the second field of the matched tuple
-* If there are no matches, the program will wait until there is a match
 
-Tuple Space Model
------------------
 
+###Tuple Space Model
+
+* An visual representation of the [Linda model](#Linda).
+* Tuples are represented as `tag.val1.val2...valn`
+
+Timed Systems
+-------------
