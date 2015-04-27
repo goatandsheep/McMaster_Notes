@@ -126,11 +126,14 @@ When a resource is unavailable, the process can either wait or do a non-critical
 **livelock**: when processes are waiting for a process to stop using a resource that they are locked into using
 
 ####Synchronized
+
 `synchronized`:
 
 `synchronized <object>`: only one person can access a method at a time
 
-##Monitors
+Monitors
+----------
+
 > *<ins>passive</ins> entities which respond to actions (a.k.a. humans)*
 
 * Opposite of a [thread](#threads)
@@ -146,23 +149,26 @@ When a resource is unavailable, the process can either wait or do a non-critical
 	* overkill, so use `notify()` if you know you only have one thread
 	* operating system deals with the order in which threads are executed 
 
-##Interference
-: *Interactions between processes trying to share a resource.*
+Interference
+------------
 
-> * It can be good
-> * Controlled by [monitors](#monitors)
+> Interactions between processes trying to share a resource.
+
+* It can be good
+* Controlled by [monitors](#monitors)
 
 **Feature interaction**: unwanted interference
 
-##Bounded Buffer
-: *A process queue for when there are multiple resources*
+###Bounded Buffer
+
+> A process queue for when there are multiple resources
 
 ##Deadlock
 : *When multiple processes need multiple resources simultaneously to continue but it's not working*
 
 > **Think** if there is one chopstick on the left and one on the right of each person on a table, but you need 2 and everyone takes the right chopstick, nobody can eat because you need 2
  
-#Safety & Liveness property
+###Safety & Liveness property
 
 **Termination**: every program should end
 
@@ -182,3 +188,50 @@ synchronous:
 asynchronous: 
 
 Rendezvous: bidirectional
+
+**Filters**: process that transforms a stream of inputs into a stream of outputs
+
+**Connectors**: (a.k.a. *pipes*) define interaction between components in the architecture
+
+Timed Systems
+-------------
+
+Linda Tuple Spaces
+------------------
+
+**Linda Model**: a method of parallel execution that works like a messy table (shared tuple space) of tasks / resources (tuples), where workers can take tasks any in any order and it won't mess up the program execution. If you have operations that need to go after, you would put them in a later tuple.
+
+ `("tag", expr1,...,exprn)`
+
+![Linda Spaces](images/linda.png)
+
+**Process tuples**: (a.k.a. *live tuples*)
+
+**Data tuples**: (a.k.a. *passive tuples*) `("tag", )`
+
+Operations:
+
+* `in(template)`: removes a tuple from tuple space
+* `rd(template)`: reads the values in a tuple in tuple space without affecting it
+* `out(data tuple)`: inserts a data tuple in tuple space
+* `eval(process tuple)`: creates a process tuple
+
+###Templates
+
+> (a.k.a. *anti-tuple*) a way of querying for tuples that follow a certain template
+
+* can contain **actuals**, values that aren't placeholders
+* contain placeholders, called **formals**, denoted by `?variable_name`
+* e.g. if you're looking for `("cube", 8, 512)`
+	* `rd("cube", 8, ?i);` will assign 512 to `i`
+	* `in("cube", j, ?i);` would only remove this particular tuple if `j=8`
+* A template matches a tuple when:
+	* They both have the same number of fields
+	* The types, values, and length of all *actuals* in the template are the same as the those of the corresponding fields in the tuple
+	* The types and lengths of all *formals* in the template match the types and lengths of the corresponding fields in the tuple.
+* When a matching tuple is found, then the variable *i* will be assigned the value in the second field of the matched tuple
+* If there are no matches, the program will wait until there is a match
+
+Tuple Space Model
+-----------------
+
