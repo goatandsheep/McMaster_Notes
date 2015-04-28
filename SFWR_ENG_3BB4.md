@@ -244,3 +244,39 @@ Operations:
 
 Timed Systems
 -------------
+
+**Timed Systems**: Programs that are concerned with the passage of time and synchronize processes through a global clock.
+
+In order to model Times Systems/Programs we use a representation of time which is signaled by successive 'ticks' of a clock.
+
+Deadlock may happen in timed systems due to a 'time-stop'; where due to a tick inconsistency between processes, the model of the program cannot progress time any further (the next tick is deadlocked). To fix such a deadlock condition in a timed system, one can make the tick action a "low priority" action (SYS>>{tick}) and make the tick action a progress (progress TIME = {tick}) to ensure progression of time.
+
+Implementation of Timed Systems
+
+**Thread-based approach**: Uses sleep() and wait() functions to synchronize with time
+
+**Event-based approach**: Uses 'tick' actions instead to broadcast timed events to other entities that need to be aware of passage of time.
+
+Any entity with the action 'tick' in its alphabet becomes a timed object in implementation.
+
+Broadcasting of timed events is taken care of by the TimeManager thread.
+
+**Parcel Router**:
+ 
+![Parcel Router Problem](images/parcel.png) 
+
+The problem... "Parcels are dropped in a chute and fall by gravity; each parcel has a destination code, which can be read so that the parcel is routed to the correct destination bin. A switch can only be moved if there is no parcel in its way."
+
+There are 6 processes to take into account when addressing the Parcel Router Problem:
+
+**GEN**: Generates a parcel every T units of time.
+
+**BIN**: Contains information about the destination number it contains and that of the parcels destination.
+
+**STAGE**: Defines the different stages which every parcel must go through.
+
+**CHUTE**: Models movement of a single parcel through a segment of a physical chute.
+
+**SENSORCONTROLLER**: Detects a parcel by observing the action caused by a parcel passing from one CHUTE to the next. It computes the SWITCH process state by observing the parcel destination.
+
+**SWITCH**: Can be derived from the CHUTE implementation. Ignores SENSORCONTROLLER commands while parcel is going through.
