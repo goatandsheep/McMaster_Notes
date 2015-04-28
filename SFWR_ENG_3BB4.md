@@ -180,11 +180,13 @@ Interference
 
 **Termination**: every program should end
 
-**Safety**: 
+**Safety**: nothing bad happens
 
-**Liveness**: 
+**Liveness**: something good eventually happens
 
 ###Progress Properties
+
+An alphabet labelled `progress` is one where at least one of the actions will be executed infinitely often. 
 
 **Progress**: an action will eventually be executed
 
@@ -204,7 +206,7 @@ Priority usually refers to state number, so the lower priority actions are the o
 
 **Alphabet extension**: `+{actions}` adding actions to a group from another group that shouldn't normally have it
 
-**Action hiding**: `\{actions}` omitting unnecessary actions
+**Action hiding**: `\{newname}` rename an alphabet extension 
 
 Dynamic Systems
 ---------------
