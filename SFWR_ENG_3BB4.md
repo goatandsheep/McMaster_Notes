@@ -114,8 +114,10 @@ When a resource is unavailable, the process can either wait or do a non-critical
 
 **Binary Semaphor**: enables and disables?? 
 
-##LTSA
-: *Labelled Transition System Analyser*
+LTSA
+----
+
+*Labelled Transition System Analyser*
 
 `ERROR`: predefined process to identify...error
 
@@ -130,6 +132,11 @@ When a resource is unavailable, the process can either wait or do a non-critical
 `synchronized`:
 
 `synchronized <object>`: only one person can access a method at a time
+
+Java
+----
+
+`synchronized <method>`: uses a lock on the object
 
 Monitors
 ----------
@@ -164,7 +171,8 @@ Interference
 > A process queue for when there are multiple resources
 
 ##Deadlock
-: *When multiple processes need multiple resources simultaneously to continue but it's not working*
+
+*When multiple processes need multiple resources simultaneously to continue but it's not working*
 
 > **Think** if there is one chopstick on the left and one on the right of each person on a table, but you need 2 and everyone takes the right chopstick, nobody can eat because you need 2
  
@@ -172,13 +180,31 @@ Interference
 
 **Termination**: every program should end
 
+**Safety**: 
+
 **Liveness**: 
 
 ###Progress Properties
 
-**High Priority** [<<]:
+**Progress**: an action will eventually be executed
 
-**Low Priority** [>>]:  
+**Starvation**: a situation where an action is never executed
+
+**Fair Choice**: if  a  choice  over  a  set  of  transitions  is 
+executed  infinitely  often,  then  every  transition  in  the 
+set will be executed infinitely often
+
+**Progress violation**: a terminal set of states in which none of the progress set actions appear
+
+**High Priority** [<<]: if there are multiple transitions, the transitions with lower priority actions are discarded
+
+Priority usually refers to state number, so the lower priority actions are the ones that go to higher numbers (higher number --> lower priority) **Think**: take a number 
+
+**Low Priority** [>>]: if there are multiple transitions, the transitions with higher priority actions are discarded
+
+**Alphabet extension**: `+{actions}` adding actions to a group from another group that shouldn't normally have it
+
+**Action hiding**: `\{actions}` omitting unnecessary actions
 
 Dynamic Systems
 ---------------
@@ -263,7 +289,7 @@ Broadcasting of timed events is taken care of by the TimeManager thread.
 
 **Parcel Router**:
  
-![Parcel Router Problem](images/parcel.png) 
+![Parcel Router Problem](images/parcel.jpg) 
 
 The problem... "Parcels are dropped in a chute and fall by gravity; each parcel has a destination code, which can be read so that the parcel is routed to the correct destination bin. A switch can only be moved if there is no parcel in its way."
 
