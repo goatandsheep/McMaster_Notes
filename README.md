@@ -22,13 +22,13 @@ If you simply wish to view the notes, open the PDF files (vs `.doc`) to reduce p
  2. Re-save the file as a PDF in Microsoft Word ![wordpdf](images/save_pdf.PNG)
 5. If the file is a markdown file (`*.md`), edit it using any text editor and it will work. 
 6. Right-Click the `git/McMaster_Notes` folder.
-7. Press `Fetch...` to get changes (in case someone else has changed stuff): ![git fetch](images/git_pull.png)
+7. Press `Pull...` to get changes (in case someone else has changed stuff): ![git pull](images/git_pull.png)
 8. Right-Click the folder again
 9. Press `Merge...` to merge their changes with yours. ![git merge](images/git_merge.png)
 10.  Right-Click the folder again.
 11.  Press `Git commit -> "master"...` to package your changes. ![git commit -A](images/git_commit.png)
 12.  Right-Click the folder again.
-13.  Press `Push...` to upload changes. ![git fetch](images/git_pull.png)
+13.  Press `Push...` to upload changes. ![git push](images/git_pull.png)
 14.  Just keep pressing `Ok`.
 15.  It will ask you for your GitHub email address and password.
 
