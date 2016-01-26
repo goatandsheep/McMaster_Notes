@@ -32,13 +32,23 @@
 
 * **Felsic**: rich in quartz, primarily on continents, typically granite, granodiorite
   * **Rhyolite**: continental crust
+	  * thick, sticky lava: silica traps more gasses
+	  * eruptions are extremely volatile
 * **Mafic**: ocean crust
+	* creates runny lava (think: maple syrup): lower silica content
+	* **Basalt**:
+		* **pahoehoe**: flows easily, re-entry into old lava tube
+		* **aa**: "ah-ah", blocky texture
+
+**Ash**: a grain size
+
+**Pyroclastics**: older, crushed ash rocks
 
 ## Textures
 
 **Phenocryst**: 
 
-Types
+Types:
 
 * **Phaneritic**: intrusive
   * **Porphyritic**: 
