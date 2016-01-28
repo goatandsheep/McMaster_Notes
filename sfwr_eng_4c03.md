@@ -75,6 +75,7 @@ Sources:
 * User Datagram Protocol (UDP)
 * way better for speed
 * used for messaging services, streaming
+* Multiplexor / Demultiplexor
 
 #### TCP
 
@@ -82,8 +83,65 @@ Sources:
 
 * Transmission Control Protocol (TCP)
 * better for security
+* Features:
+  * Multiplexor / Demultiplexor
+  * Relaible data transfer
+  * Flow Control
+  * Congestion Control
 
 ## Security
 
 * **Transport Layer Security (TLS)**: an encryption layer on top of the above protocols
   * Deprecated version: **Secure Socket Layer (SSL)**
+
+## DNS
+
+**Domain Name Server (DNS)**:
+
+* Name servers cache the mappings
+* Messages are not sent directly, but rather through multiple DNS first. This is good because
+  * You can cache the page instead of bothering the server each request
+  * You use an optimal map
+* blackadder, baldric.cis.mcmaster.ca
+* [dig](https://toolbox.googleapps.com/apps/dig/)
+* Thought: could one spoof a server, then send unlimited messages from the IP address they're spoofing
+
+## Socket Programming
+
+`AF_INET`: IP protocol
+
+`SOCK_DGRAM`: SOCKet DataGRAM
+
+`listen()`: wait for incoming connections
+
+**raw socket**:
+
+SSL: encrypting the network socket
+
+## Transport Layer
+
+Internet protocols including UDP and TCP
+
+### Functions
+
+#### Multiplexing/Demultiplexing
+
+1. 32 bits for source port # + destination port #, i.e. 16 bits each, i.e. 2^16 ports
+2. Other header fields
+3. Application data
+
+#### Reliability
+
+Things like a microwaves can distort your messages. This detects for packets that are erroneous / missing and recovers them
+
+##### Error detection
+
+* adding extra bits to each packet
+  
+* **Parity Checking**: adding a bit to the end. A very simple mechanism to see if it has been changed
+  
+  * **Odd parity**: number of 1s will be odd
+    
+  * **Even parity**: number of 1s will be even
+    
+    ​
