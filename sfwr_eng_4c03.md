@@ -76,6 +76,7 @@ Sources:
 * way better for speed
 * used for messaging services, streaming
 * Multiplexor / Demultiplexor
+* 16-word checksum
 
 #### TCP
 
@@ -85,7 +86,7 @@ Sources:
 * better for security
 * Features:
   * Multiplexor / Demultiplexor
-  * Relaible data transfer
+  * Reliable data transfer
   * Flow Control
   * Congestion Control
 
@@ -134,14 +135,57 @@ Internet protocols including UDP and TCP
 
 Things like a microwaves can distort your messages. This detects for packets that are erroneous / missing and recovers them
 
+**Utilization**: maximum data rate / bandwidth
+
 ##### Error detection
 
 * adding extra bits to each packet
-  
 * **Parity Checking**: adding a bit to the end. A very simple mechanism to see if it has been changed
-  
-  * **Odd parity**: number of 1s will be odd
-    
-  * **Even parity**: number of 1s will be even
-    
-    ​
+  * **Odd parity**: number of 1s will be odd (after adding parity bit)
+  * **Even parity**: number of 1s will be even (after adding parity bit)
+
+**Redundancy**: bits/message bits
+
+	Could tertiary, i.e. base 3 work for analog signal streams (not storage)? Problem is that some signals can be affected by external radiation. Maybe even different colours.
+
+**Bursting Error**:
+
+**2-D Parity checking**:
+
+	1 0 1 0 1 | 1
+	1 1 1 1 0 | 0
+	0 1 1 0 1 | 1
+	--------------
+	0 0 1 0 1 | 0
+
+* Helps identify which bit is correct.
+* Corner bit is 1 if they are different
+* Even parity works best because the corner value needs to be checked and can result in mistakes
+* redundant bits = i + j + 1
+* redundancy = ((i * j) + i + j + 1)/(i * j)
+
+**carrier**: when you add two numbers and there is a number that carries over to the next base 
+
+**Two's complement sum**: add each of the words together (i.e 4 hex characters)
+
+**One's complement sum**:
+
+1. get two's complement sum
+2. remove *carrier*
+3. add value of carrier to the first bit.
+4. If there is still a carrier, go to step 1
+
+##### Loss Detection
+
+Causes:
+
+* buffer overflow
+
+Methods:
+
+* Label the packets with the packet number. If there's a packet # missing, the receiving server will keep looking for it.
+	* Could one spoof the server IP, then send only 1, 3, and 4? The server will send a message to itself and it will start looking for the message.
+* **Fin package**: concludes the transmission
+* Respond to sender:
+	* **Negative ACK (NACK)**:
+	* **positive ACK (ACK)**:

@@ -3,6 +3,8 @@
 * Kemal Ahmed
 * Winter 2016
 
+**Uniformitarianism**: studying the past to explain the future
+
 ## Plate Tectonics
 
 **Subduction**: when a plate goes under another, brings water down with it, and the boiling water melts the rocks above it as it goes down
@@ -88,3 +90,48 @@ Types:
 * If *strain energy* builds up, when the subduction plate breaks, the top plate jumps up a bit
 * Travel fastest in deep water
 * Slows down as the friction of the waves hit the ground
+* **Turbidite**: underwater landslides
+	* unsort sediments
+* Can be caused by *turbidites*
+
+##Sedimentary Rocks
+
+* 7% volume of crust, 75% surface coverage
+* Signs of oil, coal, natural gas, etc., water
+
+**fissile**: has fine layers
+
+Types:
+
+* **Biochemical** : Carbonate rocks: found primarily in ocean
+	* **Limestone**: calcite
+	* **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
+		* Fizzes when scraping with nail
+* **Clastic**: made up of older rocks
+	* Identification
+		* (CU): Coarse
+		* (M): Medium
+	* **Conglomerate**: smooth
+	* **Shale**: fissile, breaks into fine layers
+	* **Siltstone**: glistening in sunlight, more gritty
+* **Chemical**: usually similar to the other two, but was altered
+
+###Characteristics
+
+* **Angularity**: angular --> rounded, rough --> smooth
+	* more transportation --> smoother
+* **Sorting**: consistency of grain sizes
+	* more transportation --> more sorted
+	* brittleness unrelated
+
+	Can sand act where water is currently being used?
+
+###Lithification
+
+**Lithification**: conversion from sediments to rock
+
+* requires heat
+* heat comes from poor heat distribution
+* **Compaction**: reduction in volume
+* **Cementation**: precipitates bind the grains of sediment together
+
