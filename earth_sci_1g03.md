@@ -3,9 +3,17 @@
 * Kemal Ahmed
 * Winter 2016
 
-**Uniformitarianism**: studying the past to explain the future
+**Hutton's Revolution**:
+
+**Uniformitarianism**: studying the present to explain the past
 
 ## Plate Tectonics
+
+**Continental Drift**:
+
+**Paleomagnetic Evidence**:
+
+**Seafloor Spreading**:
 
 **Subduction**: when a plate goes under another, brings water down with it, and the boiling water melts the rocks above it as it goes down
 
@@ -14,18 +22,33 @@
 | Name       | Direction | Volcanoes     | [Earthquakes](##Earthquakes)             | Tsunamis      |
 | ---------- | --------- | ------------- | ---------------------------------------- | ------------- |
 | Divergent  | Apart     | Yeah          | Shallow                                  |               |
-| Convergent | Together  | If subduction | If *subduction*, range from shallow in trenches to deep farther into the zone. Else, | If subduction |
+| Convergent | Together  | If subduction | If *subduction*, range from shallow in trenches to deep farther into the zone. Else, | If subduction and vertical movement |
 | Transform  | Beside    | No            | Shallow                                  |               |
+
+Rates of motion
+
+**Wilson Cycles**:
 
 ## Mineral Classification
 
+###Characteristics
+
+How to differentiate?
+
+* Lustre
+* Cleavage
+* Hardness
+* Colour
+* Streak
+* More
+
 ### Intrusive
+
+**Intrusive**: magma that doesn't make it to the surface
 
 **Dikes** can form between **sill**, older rocks.
 
 ### Igneous
-
-
 
 | Composition  | Extrusive           | Intrusive  |
 | ------------ | ------------------- | ---------- |
@@ -38,17 +61,33 @@
   * **Rhyolite**: continental crust
 	  * thick, sticky lava: silica traps more gasses
 	  * eruptions are extremely volatile
-* **Mafic**: ocean crust
+* **Intermediate**:
+	* lava between runny and explosive
+* **Mafic**: ocean crust, mid-ocean ridges
 	* creates runny lava (think: maple syrup): lower silica content
 	* **Basalt**:
 		* **pahoehoe**: flows easily, re-entry into old lava tube
 		* **aa**: "ah-ah", blocky texture
 
+Characteristics:
+
+* Attribute: Low —> High
+* Fe, Mg: Felsic —> Ultramafic
+* Density: Felsic —> Ultramafic
+* Si, O: Ultramafic —> Felsic
+* Temperature of formation: Felsic (700C) —> Ultramafic (1200C)
+
 **Ash**: a grain size
 
-**Pyroclastics**: older, crushed ash rocks
+**Pyroclastics**: older, crushed ash rocks (are they mafic or felsic?)
 
-## Textures
+**Mantle Plume**:
+
+Shild vs composite volcanoes
+
+### Textures
+
+Texture determines in/extrusive
 
 **Phenocryst**: 
 
@@ -58,15 +97,30 @@ Types:
   * **Porphyritic**:
 * **Aphanitic**: too small to see, extrusive
 
+####Fractional crystalization
+
+Silica-rich: partially melt
+
+1. Olivene (52% silica): pulls metals out of magma
+2. (52%)
+3. Hornblend
+
 ## Earthquakes
 
 * Crust usually breaks in 3 cracks of ~$\frac{3\pi}{4}$
 
+**Epicentre**:
+
+**Focus**:
+
 ### Types of Waves
 
-* P
-* S
-* ​
+* Body:
+	* P: faster
+	* S
+* Surface:
+	* love
+	* rally​
 
 ### Measuring
 
@@ -78,6 +132,7 @@ Types:
   * **Richter magnitude scale**: logarithmic based on max amplitudes on seismographs
   * **Moment magnitude**: more accurate, related to fault rupture size and seismic energy
   * **Mercalli Intensity Scale**: *destructiveness* in proximity to population, infrastructure, time, rock types
+  * Depth:
 
 ### Minimizing
 
@@ -93,6 +148,9 @@ Types:
 * **Turbidite**: underwater landslides
 	* unsort sediments
 * Can be caused by *turbidites*
+* Requires more vertical than horizontal motion
+* The amount of debris will increase momentum of wave
+* You can know it's coming because it pulls away quickly at the shore
 
 ##Sedimentary Rocks
 
@@ -123,6 +181,9 @@ Types:
 * **Sorting**: consistency of grain sizes
 	* more transportation --> more sorted
 	* brittleness unrelated
+* **Chert**: biochemical & chemical
+	* can be from silica shells of fossils
+* **Ripples**:
 
 	Can sand act where water is currently being used?
 

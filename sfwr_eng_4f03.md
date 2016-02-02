@@ -53,7 +53,9 @@ Node latency:
 
 * **Links** [l]:
 * **Words** [m]: size of message
-* t_com = t_s + t_h * l + m * t_w * l = t_s + l (t_h + m * t_w) ~= t_s + l * m * t_w
+* t_com = t_s + t_h * l + m * t_w * l
+= t_s + l (t_h + m * t_w)
+~= t_s + l * m * t_w
 
 **Packet Routing**: old way of routing
 
@@ -191,3 +193,61 @@ S(p) --> p
 as p incareases
 a <<b
 alpha = a/a+b ~= D
+
+
+Consider addign n numbers on n processors
+
+a0	a1	a2	a3	a4	a5	a6	a7
+
+V	<	V	<	V	<	V	<
+
+a0+a1	a2+a3	a4+a5	a6+a7
+
+V		<		V		<
+
+a0+..a3			a4+..a7
+
+V				<
+
+a0+..a7
+
+O(n), n=2^K
+
+[t_c]: time to add
+
+(t_s + t_w) logn communication
+
+t_c * log(n) to do additions
+
+T_p = (t_c + t_s + t_w) log(n) = O(log(n))
+
+S = T_s / T_p = O(n)/O(lgn) = O(n/logn)
+
+E = S/n = O(1/logn)
+
+Assume p << n processors: each process gets n/p numbers
+
+T_p = O(n/p + log(p))
+
+S = O(n/(n/p + log(p))) = 1/(1/p + log(p)/n) = p/(1 + p log(p)/n)
+
+E = 1/(1 + p log(p)/n)
+
+##Communication
+
+Think: how to determine number of cycles to communicate
+
+(startup time + message * word) * log(p) + propagation
+
+1. Send small message
+2. Check time
+3. Send slightly larger message
+4. Check time
+5. Find equation
+6. Take y-intercept
+7. Treat as optimization problem
+
+7)
+
+* MIN c1, where t_1 = t_2 + c1
+* MIN c2, where t_2 = t_3 + c2

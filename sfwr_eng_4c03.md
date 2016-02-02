@@ -51,6 +51,10 @@ Sources:
 
 **Nodal delay** [d~nodal~]:  d~proc~ +  d~queue~ +  d~trans~ +  d~prop~
 
+##Packet Capturing
+
+**Promiscuous mode**: captures other people's traffic
+
 ## Application Layer
 
 ### Protocol
@@ -66,6 +70,10 @@ Sources:
 2. Peer-to-peer (P2P)
 3. Hybrid
 
+###Persistent
+
+
+
 ### Transport Protocols
 
 #### UDP
@@ -78,7 +86,7 @@ Sources:
 * Multiplexor / Demultiplexor
 * 16-word checksum
 
-#### TCP
+####TCP
 
 ![TCP](http://www.skullbox.net/tcp.jpg)
 
@@ -87,13 +95,14 @@ Sources:
 * Features:
   * Multiplexor / Demultiplexor
   * Reliable data transfer
-  * Flow Control
-  * Congestion Control
+  * Flow Control: throttled by receiver, so sender reacts
+  * Congestion Control: Adjusts transmission rate based on congestion signal
 
 ## Security
 
 * **Transport Layer Security (TLS)**: an encryption layer on top of the above protocols
   * Deprecated version: **Secure Socket Layer (SSL)**
+  * can happen simultaneously with UDP
 
 ## DNS
 
@@ -106,6 +115,9 @@ Sources:
 * blackadder, baldric.cis.mcmaster.ca
 * [dig](https://toolbox.googleapps.com/apps/dig/)
 * Thought: could one spoof a server, then send unlimited messages from the IP address they're spoofing
+
+**Time To Live (TTL)**: number of hops until it dies
+* Error messages can be dropped. They are sent by the router at which the TTL goes to 0
 
 ## Socket Programming
 
@@ -136,6 +148,8 @@ Internet protocols including UDP and TCP
 Things like a microwaves can distort your messages. This detects for packets that are erroneous / missing and recovers them
 
 **Utilization**: maximum data rate / bandwidth
+
+total delay   = Internet delay + access delay + LAN delay 
 
 ##### Error detection
 
@@ -189,3 +203,30 @@ Methods:
 * Respond to sender:
 	* **Negative ACK (NACK)**:
 	* **positive ACK (ACK)**:
+
+##Congestion Control
+
+**Flow Control**: telling the sender to stop if recipient is receiving too much and/or overwhelming the network
+
+**Output Link Capacity** [R]:
+
+**Max per-connection throughput**: R/2
+
+**Flow conservation**: when you don't lose any packets. This occurs because everything has a finite buffer size
+
+**Original Data** [$\lambda_{in}$]:
+
+**Re-transmitted data** [$\lambda_{Tr}$]:
+
+**Data sent** [$\lambda'_{in}$]: $\lambda_{in} + \lambda_{Tr}$
+
+* If infinite buffer, linear increase until R/2
+* In reality, it tapers off because re-transmission of data is necessary
+* The difference between the two functions is the amount of re-transmitted data.
+* If you have a matrix of multiple routers in a row, you need to be careful as to not cause *deadlock* if you fill up the buffers
+
+**Chunking**: sending more, smaller packets so that if there's an error, you only have to resend that small portion
+
+**Sequence Number**: which chunk? 
+
+* What if the `ACK` gets lost? Wait for timeout and try again, until you can't or connection is closed.
