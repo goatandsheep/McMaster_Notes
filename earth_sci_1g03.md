@@ -3,6 +3,10 @@
 * Kemal Ahmed
 * Winter 2016
 
+--------------------
+
+**Catastrophism**: catastrophes like Noah's ark change the earth
+
 **Hutton's Revolution**:
 
 **Uniformitarianism**: studying the present to explain the past
@@ -11,11 +15,21 @@
 
 **Continental Drift**:
 
-**Paleomagnetic Evidence**:
+**Paleomagnetic Evidence**: when magnetite freezes, it is aligned with the particles of the north pole. We know that the rocks were moving because the direction of the north pole as we dig deeper shows it changing.
+
+**Magnetic Reversal**: Earth goes through sudden shifts in polarity of North Pole and south pole. Alignments of rocks are symmetric on American side of mid-ocean ridge in Atlantic Ocean with European side
+
+Since north part of magnet points the northern magnetic pole, the northern magnetic pole actually has *southern* polarity
+
+**Isochron Dating**: how old are minerals
+
+**Abyssal plain**: flat oceanic area without ridges
 
 **Seafloor Spreading**:
 
 **Subduction**: when a plate goes under another, brings water down with it, and the boiling water melts the rocks above it as it goes down
+
+**Magnetometer**: devices that measures for stronger or weeker local magnetic field
 
 ### Boundaries
 
@@ -29,18 +43,70 @@ Rates of motion
 
 **Wilson Cycles**:
 
+###Layers
+
+**Isostasy**: crust floats on mantle
+
+1. **Crust**: think apple skin
+	1. Continental: 20-40km
+	2. Oceanic: 2-10km
+2. **Mantle**: 40-2890km
+	1. Fe, Mg
+3. **Outer core**: 2900km - 5140 km
+	1. Liquid Fe, Si
+4. **Inner core**: 5140 km - 6370 km
+	1. Solid Fe, Ni
+
 ## Mineral Classification
 
 ###Characteristics
 
 How to differentiate?
 
-* Lustre
-* Cleavage
-* Hardness
-* Colour
-* Streak
-* More
+1. Colour
+2. Streak
+3. **Lustre**: crystal light reflection
+4. Hardness
+5. **Crystal Habit**: directions and stuff of crystal growth
+6. **Cleavage**: ability to break along certain directions / planes
+
+More:
+
+* **Fracture**: breaking without cleavage constraint
+* **Magnetism**:
+
+####Colour
+
+* **Black**: Fe, Mg
+* Light: Felsic
+
+####Lustre
+
+* **Metallic**: think chrome
+* **Vitreous / glassy**: glazed (e.g. quartz, feldspar, amphiboles)
+* **Earthy**: think pottery, dull, clay
+* **Silky**: (e.g. gypsum)
+* **Pearly**: um...like a pearl?
+
+####Hardness
+
+Moh's Hardness scale
+
+1. Talc
+2. Gypsum (fingernail ~2.5)
+3. Calcite (Copper wire ~3.5)
+4. Fluorite
+5. Apatite (Masonry nail ~5.5)
+6. Orthoclase (streak plate 6-6.5)
+7. Quartz
+
+####Habit
+
+**Anhedral**: Inhibited growth; irregular shape
+
+**Euhedral**: Uninhibited growth; mineral grows in preferred crystal shape; necessary if you want to be able to identify it
+
+There's a chart of shapes, like blocky, hexagonal pyramid, etc.
 
 ### Intrusive
 
@@ -58,13 +124,17 @@ How to differentiate?
 | Ultramafic   | Komatiite (Picrite) | Peridotite |
 
 * **Felsic**: rich in quartz, primarily on continents, typically granite, granodiorite
-  * **Rhyolite**: continental crust
-	  * thick, sticky lava: silica traps more gasses
-	  * eruptions are extremely volatile
+	* Rich: K, Na, Si, Al
+	* Lighter-coloured
+	* **Rhyolite**: continental crust
+		* thick, sticky lava: silica traps more gasses
+		* eruptions are extremely volatile
 * **Intermediate**:
 	* lava between runny and explosive
 * **Mafic**: ocean crust, mid-ocean ridges
 	* creates runny lava (think: maple syrup): lower silica content
+	* Rich: Mg, Fe, Ca
+	* Poor: K, Na, Si
 	* **Basalt**:
 		* **pahoehoe**: flows easily, re-entry into old lava tube
 		* **aa**: "ah-ah", blocky texture
@@ -94,8 +164,8 @@ Texture determines in/extrusive
 Types:
 
 * **Phaneritic**: intrusive
-  * **Porphyritic**:
 * **Aphanitic**: too small to see, extrusive
+* **Porphyritic**: mix of 2 distinct sizes
 
 ####Fractional crystalization
 
