@@ -201,8 +201,8 @@ Methods:
 	* Could one spoof the server IP, then send only 1, 3, and 4? The server will send a message to itself and it will start looking for the message.
 * **Fin package**: concludes the transmission
 * Respond to sender:
-	* **Negative ACK (NACK)**:
-	* **positive ACK (ACK)**:
+	* **Negative ACK (NACK)**: 
+	* **Positive ACK (ACK)**: 
 
 ##Congestion Control
 
@@ -230,3 +230,23 @@ Methods:
 **Sequence Number**: which chunk? 
 
 * What if the `ACK` gets lost? Wait for timeout and try again, until you can't or connection is closed.
+
+t_transmission = L/R
+
+t_ACK arrives = RTT + t_transmission
+
+**Bandwidth Delay Product (BDP)**: BW * RTT = CW * L
+
+**(CW)**: maximum packets in the pipe
+
+	u_sender= (L/R)/(RTT + (L/R))
+			= (CW * L / BW) / RTT
+
+**Window**: a.k.a. buffer
+
+**Sender Window (SW)**:
+
+**Receiver Window (RW)**:
+
+**Sliding Window Protocol**: if a packet that is not at the beginning of the queue is acknowledged, you can either move it out or simply mark it as acknowledged and wait before removing it, depending on the importance of the order of arrival 
+
