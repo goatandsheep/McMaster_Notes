@@ -240,7 +240,7 @@ Types:
 		* (CU): Coarse
 		* (M): Medium
 	* **Conglomerate**: smooth
-	* **Shale**: fissile, breaks into fine layers
+	* **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks)
 	* **Siltstone**: glistening in sunlight, more gritty
 * **Chemical**: usually similar to the other two, but was altered
 
@@ -265,4 +265,43 @@ Types:
 * heat comes from poor heat distribution
 * **Compaction**: reduction in volume
 * **Cementation**: precipitates bind the grains of sediment together
+
+##Metamorphic Rocks
+
+Experienced heat, pressure, or fluids
+
+**Protolith**: always change a solid rock, despite conditions
+
+**P-T Diagram**: although pressure is on y-axis, negative to match depth of Earth
+
+Low pressure, high temperature happens in magma chambers
+
+	Can glaciers have low temp, high pressure?
+
+Not as much pressure as a continental collision.
+
+###Foliated rocks
+
+**Foliation**: compression that causes platy elongation from dragging, shearing, etc.
+
+Forces, stress perpendicular to stretch
+
+###Examples
+
+* Slate: shiny, hard, crystals ring when hit
+* Schist: 
+* Phylite: 
+* Migmatite: 
+* Biotite: requires Fe
+* Gneiss:
+
+###Non-foliated
+
+Sources:
+
+* Limestone:
+	* e.g. Marble
+* Sandstone:
+	* e.g. Quartzite: cleavage not along boundaries between different rocks
+* **Mafic**: Amphibolite
 

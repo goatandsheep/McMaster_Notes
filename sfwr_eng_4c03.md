@@ -250,3 +250,12 @@ t_ACK arrives = RTT + t_transmission
 
 **Sliding Window Protocol**: if a packet that is not at the beginning of the queue is acknowledged, you can either move it out or simply mark it as acknowledged and wait before removing it, depending on the importance of the order of arrival 
 
+**Selective Repeat (SR)**:
+
+**SW Size (SWS)**:
+
+**RW Size (RWS)**:
+
+**Go-Back-N (GBN)**:
+
+
