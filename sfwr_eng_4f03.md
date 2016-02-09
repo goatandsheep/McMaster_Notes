@@ -87,7 +87,7 @@ l * t_h << t_w * m, since l is not very large
 
 t_com = t_s + t_w * m
 
-##Abmdahl's Law
+##Ambdahl's Law
 
 r parallel
 
