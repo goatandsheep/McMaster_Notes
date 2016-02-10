@@ -251,3 +251,23 @@ Think: how to determine number of cycles to communicate
 
 * MIN c1, where t_1 = t_2 + c1
 * MIN c2, where t_2 = t_3 + c2
+
+##GNP
+
+3 types of numbers:
+
+* `mpz_t`: integer
+* `mpq_t`: rational number (think fractions)
+	* converts easily between double
+* `mpf_t`: float
+	* array "MeN"
+	* converts easily between double
+
+##C Errors
+
+* `Segmentation Fault`: referencing an array item out of bounds
+* `warning: implicit declaration of function`: inputs wrong for function (could be types or quantity of inputs)
+* `lvalue required as left operand of assignment`: make sure you used a proper comparison assignment. like `==` or `!=`, but not `=` nor `=!`
+* `assignment makes pointer from integer without a cast`: https://stackoverflow.com/questions/16587672/assignment-makes-pointer-from-integer-without-a-cast-and-other-questions
+* `note: expected âlong unsigned intâ but argument is of type âstruct`: 
+* `cast specifies array type`: make sure that if you're casting a variable to be treated as an array of a different type

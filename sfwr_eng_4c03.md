@@ -258,10 +258,3 @@ t_ACK arrives = RTT + t_transmission
 
 **Go-Back-N (GBN)**:
 
-##C Errors
-
-* `Segmentation Fault`: referencing an array item out of bounds
-* `warning: implicit declaration of function`: inputs wrong for function (could be types or quantity of inputs)
-* `lvalue required as left operand of assignment`: make sure you used a proper comparison assignment. like `==` or `!=`, but not `=` nor `=!`
-* `assignment makes pointer from integer without a cast`: https://stackoverflow.com/questions/16587672/assignment-makes-pointer-from-integer-without-a-cast-and-other-questions
-* `note: expected âlong unsigned intâ but argument is of type âstruct`: 

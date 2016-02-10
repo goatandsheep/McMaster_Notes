@@ -305,3 +305,91 @@ Sources:
 	* e.g. Quartzite: cleavage not along boundaries between different rocks
 * **Mafic**: Amphibolite
 
+##Stress
+
+Determined by:
+
+* temperature
+
+###Brittle
+
+**Brittle**: breaks when stress applied
+
+**Joint**: fractures where no movement
+
+###Ductile
+
+**Ductile**: stays one piece, but changes shape
+
+* more common when hotter temperatures
+
+**Footwall**: rock below fault
+
+**Hanging wall**: rock above fault
+
+###Shifts
+
+Types:
+
+* **Normal**: hanging wall goes down relative to footwall
+* **Reverse**: hanging wall goes up relative to footwall
+	* **Thrust**: angle is < pi/4
+* **Strike-Slip**: horizontal movement for vertical faults
+	* **Left-lateral**: if the fault in front moved to the left relative to the back one
+	* San Andreas is *right-lateral*
+
+###Forces
+
+* **Compressive**:
+* **Tensional**:
+
+###Folds
+
+2 limbs divided by **axial plane**
+
+	Think: bendy fault 
+
+* **Anticline**: rolls up, then down, like a wave
+* **Syncline**: rolls down, then up, like a bowl
+
+Folding in 2 directions
+
+**Basin**
+
+**Dome**
+
+###Age
+
+* **Relative**: age relative to other objects / events
+* **Absolute**: age in years
+
+**Cross-Cutting**: feature that cuts across another older feature
+
+1. A (Alluvium)
+2. J (Basalt Dike)
+3. B (Arkose)
+4. C (Conglomerate)
+5. I (Stock)
+6. D (Sandstone)
+7. E (Shale)
+8. F (Limestone)
+8. G (Siltstone) ?
+9. H (Dolomite)  ?
+
+
+####Techniques
+
+**Radiocarbon Dating**:
+
+**Stratigraphic Correlation**: if a fossil is found above another in one region, you'll know the relative age and that if you find it in another region, it will still have the same relative age
+
+**Index Fossil**: existed for short time interval, but wide geographic distribution
+
+**Faunal Succession**: 
+
+**Unconformities**: gap in sedimentary record
+
+* **Disconforities**: parallel sediment above and below erosion
+* **Angular Unconformity**:
+* **Nonconformity**: metamorphic rock under sedimentary
+
