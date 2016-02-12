@@ -89,9 +89,17 @@ t_com = t_s + t_w * m
 
 ##Ambdahl's Law
 
+* fixed problem size
+* increasing number of processors
+* efficiency similar to Gustafsson
+* better scalability
+
 r parallel
 
 1-r serial
+
+p/(r+ p(1-r))
+
 
 T_p = (1 - r)T_s + (rT_s)/P
 
@@ -165,6 +173,10 @@ E = 1/(1+t_s p log(p) + p/n t_w)
 ~= 1/sqrt(p)
 
 ##Gustafson's Law
+
+* increasing size
+* processors increasing
+* efficiency similar to Ambdahl's
 
 Assumption:
 
@@ -271,3 +283,4 @@ Think: how to determine number of cycles to communicate
 * `assignment makes pointer from integer without a cast`: https://stackoverflow.com/questions/16587672/assignment-makes-pointer-from-integer-without-a-cast-and-other-questions
 * `note: expected âlong unsigned intâ but argument is of type âstruct`: 
 * `cast specifies array type`: make sure that if you're casting a variable to be treated as an array of a different type
+* `expected â=â, â,â, â;â, âasmâ or â__attribute__â before âisPrime`: 
