@@ -254,7 +254,11 @@ t_ACK arrives = RTT + t_transmission
 
 **Selective Repeat (SR)**:
 
-**SW Size (SWS)**:
+**Congestion WiNDow (CWND)**:
+
+**Receiver WiNDow (RWND)**:
+
+**SW Size (SWS)**: `min(CWND, RWND)`
 
 **RW Size (RWS)**:
 
@@ -266,9 +270,22 @@ t_ACK arrives = RTT + t_transmission
 
 **Three-Way Handshake**: how TCP connections establish a connection
 
+**SYNc (SYN)**: determine the starting byte number
+
 **SYN-ACK**: acknowledge sequence number + 1
 
-C message: the initial connect request from the client
+1. **C** message: `connect()` (SeqC) the initial connect request from the client
+2. **S** (SeqS) accompanied by ACK (SeqC+1) `listen()`
+3. **C** ACK: SeqS + 1 to identify that the connection request is legitimate `accept()`
+
+###Tear Down
+
+1. **C** FIN, SeqA `close()`
+2. **S** ACK, SeqA+1
+3. **S** Data, SeqB
+4. **C** ACK, SeqB+1
+5. **S** FIN, SeqC
+6. **C** ACK, SeqC+1
 
 
 

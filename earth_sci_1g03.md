@@ -33,11 +33,11 @@ Since north part of magnet points the northern magnetic pole, the northern magne
 
 ### Boundaries
 
-| Name       | Direction | Volcanoes     | [Earthquakes](##Earthquakes)             | Tsunamis      |
-| ---------- | --------- | ------------- | ---------------------------------------- | ------------- |
-| Divergent  | Apart     | Yeah          | Shallow                                  |               |
+| Name       | Direction | Volcanoes     | [Earthquakes](##Earthquakes)             | Tsunamis                            |
+| ---------- | --------- | ------------- | ---------------------------------------- | ----------------------------------- |
+| Divergent  | Apart     | Yeah          | Shallow                                  |                                     |
 | Convergent | Together  | If subduction | If *subduction*, range from shallow in trenches to deep farther into the zone. Else, | If subduction and vertical movement |
-| Transform  | Beside    | No            | Shallow                                  |               |
+| Transform  | Beside    | No            | Shallow                                  |                                     |
 
 Rates of motion
 
@@ -48,14 +48,14 @@ Rates of motion
 **Isostasy**: crust floats on mantle
 
 1. **Crust**: think apple skin
-	1. Continental: 20-40km
-	2. Oceanic: 2-10km
+   1. Continental: 20-40km
+   2. Oceanic: 2-10km
 2. **Mantle**: 40-2890km
-	1. Fe, Mg
+   1. Fe, Mg
 3. **Outer core**: 2900km - 5140 km
-	1. Liquid Fe, Si
+   1. Liquid Fe, Si
 4. **Inner core**: 5140 km - 6370 km
-	1. Solid Fe, Ni
+   1. Solid Fe, Ni
 
 ## Mineral Classification
 
@@ -124,20 +124,20 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
 | Ultramafic   | Komatiite (Picrite) | Peridotite |
 
 * **Felsic**: rich in quartz, primarily on continents, typically granite, granodiorite
-	* Rich: K, Na, Si, Al
-	* Lighter-coloured
-	* **Rhyolite**: continental crust
-		* thick, sticky lava: silica traps more gasses
-		* eruptions are extremely volatile
+  * Rich: K, Na, Si, Al
+  * Lighter-coloured
+  * **Rhyolite**: continental crust
+  * thick, sticky lava: silica traps more gasses
+  * eruptions are extremely volatile
 * **Intermediate**:
-	* lava between runny and explosive
+  * lava between runny and explosive
 * **Mafic**: ocean crust, mid-ocean ridges
-	* creates runny lava (think: maple syrup): lower silica content
-	* Rich: Mg, Fe, Ca
-	* Poor: K, Na, Si
-	* **Basalt**:
-		* **pahoehoe**: flows easily, re-entry into old lava tube
-		* **aa**: "ah-ah", blocky texture
+  * creates runny lava (think: maple syrup): lower silica content
+  * Rich: Mg, Fe, Ca
+  * Poor: K, Na, Si
+  * **Basalt**:
+  * **pahoehoe**: flows easily, re-entry into old lava tube
+  * **aa**: "ah-ah", blocky texture
 
 Characteristics:
 
@@ -186,11 +186,11 @@ Silica-rich: partially melt
 ### Types of Waves
 
 * Body:
-	* P: faster
-	* S
+  * P: faster
+  * S
 * Surface:
-	* love
-	* rally​
+  * love
+  * rally​
 
 ### Measuring
 
@@ -216,7 +216,7 @@ Silica-rich: partially melt
 * Travel fastest in deep water
 * Slows down as the friction of the waves hit the ground
 * **Turbidite**: underwater landslides
-	* unsort sediments
+  * unsort sediments
 * Can be caused by *turbidites*
 * Requires more vertical than horizontal motion
 * The amount of debris will increase momentum of wave
@@ -232,27 +232,27 @@ Silica-rich: partially melt
 Types:
 
 * **Biochemical** : Carbonate rocks: found primarily in ocean
-	* **Limestone**: calcite
-	* **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
-		* Fizzes when scraping with nail
+  * **Limestone**: calcite
+  * **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
+  * Fizzes when scraping with nail
 * **Clastic**: made up of older rocks
-	* Identification
-		* (CU): Coarse
-		* (M): Medium
-	* **Conglomerate**: smooth
-	* **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks)
-	* **Siltstone**: glistening in sunlight, more gritty
+  * Identification
+  * (CU): Coarse
+  * (M): Medium
+  * **Conglomerate**: smooth
+  * **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks)
+  * **Siltstone**: glistening in sunlight, more gritty
 * **Chemical**: usually similar to the other two, but was altered
 
 ###Characteristics
 
 * **Angularity**: angular --> rounded, rough --> smooth
-	* more transportation --> smoother
+  * more transportation --> smoother
 * **Sorting**: consistency of grain sizes
-	* more transportation --> more sorted
-	* brittleness unrelated
+  * more transportation --> more sorted
+  * brittleness unrelated
 * **Chert**: biochemical & chemical
-	* can be from silica shells of fossils
+  * can be from silica shells of fossils
 * **Ripples**:
 
 	Can sand act where water is currently being used?
@@ -300,9 +300,9 @@ Forces, stress perpendicular to stretch
 Sources:
 
 * Limestone:
-	* e.g. Marble
+  * e.g. Marble
 * Sandstone:
-	* e.g. Quartzite: cleavage not along boundaries between different rocks
+  * e.g. Quartzite: cleavage not along boundaries between different rocks
 * **Mafic**: Amphibolite
 
 ##Stress
@@ -333,10 +333,10 @@ Types:
 
 * **Normal**: hanging wall goes down relative to footwall
 * **Reverse**: hanging wall goes up relative to footwall
-	* **Thrust**: angle is < pi/4
+  * **Thrust**: angle is < pi/4
 * **Strike-Slip**: horizontal movement for vertical faults
-	* **Left-lateral**: if the fault in front moved to the left relative to the back one
-	* San Andreas is *right-lateral*
+  * **Left-lateral**: if the fault in front moved to the left relative to the back one
+  * San Andreas is *right-lateral*
 
 ###Forces
 
@@ -358,9 +358,10 @@ Folding in 2 directions
 
 **Dome**
 
-###Age
+##Age
 
 * **Relative**: age relative to other objects / events
+  * Generally doesn't change as detection technology changes
 * **Absolute**: age in years
 
 **Cross-Cutting**: feature that cuts across another older feature
@@ -373,13 +374,20 @@ Folding in 2 directions
 6. D (Sandstone)
 7. E (Shale)
 8. F (Limestone)
-8. G (Siltstone) ?
-9. H (Dolomite)  ?
+9. G (Siltstone) ?
+10. H (Dolomite)  ?
 
+###Ranges
 
-####Techniques
+| Range | Era  | Epoch        |
+| ----- | ---- | ------------ |
+|       |      | Anthropocene |
+|       |      | Holocene     |
+|       |      |              |
 
-**Radiocarbon Dating**:
+###Techniques
+
+Usually you use many dating methods on the same sample
 
 **Stratigraphic Correlation**: if a fossil is found above another in one region, you'll know the relative age and that if you find it in another region, it will still have the same relative age
 
@@ -392,4 +400,38 @@ Folding in 2 directions
 * **Disconforities**: parallel sediment above and below erosion
 * **Angular Unconformity**:
 * **Nonconformity**: metamorphic rock under sedimentary
+
+####Radioactive Dating
+
+**Radioactive Dating**: using half life to determine proportion of remaining amount of a radioactive isotope (**parent**) to the isotope it decomposes to (**daughter**)
+
+Recall types of radioactive decay:
+
+* Alpha Decay: He^+^
+* Beta Decay:
+* Gamma Decay:
+
+Assumptions:
+
+* No daughter initially
+* Nothing escaped
+
+Difficulties:
+
+* pretty difficult after 10^th^ half-life
+* detecting daughter if half-life too big
+
+**Radiocarbon Dating**:^14^C —> ^14^N
+
+Plants take in ^14^C during photosynthesis
+
+**Bracketing**:
+
+###Ranges
+
+| Years | Era  |      |
+| ----- | ---- | ---- |
+|       |      |      |
+|       |      |      |
+|       |      |      |
 
