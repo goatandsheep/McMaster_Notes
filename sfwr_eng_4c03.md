@@ -96,7 +96,9 @@ Sources:
   * Multiplexor / Demultiplexor
   * Reliable data transfer
   * Flow Control: throttled by receiver, so sender reacts
+  * Data flows in order
   * Congestion Control: Adjusts transmission rate based on congestion signal
+* Both sides must "tear down connection" before either is allowed to stop receiving from the other side
 
 ## Security
 
@@ -198,11 +200,11 @@ Causes:
 Methods:
 
 * Label the packets with the packet number. If there's a packet # missing, the receiving server will keep looking for it.
-	* Could one spoof the server IP, then send only 1, 3, and 4? The server will send a message to itself and it will start looking for the message.
+  * Could one spoof the server IP, then send only 1, 3, and 4? The server will send a message to itself and it will start looking for the message.
 * **Fin package**: concludes the transmission
 * Respond to sender:
-	* **Negative ACK (NACK)**: 
-	* **Positive ACK (ACK)**: 
+  * **Negative ACK (NACK)**: 
+  * **Positive ACK (ACK)**: associated with a unique sequence number
 
 ##Congestion Control
 
@@ -257,4 +259,44 @@ t_ACK arrives = RTT + t_transmission
 **RW Size (RWS)**:
 
 **Go-Back-N (GBN)**:
+
+**Maximum Segment Size (MSS)**:
+
+###Three-Way Handshake
+
+**Three-Way Handshake**: how TCP connections establish a connection
+
+**SYN-ACK**: acknowledge sequence number + 1
+
+C message: the initial connect request from the client
+
+
+
+##Internet Protocol
+
+> **Internet Protocol (IP)**: representation of an *interface* NOT a *device*, since you can route to multiple devices with one interface / address
+
+**IPv4**: 32-bit number
+
+**(ICMP)**:
+
+**(RIP)**:
+
+**(OSPF)**: 
+
+**(BGP)**:
+
+**Forward Table**: determines what outgoing interface to route packets to
+
+**Longest Prefix Matching**: method of determining how to save the least number of bits to identify IP. Save the longest common prefix once, then save the lower uncommon bits separately
+
+**Switching rate**: 
+
+**Switching Fabric**: 
+
+Types:
+
+* **Memory Fabric**: dynamic, fast, expensive
+* **Bus Fabric**: cheap
+* **Crossbar Fabric**: think 2DA4
 
