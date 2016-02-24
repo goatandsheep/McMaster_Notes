@@ -246,7 +246,7 @@ t_ACK arrives = RTT + t_transmission
 
 **Window**: a.k.a. buffer
 
-**Sender Window (SW)**:
+**Sender Window (SW)**: doesn't move until the first packet in the window has been ACK'd
 
 **Receiver Window (RW)**:
 
@@ -254,7 +254,7 @@ t_ACK arrives = RTT + t_transmission
 
 **Selective Repeat (SR)**:
 
-**Congestion WiNDow (CWND)**:
+**Congestion WiNDow (CWND)**: congestion control  
 
 **Receiver WiNDow (RWND)**:
 
@@ -262,9 +262,50 @@ t_ACK arrives = RTT + t_transmission
 
 **RW Size (RWS)**:
 
+**Effective Window**: = SWS - (`LastByteSent` - `LastByteACKed`)
+
+rate = SWS/RTT (bytes/sec)
+
 **Go-Back-N (GBN)**:
 
-**Maximum Segment Size (MSS)**:
+**Maximum Segment Size (MSS)**: (bytes)
+
+**Slow-Start THRESHold value** [`ss_thresh`]: initial value is advertised window size
+
+Congestion Control Phases:
+
+* **Slow start (SS)**: `CWND < ss_thresh` starts increase exponentially fast, i.e. double packets sent every RTT
+* **Congestion Avoidance (CA)**: `CWND >= ss_thresh` increment CWND 1MSS every RTT
+
+**TCP Taho**: old standard
+
+* After fast-retransmit:
+
+  * cwnd = cwnd
+  * ss_thresh = cwnd
+
+* After timeout
+
+  - ss_thresh = cwnd/2
+  - cwnd = 1
+  - Start slow start
+
+  ​
+
+**TCP Reno**: most common
+
+* Regular:
+  * 3 duplicate ACKs, retransmit presumed lost segment
+  * congestion avoidance phase
+* After fast-retransmit:
+  * cwnd = cwnd/2
+  * ss_thresh = cwnd
+* After timeout: same as Taho
+
+**Additive Increase & Multiplicative Decrease (AIMD)**:
+
+* **Additive Increase**: cwnd+=1 MSS every RTT when no losses
+* **Multiplicative Decrease**: cut cwnd in half after loss event
 
 ###Three-Way Handshake
 
@@ -286,7 +327,6 @@ t_ACK arrives = RTT + t_transmission
 4. **C** ACK, SeqB+1
 5. **S** FIN, SeqC
 6. **C** ACK, SeqC+1
-
 
 
 ##Internet Protocol
@@ -316,4 +356,3 @@ Types:
 * **Memory Fabric**: dynamic, fast, expensive
 * **Bus Fabric**: cheap
 * **Crossbar Fabric**: think 2DA4
-
