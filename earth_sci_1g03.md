@@ -435,3 +435,27 @@ Plants take in ^14^C during photosynthesis
 |       |      |      |
 |       |      |      |
 
+##Resources
+
+**Geologic Resource**: something that came from the lithosphere (not water!)
+
+###Fossil Fuels
+
+**Reserve**: where there's oil that isn't worth getting
+
+####Formation
+
+* If you don't get bacteria decomposing dead organisms, you get oil
+* Oxygen-poor water
+* Marine organisms
+* Tar-sands: organisms have started to get at the oil
+* Additional heat forms natural gas
+* Additional heat leaves you with pure carbon, usually in the form of graphite
+* limited to certain depth ranges
+
+####Locating
+
+* We can determine what is under the ground by how waves bounce underground when we bang it
+* Since it is buoyant, rises
+* Gets trapped under impermeable layers in porous rocks
+
