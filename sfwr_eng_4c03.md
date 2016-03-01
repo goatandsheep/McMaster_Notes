@@ -356,3 +356,5 @@ Types:
 * **Memory Fabric**: dynamic, fast, expensive
 * **Bus Fabric**: cheap
 * **Crossbar Fabric**: think 2DA4
+
+**Fragmentation**: splitting up packets into smaller parts
