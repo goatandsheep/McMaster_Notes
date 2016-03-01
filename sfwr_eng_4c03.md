@@ -328,7 +328,6 @@ Congestion Control Phases:
 5. **S** FIN, SeqC
 6. **C** ACK, SeqC+1
 
-
 ##Internet Protocol
 
 > **Internet Protocol (IP)**: representation of an *interface* NOT a *device*, since you can route to multiple devices with one interface / address
@@ -358,3 +357,14 @@ Types:
 * **Crossbar Fabric**: think 2DA4
 
 **Fragmentation**: splitting up packets into smaller parts
+
+**Subnet**: 
+
+`Subnet_address` = `IP_Address` + `Subnet_mask`
+
+**Broadcast Domain**:
+
+**Gateway Router**:
+
+**Dynamic Host Configuration Protocol (DHCP)**:
+

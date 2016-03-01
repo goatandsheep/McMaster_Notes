@@ -457,5 +457,24 @@ Plants take in ^14^C during photosynthesis
 
 * We can determine what is under the ground by how waves bounce underground when we bang it
 * Since it is buoyant, rises
-* Gets trapped under impermeable layers in porous rocks
+* Gets trapped under impermeable layers (**seal rock**) in porous rocks (**reservoir rock**)
+  * If no *seal rock*, it rises up to the surface and usually catches fire and doesn't stop burning for years
 
+##Maps
+
+* use millimetres
+
+**Cross-section**: a graph or 2D slice of a topological map to identify elevation changes across a line
+
+To draw *cross-sections*:
+
+1. Method 1: easier, but impossible to change horizontal scale
+   1. Take a piece of paper, and line it up with the line
+   2. Make notches at every elevation change
+2. Method 2:
+   1. Take a ruler and measure the distance between each change and the beginning of the line
+   2. Multiply this distance by the scale and put that on your graph
+
+Note:
+
+* Rivers are assumed to be very shallow;  just put a little bump
