@@ -439,26 +439,44 @@ Plants take in ^14^C during photosynthesis
 
 **Geologic Resource**: something that came from the lithosphere (not water!)
 
-###Fossil Fuels
+##Fossil Fuels
 
 **Reserve**: where there's oil that isn't worth getting
 
-####Formation
+###Formation
 
-* If you don't get bacteria decomposing dead organisms, you get oil
+**Peat**: dead, decaying plant matter
+
+* If you have peat + heat, you get **coal**
+* If you don't get bacteria decomposing dead organisms, you get **oil**
 * Oxygen-poor water
 * Marine organisms
-* Tar-sands: organisms have started to get at the oil
-* Additional heat forms natural gas
+* **Tar-sands**: organisms have started to get at the oil
+* Additional heat forms **natural gas**
 * Additional heat leaves you with pure carbon, usually in the form of graphite
 * limited to certain depth ranges
 
-####Locating
+###Locating
 
 * We can determine what is under the ground by how waves bounce underground when we bang it
 * Since it is buoyant, rises
 * Gets trapped under impermeable layers (**seal rock**) in porous rocks (**reservoir rock**)
   * If no *seal rock*, it rises up to the surface and usually catches fire and doesn't stop burning for years
+
+###Coal Mining
+
+**Strip mining**:
+
+* Process:
+	* blowing up a chunk of land then moving it over
+	* removing the coal
+	* replanting the previous stuff
+* Increases sulphur content, making water more acidic
+	* Acid dissolves heavy metals 
+
+###Nuclear
+
+* You need to be careful about getting rid of the radioactive waste
 
 ##Maps
 
@@ -478,3 +496,4 @@ To draw *cross-sections*:
 Note:
 
 * Rivers are assumed to be very shallow;  just put a little bump
+
