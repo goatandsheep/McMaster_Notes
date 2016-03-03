@@ -28,6 +28,8 @@ byte (B)
 
 **Packet Switches**: forward packets
 
+**Router**: connector between layers of intranets
+
 ## Packet Delay
 
 Sources:
@@ -365,3 +367,36 @@ Types:
 **Gateway Router**:
 
 **Dynamic Host Configuration Protocol (DHCP)**:
+
+**Autonomous System (AS)**: a.k.a. **Autonomous Domain**
+
+* Each given an **AS Number (ASN)**:
+
+Intra-domain routing protocols:
+
+* **Open Shortest Path First (OSPF)**: uses Dijkstra's
+* **Routing Information Protocol (RIP)**: Distance Vector algorithm
+  * **Advertisement**: response message
+* **Interior Gateway Routing Protocol (IGBRP)**: Cisco proprietary
+* designed for efficiency
+
+Inter-domain protocols:
+
+* **Border Gateway Protocol (BGP)**:
+* designed for cost
+
+###Routing Algorithms
+
+Think about graph theory, where routers are vertices and links are edges.
+
+**Graph Abstraction**: ignore the time in router
+
+[Some of the following algorithms are covered here](https://drive.google.com/open?id=0BxW61uJyyN8TT3l5M0NHZFVRMkk):
+
+* **Dijkstra (D)**
+* **Bellman-Ford (BF)**
+  * **Distance Vector (DV)**
+
+D~v~(y): shortest distance from `v` to `y`
+
+`c(x,y)`: cost of direct path between node `x` and node `y`
