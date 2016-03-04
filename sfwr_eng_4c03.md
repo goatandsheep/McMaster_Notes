@@ -358,6 +358,8 @@ Types:
 * **Bus Fabric**: cheap
 * **Crossbar Fabric**: think 2DA4
 
+**Fragmentation**: splitting up packets into smaller parts
+
 **Subnet**: 
 
 `Subnet_address` = `IP_Address` + `Subnet_mask`
