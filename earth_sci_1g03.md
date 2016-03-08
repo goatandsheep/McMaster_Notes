@@ -280,6 +280,10 @@ Low pressure, high temperature happens in magma chambers
 
 Not as much pressure as a continental collision.
 
+**Contact**: formed with heat by touching magma
+
+**Regional**: pressure from tectonic plates
+
 ###Foliated rocks
 
 **Foliation**: compression that causes platy elongation from dragging, shearing, etc., i.e. look for long streaks
@@ -312,11 +316,13 @@ Determined by:
 * temperature
 * pressure
 
-###Brittle
+###Forces
 
-**Brittle**: breaks when stress applied
+* **Compressive**: folding
+* **Tensional**: stretching
+* **Shear**: two things going in different directions
 
-**Joint**: fractures where no movement
+**Brittle Response**: creates fractures called **joints**
 
 ###Ductile
 
@@ -324,41 +330,45 @@ Determined by:
 
 * more common when hotter temperatures
 
+###Shifts
+
 **Footwall**: rock below fault
 
 **Hanging wall**: rock above fault
 
-###Shifts
+![Dip Angle](http://eqseis.geosc.psu.edu/~cammon/HTML/Classes/IntroQuakes/Notes/Images_specific/dip_def.gif)
 
 Types:
 
-* **Normal**: hanging wall goes down relative to footwall
-* **Reverse**: hanging wall goes up relative to footwall
-  * **Thrust**: angle is < pi/4
+* **Normal**:
+	* dip angle > pi/4
+	* hanging wall goes down relative to footwall
+* **Reverse**:
+	* dip angle > pi/4
+	* hanging wall goes up relative to footwall
+	* compression
+* **Thrust**:
+	* dip angle is < pi/4
+	* up
+	* e.g. Rockies
 * **Strike-Slip**: horizontal movement for vertical faults
   * **Left-lateral**: if the fault in front moved to the left relative to the back one
   * San Andreas is *right-lateral*
 
-###Forces
+####Folds
 
-* **Compressive**: folding
-* **Tensional**: stretching
-* **Shear**: two things going in different directions
-
-###Folds
+> result of ductile/plastic response
 
 2 limbs divided by **axial plane**
 
 	Think: bendy fault 
 
 * **Anticline**: rolls up, then down, like a wave
+	* **Dome**: 2D anticline
 * **Syncline**: rolls down, then up, like a bowl
-
-Folding in 2 directions
-
-**Basin**
-
-**Dome**
+	* **Basin**: 2D syncline
+		* **Basement**: bottom of basin
+		* e.g. Michigan basin / escarpment
 
 ##Age
 
@@ -397,20 +407,23 @@ Usually you use many dating methods on the same sample
 
 **Faunal Succession**: 
 
-**Unconformities**: gap in sedimentary record
+###Unconformity
 
-* **Disconforities**: parallel sediment above and below erosion
+> gap in sedimentary record
+
+* **Disconformities**: parallel sediment above and below erosion
 * **Angular Unconformity**:
 * **Nonconformity**: metamorphic rock under sedimentary
 
 ####Radioactive Dating
 
-**Radioactive Dating**: using half life to determine proportion of remaining amount of a radioactive isotope (**parent**) to the isotope it decomposes to (**daughter**)
+> using half life to determine proportion of remaining amount of a radioactive isotope (**parent**) to the isotope it decomposes to (**daughter**)
 
 Recall types of radioactive decay:
 
 * Alpha Decay: He^+^
-* Beta Decay:
+* Beta Decay: N = P + e-
+* Electron Capture: P + e- = N
 * Gamma Decay:
 
 Assumptions:
@@ -423,11 +436,11 @@ Difficulties:
 * pretty difficult after 10^th^ half-life
 * detecting daughter if half-life too big
 
-**Radiocarbon Dating**:^14^C —> ^14^N
+**Radiocarbon Dating**:^14^C —> ^14^N (5730 year)
 
 Plants take in ^14^C during photosynthesis
 
-**Bracketing**:
+**Bracketing**: radiometric dating + cross-cutting
 
 ###Ranges
 
@@ -449,7 +462,8 @@ Plants take in ^14^C during photosynthesis
 
 **Peat**: dead, decaying plant matter
 
-* If you have peat + heat, you get **coal**
+**Coal**: peat + heat
+
 * If you don't get bacteria decomposing dead organisms, you get **oil**
 * Oxygen-poor water
 * Marine organisms
@@ -544,20 +558,9 @@ Note:
 
 **Gradient**: actual slope, i.e. rise/run = d~vertical/d~horizontal
 
-##Mining
+###Planes
 
-**Metallic ores**: primarily *sulphides*, **NOT** *silicates*
-
-* concentrated near hydrothermic fluids
-* e.g. black smoker vents
-
-**Ore veins**:
-
-**Placer Deposits**: looking for deposits in streams is just the remains from the original ore veins that have sometimes been completely eroded into the sediments of the stream
-
-Acid mining, acid rain from smelting
-
-**Planes**: place when two rock layers meet
+> place when two rock layers meet
 
 * **Strike**: line across a plane at a constant elevation
 	* **Strike angle**angle from North to the *strike* line
@@ -576,4 +579,18 @@ Acid mining, acid rain from smelting
 * `Strike / dip direction`
   * `_ _ _ / _ _  _ _`
   * `315deg / 15deg NW`
-* ​
+* 
+
+##Mining
+
+**Metallic ores**: primarily *sulphides*, **NOT** *silicates*
+
+* concentrated near hydrothermic fluids
+* e.g. black smoker vents
+
+**Ore veins**:
+
+**Placer Deposits**: looking for deposits in streams is just the remains from the original ore veins that have sometimes been completely eroded into the sediments of the stream
+
+Acid mining, acid rain from smelting
+​
