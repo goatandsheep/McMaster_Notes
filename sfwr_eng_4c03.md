@@ -8,7 +8,7 @@ Winter 2016
 
 ## Internet Architecture
 
-**Datagram**: 
+**Datagram**: basic transfer unit, essentially a packet
 
 bit (b)
 
@@ -72,7 +72,7 @@ Sources:
 
 ###Persistent
 
-
+todo
 
 ### Transport Protocols
 
@@ -334,7 +334,7 @@ Congestion Control Phases:
 
 **IPv4**: 32-bit number
 
-**(ICMP)**:
+**Internet Communication Message Protocol (ICMP)**: (`type`, `code`, first 8 bytes of IP datagram)
 
 **(RIP)**:
 
@@ -362,9 +362,22 @@ Types:
 
 `Subnet_address` = `IP_Address` + `Subnet_mask`
 
+Size of *subnet* [`10.0.0/24`]: 24 bits for representing an address 
+
 **Broadcast Domain**:
 
 **Gateway Router**:
 
 **Dynamic Host Configuration Protocol (DHCP)**:
+
+**Translation Table**: 
+
+**Network Address Translation (NAT)**: allows for IP-ception, so one address represents them all
+
+`(source_IP_address, port#)` -->
+
+*Incoming datagrams*: replace `(NAT_IP, new_port#)` --> `(sourceIP, port#)` 
+
+**Session Traversal Utilities for Nat's (STUN)**: 
+
 
