@@ -468,11 +468,11 @@ Plants take in ^14^C during photosynthesis
 **Strip mining**:
 
 * Process:
-	* blowing up a chunk of land then moving it over
-	* removing the coal
-	* replanting the previous stuff
+  * blowing up a chunk of land then moving it over
+  * removing the coal
+  * replanting the previous stuff
 * Increases sulphur content, making water more acidic
-	* Acid dissolves heavy metals 
+  * Acid dissolves heavy metals
 
 ###Nuclear
 
@@ -497,3 +497,33 @@ Note:
 
 * Rivers are assumed to be very shallow;  just put a little bump
 
+##Mining
+
+**Metallic ores**: primarily *sulphides*, **NOT** *silicates*
+
+* concentrated near hydrothermic fluids
+* e.g. black smoker vents
+
+**Ore veins**:
+
+**Placer Deposits**: looking for deposits in streams is just the remains from the original ore veins that have sometimes been completely eroded into the sediments of the stream
+
+Acid mining, acid rain from smelting
+
+**Planes**: place when two rock layers meet
+
+* **Strike**: angle from North to x
+  * take all points at a given elevation at rock contacts
+  * connect points with line
+  * label with elevation, contact name
+* **Dip**: 
+* Defined by 3 points in space
+* From a given vantage point, the apparent distance between heights determines the angle
+* Assumption:
+  * North is 0deg
+  * East is $\frac{\pi}{2}$
+  * South is $\pi$
+  * West is $\frac{3\pi}{2}$
+* `Strike / dip`
+  * `_ _ _ / _ _`
+* ​
