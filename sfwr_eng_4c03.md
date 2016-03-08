@@ -168,6 +168,8 @@ total delay   = Internet delay + access delay + LAN delay
 
 **Bursting Error**:
 
+**Cyclic Redundancy Check (CRC)**:
+
 **2-D Parity checking**:
 
 	1 0 1 0 1 | 1
@@ -336,13 +338,11 @@ Congestion Control Phases:
 
 **IPv4**: 32-bit number
 
-**(ICMP)**:
+**Internet Control Message Protocol (ICMP)**: one of the main protocols of the internet protocol suite
 
-**(RIP)**:
+Forward Table: determines what outgoing interface to route packets to
 
-**(OSPF)**: 
-
-**(BGP)**:
+**Multicast OSPF (MOSPF)**: 
 
 **Forward Table**: determines what outgoing interface to route packets to
 
@@ -350,7 +350,9 @@ Congestion Control Phases:
 
 **Switching rate**: 
 
-**Switching Fabric**: 
+###Switching Fabrics 
+
+> **Switching Fabric**: I don't know what this is
 
 Types:
 
@@ -374,11 +376,15 @@ Types:
 
 * Each given an **AS Number (ASN)**:
 
-Intra-domain routing protocols:
+###Intra-domain routing protocols
 
-* **Open Shortest Path First (OSPF)**: uses Dijkstra's
+* **Open Shortest Path First (OSPF)**: uses Link State Algorithm, 1 entry/neighbour router
+  * Multiple same-cost paths allowed
+  * Can have hierarchical network for large domains
+  * **Multicast OSPF (MOSPF)**: think Twitch streaming, so everyone is seeing the same packets at the same time
 * **Routing Information Protocol (RIP)**: Distance Vector algorithm
   * **Advertisement**: response message
+  * Only one path
 * **Interior Gateway Routing Protocol (IGBRP)**: Cisco proprietary
 * designed for efficiency
 
@@ -402,3 +408,49 @@ Think about graph theory, where routers are vertices and links are edges.
 D~v~(y): shortest distance from `v` to `y`
 
 `c(x,y)`: cost of direct path between node `x` and node `y`
+
+**Link State algorithm (LS)**:
+
+* LS packet dissemination
+* Topology map at each node
+* computes route using D
+
+##Data Link Layer
+
+> **Data Link Layer**: transfers frames from one node to an adjacent node over a link
+
+**Frame**:
+
+1. PHY
+2. Link Layer
+3. Network
+4. Transport
+5. Application
+
+###Devices
+
+**Switch**: (1) specifies where to send data
+
+**Hub**: (1, 2) repeater, extends
+
+**Router**: (1, 2, 3)
+
+**Access Point (AP)**:
+
+**Wireless AP**:
+
+**Interface Card (IC)**:
+
+###Services
+
+* Flow control
+* Error detection
+* Error correction
+* **Duplex**:
+  * **Full Duplex**: nodes at both ends of link can transmit simultaneously
+  * **Half Duplex**:
+* **Framing**:
+* **Link Access**: for WiFi and stuff
+  * **MAC Address**: portable, unlike IP, since it depends on LAN card not subnet
+    * 32-bit IP
+  * **Broadcast Address**:
