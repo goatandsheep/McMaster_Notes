@@ -112,7 +112,7 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
 
 **Intrusive**: magma that doesn't make it to the surface
 
-**Dikes** can form between **sill**, older rocks.
+**Dikes** can form between **sill**, older rocks. ![Sill vs dike](https://upload.wikimedia.org/wikipedia/commons/f/f1/The_difference_between_a_sill_and_a_dike.jpg)
 
 ### Igneous
 
@@ -282,7 +282,7 @@ Not as much pressure as a continental collision.
 
 ###Foliated rocks
 
-**Foliation**: compression that causes platy elongation from dragging, shearing, etc.
+**Foliation**: compression that causes platy elongation from dragging, shearing, etc., i.e. look for long streaks
 
 Forces, stress perpendicular to stretch
 
@@ -310,6 +310,7 @@ Sources:
 Determined by:
 
 * temperature
+* pressure
 
 ###Brittle
 
@@ -340,8 +341,9 @@ Types:
 
 ###Forces
 
-* **Compressive**:
-* **Tensional**:
+* **Compressive**: folding
+* **Tensional**: stretching
+* **Shear**: two things going in different directions
 
 ###Folds
 
@@ -480,9 +482,9 @@ Plants take in ^14^C during photosynthesis
 
 ##Maps
 
-* use millimetres
+###Cross-Section
 
-**Cross-section**: a graph or 2D slice of a topological map to identify elevation changes across a line
+> A graph or 2D slice of a topological map to identify elevation changes across a line
 
 To draw *cross-sections*:
 
@@ -496,6 +498,51 @@ To draw *cross-sections*:
 Note:
 
 * Rivers are assumed to be very shallow;  just put a little bump
+* Label the following things:
+	* River valleys
+	* Hilltops
+	* Relief: height between river and hill
+
+###Contour
+
+* Contour lines can never cross, except where an overhanging slope exists
+* Contours equal elevation
+* Rivers are identified by v's or dots
+
+![Rivers](http://www.schools.ccps.k12.va.us/sites/HIGH/solquiz/Document%20Library/1/EOC2007EarthScience/18.jpg)
+
+###UTM
+
+**Universal Transverse Mercator coordinate system (UTM)**:
+
+* six digits: `EEENNN`
+	* first three digits being the 'Easting'
+		* line immediately west of feature in question
+	* last three digits the 'Northing'
+		* line immediately south of feature in question
+
+###Map Elements
+
+####Magnetic Decline
+
+> Current angle between True North and Magnetic North
+
+* Fraction of degree represented by 60 **minutes**, represented by 60 **seconds**
+* **True North (TN)**: physical, non-moving pole  
+* **Grid North (GN)**: direction of North pole in year of mapping
+* **Magnetic North (MN)**: direction of magnetic North pole
+	* MN~today = MN~print + GN + rate*(year~today - year~mapping)
+	* Keep in mind if GN is in opposite direction of TN, its negative
+	* Sometimes on map represented by angle between GN and MN, instead of TN and MN
+
+####Scales
+
+**Vertical Exaggeration (VE)**: it's like slope but for the scale
+ 
+* vertical scale/horizontal scale
+* the scales need to be in fraction form first, i.e. 1cm/whatever
+
+**Gradient**: actual slope, i.e. rise/run = d~vertical/d~horizontal
 
 ##Mining
 
@@ -512,11 +559,13 @@ Acid mining, acid rain from smelting
 
 **Planes**: place when two rock layers meet
 
-* **Strike**: angle from North to x
-  * take all points at a given elevation at rock contacts
-  * connect points with line
-  * label with elevation, contact name
-* **Dip**: 
+* **Strike**: line across a plane at a constant elevation
+	* **Strike angle**angle from North to the *strike* line
+	* take all points at a given elevation at rock contacts
+	* connect points with line
+    * label with elevation, contact name
+* **Dip**: line that goes directly along the slope without deviation
+	* **Dip angle**: downwards angle compared to a straight plane
 * Defined by 3 points in space
 * From a given vantage point, the apparent distance between heights determines the angle
 * Assumption:
@@ -524,6 +573,7 @@ Acid mining, acid rain from smelting
   * East is $\frac{\pi}{2}$
   * South is $\pi$
   * West is $\frac{3\pi}{2}$
-* `Strike / dip`
-  * `_ _ _ / _ _`
+* `Strike / dip direction`
+  * `_ _ _ / _ _  _ _`
+  * `315deg / 15deg NW`
 * ​
