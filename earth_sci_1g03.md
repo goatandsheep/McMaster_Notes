@@ -593,4 +593,42 @@ Note:
 **Placer Deposits**: looking for deposits in streams is just the remains from the original ore veins that have sometimes been completely eroded into the sediments of the stream
 
 Acid mining, acid rain from smelting
-​
+
+##Streams
+
+**Dissolved Load**: dissolved ions (usually 35% concentration of suspended load)
+
+**Suspended Load**: suspended particles
+
+**Bed Load**: particles dragged along bottom of stream
+
+**Capacity**​: how much stream can carry
+
+* speed:
+	* larger particles
+	* more stuff overall
+	* i.e. when dams slow down streams, they dump sediment
+
+**Base level**: limiting level below which stream can not erode
+
+Pure water picks up more sediments since less saturated,
+
+* **Dendritic**: flat
+* **Trellis**: folded / tilted
+
+**Delta**: (a.k.a. **Alluvial Fan**)
+
+**Braided Stream**: channels constantly moving because of sediments, commonly found near glaciers
+
+**Meandering Stream**: 
+
+**Cutbank**: 
+
+**Point bars**: 
+
+**Point Bar**: when sediment is deposited around the inside of a curve
+
+* can build up to form natural levees
+
+**Floodplain**: 
+

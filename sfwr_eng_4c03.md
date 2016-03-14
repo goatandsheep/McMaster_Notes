@@ -441,9 +441,9 @@ D~v~(y): shortest distance from `v` to `y`
 
 ###Devices
 
-**Switch**: (1) specifies where to send data
+**Switch**: (1) duplicates messages to ports
 
-**Hub**: (1, 2) repeater, extends
+**Hub**: (1, 2) repeater, forwards message to specific ports
 
 **Router**: (1, 2, 3)
 
@@ -464,5 +464,7 @@ D~v~(y): shortest distance from `v` to `y`
 * **Framing**:
 * **Link Access**: for WiFi and stuff
   * **MAC Address**: portable, unlike IP, since it depends on LAN card not subnet
-    * 32-bit IP
+    * 32-bit IP / 6 byte
   * **Broadcast Address**:
+
+**(ARP)**: `sudo arp -a -d`

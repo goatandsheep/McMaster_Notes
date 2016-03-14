@@ -283,4 +283,18 @@ Think: how to determine number of cycles to communicate
 * `assignment makes pointer from integer without a cast`: https://stackoverflow.com/questions/16587672/assignment-makes-pointer-from-integer-without-a-cast-and-other-questions
 * `note: expected âlong unsigned intâ but argument is of type âstruct`: 
 * `cast specifies array type`: make sure that if you're casting a variable to be treated as an array of a different type
-* `expected â=â, â,â, â;â, âasmâ or â__attribute__â before âisPrime`: 
+* `expected â=â, â,â, â;â, âasmâ or â__attribute__â before âisPrime`:
+* `ignoring #pragma openmp parallel`: make sure `-fopenmp` is in `CFLAGS` as well as `LDFLAGS`
+* `expecting end of line`:
+
+##OpenACC
+
+* When dealing with structs, use pointers on heap instead of stack use `pcopyin(inX[:1])`...
+* `pcopy`: present or create, saves time from using malloc if you need it
+* `->` associate the pointer of a variable with the same memory address of another variable
+* `-ta=tesla:managed`: unified memory architecture for tesla supercomputer cards, titanX
+* `CFLAGS`: for C compiler
+* `LDFLAGS`: link (or "load") directives, such as libraries
+* `#pragma omp parallel for`
+* `#pragma omp parallel num_threads(2) shared(x)`
+
