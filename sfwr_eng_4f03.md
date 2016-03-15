@@ -264,6 +264,10 @@ Think: how to determine number of cycles to communicate
 * MIN c1, where t_1 = t_2 + c1
 * MIN c2, where t_2 = t_3 + c2
 
+**Boundary Vertices**: vertices that are connected to another section of a graph
+
+Neo4J
+
 ##GNP
 
 3 types of numbers:

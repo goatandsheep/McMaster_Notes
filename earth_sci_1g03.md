@@ -632,3 +632,26 @@ Pure water picks up more sediments since less saturated,
 
 **Floodplain**: 
 
+###Groundwater
+
+**Springs**: discharge of groundwater
+
+* **Effluent**: streams fed by groundwater
+* **Influent**: streams above the water table
+	* arid regions
+
+####Pollution
+
+* pollution is best placed on non-permeable substances, such as clay
+* some of it floats / sinks
+* salt meets fresh leads to sulfate smells (it's safe, though)
+
+####Overmining
+
+* Pore space collapses
+	* causes ground to lower
+	* more flood-prone because pores have collapsed
+* Water table can form **caves** or **karst** when water table disappears and only limestone remains
+	* **stalactite**: top
+	* **stalagmite**: bottom
+	* creates **sinkhole** when collapses
