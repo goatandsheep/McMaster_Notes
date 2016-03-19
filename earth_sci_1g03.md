@@ -341,16 +341,16 @@ Determined by:
 Types:
 
 * **Normal**:
-	* dip angle > pi/4
-	* hanging wall goes down relative to footwall
+  * dip angle > pi/4
+  * hanging wall goes down relative to footwall
 * **Reverse**:
-	* dip angle > pi/4
-	* hanging wall goes up relative to footwall
-	* compression
+  * dip angle > pi/4
+  * hanging wall goes up relative to footwall
+  * compression
 * **Thrust**:
-	* dip angle is < pi/4
-	* up
-	* e.g. Rockies
+  * dip angle is < pi/4
+  * up
+  * e.g. Rockies
 * **Strike-Slip**: horizontal movement for vertical faults
   * **Left-lateral**: if the fault in front moved to the left relative to the back one
   * San Andreas is *right-lateral*
@@ -364,11 +364,11 @@ Types:
 	Think: bendy fault 
 
 * **Anticline**: rolls up, then down, like a wave
-	* **Dome**: 2D anticline
+  * **Dome**: 2D anticline
 * **Syncline**: rolls down, then up, like a bowl
-	* **Basin**: 2D syncline
-		* **Basement**: bottom of basin
-		* e.g. Michigan basin / escarpment
+  * **Basin**: 2D syncline
+  * **Basement**: bottom of basin
+  * e.g. Michigan basin / escarpment
 
 ##Age
 
@@ -513,9 +513,9 @@ Note:
 
 * Rivers are assumed to be very shallow;  just put a little bump
 * Label the following things:
-	* River valleys
-	* Hilltops
-	* Relief: height between river and hill
+  * River valleys
+  * Hilltops
+  * Relief: height between river and hill
 
 ###Contour
 
@@ -530,10 +530,10 @@ Note:
 **Universal Transverse Mercator coordinate system (UTM)**:
 
 * six digits: `EEENNN`
-	* first three digits being the 'Easting'
-		* line immediately west of feature in question
-	* last three digits the 'Northing'
-		* line immediately south of feature in question
+  * first three digits being the 'Easting'
+  * line immediately west of feature in question
+  * last three digits the 'Northing'
+  * line immediately south of feature in question
 
 ###Map Elements
 
@@ -545,14 +545,14 @@ Note:
 * **True North (TN)**: physical, non-moving pole  
 * **Grid North (GN)**: direction of North pole in year of mapping
 * **Magnetic North (MN)**: direction of magnetic North pole
-	* MN~today = MN~print + GN + rate*(year~today - year~mapping)
-	* Keep in mind if GN is in opposite direction of TN, its negative
-	* Sometimes on map represented by angle between GN and MN, instead of TN and MN
+  * MN~today = MN~print + GN + rate*(year~today - year~mapping)
+  * Keep in mind if GN is in opposite direction of TN, its negative
+  * Sometimes on map represented by angle between GN and MN, instead of TN and MN
 
 ####Scales
 
 **Vertical Exaggeration (VE)**: it's like slope but for the scale
- 
+
 * vertical scale/horizontal scale
 * the scales need to be in fraction form first, i.e. 1cm/whatever
 
@@ -563,12 +563,12 @@ Note:
 > place when two rock layers meet
 
 * **Strike**: line across a plane at a constant elevation
-	* **Strike angle**angle from North to the *strike* line
-	* take all points at a given elevation at rock contacts
-	* connect points with line
+  * **Strike angle**angle from North to the *strike* line
+  * take all points at a given elevation at rock contacts
+  * connect points with line
     * label with elevation, contact name
 * **Dip**: line that goes directly along the slope without deviation
-	* **Dip angle**: downwards angle compared to a straight plane
+  * **Dip angle**: downwards angle compared to a straight plane
 * Defined by 3 points in space
 * From a given vantage point, the apparent distance between heights determines the angle
 * Assumption:
@@ -579,7 +579,7 @@ Note:
 * `Strike / dip direction`
   * `_ _ _ / _ _  _ _`
   * `315deg / 15deg NW`
-* 
+    *
 
 ##Mining
 
@@ -605,9 +605,9 @@ Acid mining, acid rain from smelting
 **Capacity**​: how much stream can carry
 
 * speed:
-	* larger particles
-	* more stuff overall
-	* i.e. when dams slow down streams, they dump sediment
+  * larger particles
+  * more stuff overall
+  * i.e. when dams slow down streams, they dump sediment
 
 **Base level**: limiting level below which stream can not erode
 
@@ -638,7 +638,7 @@ Pure water picks up more sediments since less saturated,
 
 * **Effluent**: streams fed by groundwater
 * **Influent**: streams above the water table
-	* arid regions
+  * arid regions
 
 ####Pollution
 
@@ -649,9 +649,45 @@ Pure water picks up more sediments since less saturated,
 ####Overmining
 
 * Pore space collapses
-	* causes ground to lower
-	* more flood-prone because pores have collapsed
+  * causes ground to lower
+  * more flood-prone because pores have collapsed
 * Water table can form **caves** or **karst** when water table disappears and only limestone remains
-	* **stalactite**: top
-	* **stalagmite**: bottom
-	* creates **sinkhole** when collapses
+  * **stalactite**: top
+  * **stalagmite**: bottom
+  * creates **sinkhole** when collapses
+##Landslides
+
+###Types
+
+**Creep**: mass wasting
+
+**Frost Wedging**: 
+
+**Rock Falls**: angle too high
+
+**Rock slide**: bedrock loses cohesion with rock below it
+
+###Major incidents
+
+* *Gros Ventre*:
+  * Weak layers, such as shale, supporting heavy loads
+  * groundwater high from lots of rain
+  * erosion
+* *Vaiont Dam*:
+  * dams raise water table
+  * this caused mountain to collapse into reservoir
+  * water overflowed the dam
+  * water washed away city
+  * prevented by **rock bolts** between top shale layer and bedrock
+* *Frank Slide*: Alberta
+  * thrust fault, anticline
+  * since mine didn't collapse, mining was not cause of slide
+  * people survived, got out thru ventilation shaft
+  * could have been dynamite or an earthquake
+
+###Minimizing effects
+
+* think about *sea-to-sky highway* in Vancouver
+* nets
+* when you see a slide, it will probably happen again, so be cautious
+

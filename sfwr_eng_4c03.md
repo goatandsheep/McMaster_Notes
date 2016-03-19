@@ -243,7 +243,7 @@ t_ACK arrives = RTT + t_transmission
 
 **Bandwidth Delay Product (BDP)**: BW * RTT = CW * L
 
-**(CW)**: maximum packets in the pipe
+**Contention Window (CW)**: maximum packets in the pipe
 
 	u_sender= (L/R)/(RTT + (L/R))
 			= (CW * L / BW) / RTT
@@ -280,6 +280,7 @@ Congestion Control Phases:
 
 * **Slow start (SS)**: `CWND < ss_thresh` starts increase exponentially fast, i.e. double packets sent every RTT
 * **Congestion Avoidance (CA)**: `CWND >= ss_thresh` increment CWND 1MSS every RTT
+  * a.k.a. **Collision Avoidance**
 
 **TCP Taho**: old standard
 
@@ -372,11 +373,11 @@ Size of *subnet* [`10.0.0/24`]: 24 bits for representing an address
 
 **Gateway Router**:
 
-**Dynamic Host Configuration Protocol (DHCP)**:
+**Dynamic Host Configuration Protocol (DHCP)**: allocates the IP addresses for each
 
 **Translation Table**: 
 
-**Network Address Translation (NAT)**: allows for IP-ception, so one address represents them all
+**Network Address Translation (NAT)**: protocol that allows for IP-ception, so one address represents them all
 
 `(source_IP_address, port#)` -->
 
@@ -399,8 +400,9 @@ Size of *subnet* [`10.0.0/24`]: 24 bits for representing an address
   * Only one path
 * **Interior Gateway Routing Protocol (IGBRP)**: Cisco proprietary
 * designed for efficiency
+* **Intermediate System to Intermediate System (IS-IS)**:
 
-Inter-domain protocols:
+###Inter-domain protocols
 
 * **Border Gateway Protocol (BGP)**:
 * designed for cost
@@ -465,6 +467,57 @@ D~v~(y): shortest distance from `v` to `y`
 * **Link Access**: for WiFi and stuff
   * **MAC Address**: portable, unlike IP, since it depends on LAN card not subnet
     * 32-bit IP / 6 byte
+    * [generally similar for vendors](macvendorlookup.com)
   * **Broadcast Address**:
 
 **(ARP)**: `sudo arp -a -d`
+
+##Addressing
+
+802.3 frame: ethernet
+
+* 2 addresses:
+  * MAC of recipient
+  * MAC of transmitter
+  * no need for router because it's the only possible path
+
+802.11 frame: WiFi
+
+* 3 addresses:
+  * MAC of recipient
+  * MAC of transmitter
+  * MAC of router
+
+###Frames
+
+* Management frame
+* Control Frame
+* Data Frame
+
+###Association
+
+* Only one AP at a time
+
+* **(BBS)**:
+
+* **Passive Scanning**:
+
+* **Active Scanning**:
+
+  **(CSMA)**:
+
+  **InterFrame Space (IFS)**:
+
+  **Short IFS (SIFS)**:
+
+  **Extended IFS (EIFS)**:
+
+  **Distributed coordination IFS (DIFS)**:
+
+###Medium Access Control Logic
+
+**Backoff-window**:
+
+**Exponentially backoff**: collision, $$CW' = (CW+1)*2 - 1$$ 
+
+Probability of two routers having the same CW: $$\frac{1}{(CW+1)^2} \times (CW+1) = \frac{1}{CW+1}$$
