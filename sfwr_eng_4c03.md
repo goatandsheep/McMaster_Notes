@@ -88,6 +88,16 @@ todo
 * Multiplexor / Demultiplexor
 * 16-word checksum
 
+####Checksum
+
+To determine the checksum:
+
+1. add the words in header
+2. convert that to binary (i.e. 5 words)
+3. carry = first word
+4. add carry to the next 4 words
+5. checksum = hex(bitflip the next 4 words)
+
 ####TCP
 
 ![TCP](http://www.skullbox.net/tcp.jpg)
@@ -344,7 +354,7 @@ Forward Table: determines what outgoing interface to route packets to
 
 **Multicast OSPF (MOSPF)**: 
 
-**Forward Table**: determines what outgoing interface to route packets to
+**Forward Table**: (a.k.a. **forwarding table**) determines what outgoing interface to route packets to
 
 **Longest Prefix Matching**: method of determining how to save the least number of bits to identify IP. Save the longest common prefix once, then save the lower uncommon bits separately
 
@@ -467,4 +477,4 @@ D~v~(y): shortest distance from `v` to `y`
     * 32-bit IP / 6 byte
   * **Broadcast Address**:
 
-**(ARP)**: `sudo arp -a -d`
+**Address Resolution Protocol (ARP)**: `sudo arp -a -d`
