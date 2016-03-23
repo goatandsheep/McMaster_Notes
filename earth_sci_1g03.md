@@ -645,6 +645,13 @@ Pure water picks up more sediments since less saturated,
 * pollution is best placed on non-permeable substances, such as clay
 * some of it floats / sinks
 * salt meets fresh leads to sulfate smells (it's safe, though)
+* Ph/N/K: algal blooms
+
+#####Phosphorus
+
+1. Algal bloom
+2. fungi, bacteria eat up algae, requiring oxygen
+3. Oxygen in water decreases, suffocating fish
 
 ####Overmining
 
@@ -655,6 +662,11 @@ Pure water picks up more sediments since less saturated,
   * **stalactite**: top
   * **stalagmite**: bottom
   * creates **sinkhole** when collapses
+
+###Flow
+
+Important thing is average velocity, not each incremental velocity
+
 ##Landslides
 
 ###Types
@@ -691,3 +703,20 @@ Pure water picks up more sediments since less saturated,
 * nets
 * when you see a slide, it will probably happen again, so be cautious
 
+##Oceans
+
+Tourist attractions:
+
+* reefs
+* oil
+
+Without continents, water would follow wind systems, i.e. opposite of Earth's rotation
+
+Surface current vs deep water current
+
+Deep water:
+
+* cold
+	* i.e. more oxygen rich
+	* i.e. nutrient rich
+	* around poles

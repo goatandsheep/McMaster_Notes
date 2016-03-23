@@ -531,3 +531,31 @@ D~v~(y): shortest distance from `v` to `y`
 **Exponentially backoff**: collision, $$CW' = (CW+1)*2 - 1$$ 
 
 Probability of two routers having the same CW: $$\frac{1}{(CW+1)^2} \times (CW+1) = \frac{1}{CW+1}$$
+
+##Network Security
+
+###Secure Properties
+
+* **Privacy**:
+	* nobody can see data
+	* a.k.a. **confidentiality**
+* **Integrity**:
+	* Nobody can change data
+
+###Security Breaches
+
+* **Eavesdrop**: violate *privacy*
+* **Denial of Service (DDOS)**: preventing all access to data
+
+###Cryptography
+
+Methods:
+
+* **Data Encryption Standard (DES)**:
+* **Advanced Encryption Standard (AES)**:
+* **Diffie-Hellman Key Exchange**:
+	* works like dual public/private, but shared keys instead using simpler algorithm
+* **Public Key Cryptography**:
+* **(RSA)**: named after the publishers of algorithm
+	* **Public Key**: 
+	* **Private Key**: 
