@@ -507,22 +507,24 @@ D~v~(y): shortest distance from `v` to `y`
 ###Association
 
 * Only one AP at a time
-
-* **(BBS)**:
-
 * **Passive Scanning**:
-
 * **Active Scanning**:
+* **Basic Service Set (BSS)**: infrastructure mode, wireless hosts & APs
+* **Independent BSS (IBSS)**: ad hoc mode, hosts only
+* **Extended service set (ESS)**:
+* **Distribution system (DS)**:
+* **Carrier Sensing Multiple Access (CSMA)**: listen before transmit
+	* **CSMA Collision Detection (CSMA/CD)**: stop transmission if collision detected
+	* **CSMA Collision Avoidance (CSMA/CA)**:
+* **Network Allocation Vector (NAV)**:
 
-  **(CSMA)**:
+**InterFrame Space (IFS)**:
 
-  **InterFrame Space (IFS)**:
+**Short IFS (SIFS)**:
 
-  **Short IFS (SIFS)**:
+**Extended IFS (EIFS)**:
 
-  **Extended IFS (EIFS)**:
-
-  **Distributed coordination IFS (DIFS)**:
+**Distributed coordination IFS (DIFS)**:
 
 ###Medium Access Control Logic
 
@@ -546,6 +548,7 @@ Probability of two routers having the same CW: $$\frac{1}{(CW+1)^2} \times (CW+1
 
 * **Eavesdrop**: violate *privacy*
 * **Denial of Service (DDOS)**: preventing all access to data
+* **ARP Poisoning**:
 
 ###Cryptography
 
@@ -558,4 +561,16 @@ Methods:
 * **Public Key Cryptography**:
 * **(RSA)**: named after the publishers of algorithm
 	* **Public Key**: 
-	* **Private Key**: 
+	* **Private Key**:
+	* Encrypt K_B^+
+	* Decrypt: K_B^-
+
+**Digital signature**:
+
+**Message Digest**: hash
+
+**Hash Collision**:
+
+**Key Distribution Centre (KDC)**:
+
+**Certificate Authority (CA)**:
