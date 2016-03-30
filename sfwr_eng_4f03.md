@@ -202,7 +202,7 @@ alpha = a/(a+b)
 = p-alpha(p-1)
 
 S(p) --> p
-as p incareases
+as p increases
 a <<b
 alpha = a/a+b ~= D
 

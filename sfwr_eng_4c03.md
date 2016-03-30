@@ -484,6 +484,8 @@ D~v~(y): shortest distance from `v` to `y`
 
 ##Addressing
 
+###Categories
+
 802.3 frame: ethernet
 
 * 2 addresses:
@@ -497,6 +499,39 @@ D~v~(y): shortest distance from `v` to `y`
   * MAC of recipient
   * MAC of transmitter
   * MAC of router
+
+####WiFi Security
+
+**Wired Equivalent Privacy (WEP)**:
+
+**Wifi Protected Access (WPA)**:
+
+**Master Key (MK)**:
+
+**Pairwise MK (PMK)**:
+
+**Group Transient Key (GTK)**:
+
+* **Key Confirmation Key (KCK)**:
+* **Key Encryption Key (KEK)**: distributes GTK
+* **Temporal Key (TK)**:
+
+**STAtion (STA)**: device that can connect 
+
+**Authentication Server (AS)**:
+
+**Remote Authentication Dial-In User Service (RADIUS)**: a protocol
+
+**Extensible Authentication Protocol (EAP)**: AP to AS, a.k.a. RADIUS using UDP
+
+**TK (PTK)**: [?? Ask about terminology](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys)
+
+Authentication:
+
+1. Discover security capabilities
+2. STA + AS authenticate. Generate Master Session Key (MK)
+	1. [?? Ask about terminology](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys)
+3. S
 
 ###Frames
 
@@ -550,11 +585,18 @@ Probability of two routers having the same CW: $$\frac{1}{(CW+1)^2} \times (CW+1
 * **Denial of Service (DDOS)**: preventing all access to data
 * **ARP Poisoning**:
 
-###Cryptography
+###SSL
+
+**Key Distribution Centre (KDC)**:
+
+**Certificate Authority (CA)**:
+
+##Cryptography
 
 Methods:
 
 * **Data Encryption Standard (DES)**:
+	* **Triple DES (3DES)**: a.k.a. TDES, DES 3 times
 * **Advanced Encryption Standard (AES)**:
 * **Diffie-Hellman Key Exchange**:
 	* works like dual public/private, but shared keys instead using simpler algorithm
@@ -571,6 +613,47 @@ Methods:
 
 **Hash Collision**:
 
-**Key Distribution Centre (KDC)**:
+**Hash-based Message Authentication Code (HMAC)**: message integrity
 
-**Certificate Authority (CA)**:
+Modes:
+
+* **Cypher Block Chaining (CBC)**:
+* **Electronic CodeBook (ECB)**:
+
+##VPN
+
+**Virtual Private Network (VPN)**: encrypted tunnel that works like a router
+
+**Authentication Header (AH)**:
+
+**Encapsulated Secure Payload (ESP)**: confidentiality, common
+
+**IPsec**:
+
+* tunneling mode (common)
+* host mode
+
+**Security Association (SA)**:
+
+**Security Parameters Index (SPI)**:
+
+**Security Association Database (SAD)**:
+
+**Internet Key Exchange (IKE)**: negotiates different keys to be used
+
+* UDP
+* port 500
+* reliable
+
+**Pre-Shared Key (PSK)**:
+
+**Public Key Infrastructure (PKI)**: public/private keys & certificates, similar to SSL handshakes
+
+##Attacks
+
+###Mapping
+
+* Finding out what services a network uses
+* `ping` to find out addresses on network
+* [namp](https://nmap.org/) 
+* it is good to be able to detect mapping
