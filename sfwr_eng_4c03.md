@@ -656,4 +656,55 @@ Modes:
 * Finding out what services a network uses
 * `ping` to find out addresses on network
 * [namp](https://nmap.org/) 
+* ports, IP address
 * it is good to be able to detect mapping
+
+###Packet Sniffing
+
+* Network interface in promiscuous mode
+* Read unencrypted data
+* mechanisms:
+	* SSL
+	* VPN
+	* no way of knowing when it's being sniffed
+
+###IP Spoofing
+
+* Raw socket construct any IP Packet you want
+* Can be paired with MAC address spoofing as well
+* **Ingress filtering**: prevents forwarding outgoing packets with invalid source addresses
+	* cannot be run on all networks
+* Packets that pretend to be part of a subnet will be dropped
+
+###DDOS
+
+**Dedicated Denial of Service (DDOS)**:
+
+####SYN
+
+**SYN Attack**: taking advantage of buggy implementations to crash server with lots of unfinished connections (not finishing 3-way TCP handshakes)
+
+* Filter / block SYN segments: can be difficult to distinguish between legitimate and malicious SYN requests
+* trace back to source: can be difficult if zombie army
+
+####Reflector
+
+**Reflector**: non-compromised host
+
+* spoofing victim's source IP address
+
+####IP Traceback
+
+Routers
+
+####Firewall
+
+* Isolates intranet from internet
+* Prevents DOS from SYN flooding
+* Types:
+	* Packet-filtering
+		* SYN-ACK
+		* Prevent traceroute:
+			* TTL=0
+			* filter ICMP message
+	* Application Level
