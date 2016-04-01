@@ -486,7 +486,7 @@ D~v~(y): shortest distance from `v` to `y`
 
 ###Categories
 
-802.3 frame: ethernet
+802.3 frame: Ethernet
 
 * 2 addresses:
   * MAC of recipient
@@ -531,7 +531,6 @@ Authentication:
 1. Discover security capabilities
 2. STA + AS authenticate. Generate Master Session Key (MK)
 	1. [?? Ask about terminology](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys)
-3. S
 
 ###Frames
 
@@ -708,3 +707,4 @@ Routers
 			* TTL=0
 			* filter ICMP message
 	* Application Level
+

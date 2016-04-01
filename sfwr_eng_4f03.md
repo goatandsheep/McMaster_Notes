@@ -290,6 +290,8 @@ Neo4J
 * `expected â=â, â,â, â;â, âasmâ or â__attribute__â before âisPrime`:
 * `ignoring #pragma openmp parallel`: make sure `-fopenmp` is in `CFLAGS` as well as `LDFLAGS`
 * `expecting end of line`:
+* `Procedures in acc compute region must hav acc routine information`: make sure that the external files have `#pragma acc routine seq` at the top of the files, so they run sequentially
+* `Loop carried dependency of 'arr->' prevents parallelization`: be explicit about parallelizing the loop anyways if each array reference is different
 
 ##OpenACC
 
@@ -301,4 +303,6 @@ Neo4J
 * `LDFLAGS`: link (or "load") directives, such as libraries
 * `#pragma omp parallel for`
 * `#pragma omp parallel num_threads(2) shared(x)`
+* Be explicit about which variables you are copying in/out. Or you may be copying something dumb like a temp variable
+* `create` is for temporary variables
 
