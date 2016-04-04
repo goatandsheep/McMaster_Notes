@@ -720,3 +720,45 @@ Deep water:
 	* i.e. more oxygen rich
 	* i.e. nutrient rich
 	* around poles
+
+##Glaciers
+
+> Snow that makes it through the winter
+
+Significance:
+
+* Glacial Deposits
+	* Groundwater goes through it
+* Glacial Erosion
+	* **Cirque**: bowl-like valleys carved out
+	* **Arête**: ridge between cirques where ice sheets meet
+	* If there's an uneven surface like a bump, the glacier will crack it and break it down over time
+	* U-Shaped valley, NOT V-shaped valley (i.e. rivers/streams)
+		* **Hanging Valleys**:
+		* Waterfalls 
+
+###History
+
+* Analyze pollen because it lasts longer
+* Old borders due to water trapped in ice on land
+* Snow --> ice is like sediment --> ice, i.e. both require *compression*
+* black dots on microscope represents air bubbles that form between crystals as ice formed 
+
+###Formation
+
+* **Accumulation**: highest point
+* **Ablation**: melting, generally directly into ocean
+* **Toe**: in equilibrium, will never touch that point
+* *Equilibrium*: accumulation = ablation
+* *Advance*: if accumulation > ablation
+* *Retreat*: if accumulation < ablation
+* Snow is darker when it starts melting
+	* Darker snow is affected by **Albedo effect**, i.e. reflection of light and melts *even faster*
+
+###Movement
+
+* fastest in the middle
+* **Wet glacier**: meltwater at bottom makes it flow really fast
+
+
+
