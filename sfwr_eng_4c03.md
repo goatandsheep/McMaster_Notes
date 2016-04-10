@@ -530,7 +530,7 @@ Authentication:
 
 1. Discover security capabilities
 2. STA + AS authenticate. Generate Master Session Key (MK)
-	1. [?? Ask about terminology](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys)
+   1. [?? Ask about terminology](https://en.wikipedia.org/wiki/Glossary_of_cryptographic_keys)
 
 ###Frames
 
@@ -548,8 +548,8 @@ Authentication:
 * **Extended service set (ESS)**:
 * **Distribution system (DS)**:
 * **Carrier Sensing Multiple Access (CSMA)**: listen before transmit
-	* **CSMA Collision Detection (CSMA/CD)**: stop transmission if collision detected
-	* **CSMA Collision Avoidance (CSMA/CA)**:
+  * **CSMA Collision Detection (CSMA/CD)**: stop transmission if collision detected
+  * **CSMA Collision Avoidance (CSMA/CA)**:
 * **Network Allocation Vector (NAV)**:
 
 **InterFrame Space (IFS)**:
@@ -573,15 +573,15 @@ Probability of two routers having the same CW: $$\frac{1}{(CW+1)^2} \times (CW+1
 ###Secure Properties
 
 * **Privacy**:
-	* nobody can see data
-	* a.k.a. **confidentiality**
+  * nobody can see data
+  * a.k.a. **confidentiality**
 * **Integrity**:
-	* Nobody can change data
+  * Nobody can change data
 
 ###Security Breaches
 
 * **Eavesdrop**: violate *privacy*
-* **Denial of Service (DDOS)**: preventing all access to data
+* **Distributed Denial of Service (DDOS)**: preventing all access to data
 * **ARP Poisoning**:
 
 ###SSL
@@ -595,16 +595,16 @@ Probability of two routers having the same CW: $$\frac{1}{(CW+1)^2} \times (CW+1
 Methods:
 
 * **Data Encryption Standard (DES)**:
-	* **Triple DES (3DES)**: a.k.a. TDES, DES 3 times
+  * **Triple DES (3DES)**: a.k.a. TDES, DES 3 times
 * **Advanced Encryption Standard (AES)**:
 * **Diffie-Hellman Key Exchange**:
-	* works like dual public/private, but shared keys instead using simpler algorithm
+  * works like dual public/private, but shared keys instead using simpler algorithm
 * **Public Key Cryptography**:
 * **(RSA)**: named after the publishers of algorithm
-	* **Public Key**: 
-	* **Private Key**:
-	* Encrypt K_B^+
-	* Decrypt: K_B^-
+  * **Public Key**: 
+  * **Private Key**:
+  * Encrypt K_B^+
+  * Decrypt: K_B^-
 
 **Digital signature**:
 
@@ -663,21 +663,21 @@ Modes:
 * Network interface in promiscuous mode
 * Read unencrypted data
 * mechanisms:
-	* SSL
-	* VPN
-	* no way of knowing when it's being sniffed
+  * SSL
+  * VPN
+  * no way of knowing when it's being sniffed
 
 ###IP Spoofing
 
 * Raw socket construct any IP Packet you want
 * Can be paired with MAC address spoofing as well
 * **Ingress filtering**: prevents forwarding outgoing packets with invalid source addresses
-	* cannot be run on all networks
+  * cannot be run on all networks
 * Packets that pretend to be part of a subnet will be dropped
 
 ###DDOS
 
-**Dedicated Denial of Service (DDOS)**:
+**Distributed Denial of Service (DDOS)**:
 
 ####SYN
 
@@ -701,10 +701,9 @@ Routers
 * Isolates intranet from internet
 * Prevents DOS from SYN flooding
 * Types:
-	* Packet-filtering
-		* SYN-ACK
-		* Prevent traceroute:
-			* TTL=0
-			* filter ICMP message
-	* Application Level
-
+  * Packet-filtering
+  * SYN-ACK
+  * Prevent traceroute:
+  * TTL=0
+  * filter ICMP message
+  * Application Level
