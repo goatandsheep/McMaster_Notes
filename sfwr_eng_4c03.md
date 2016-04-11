@@ -706,5 +706,13 @@ Routers
 		* Prevent traceroute:
 			* TTL=0
 			* filter ICMP message
-	* Application Level
+	* Application Level:
+		* Doesn't directly inspect
+			* Proxy for different types of data
+
+**Packet filtering**: based on header
+
+**Access Control List (ACL)**: table of rules of incoming packets with priority from top to bottom
+
+**Stateful packet filtering**:
 
