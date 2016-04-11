@@ -50,6 +50,8 @@ Rates of motion
 1. **Crust**: think apple skin
    1. Continental: 20-40km
    2. Oceanic: 2-10km
+   3. Asthenosphere: 
+   4. Lithosphere:
 2. **Mantle**: 40-2890km
    1. Fe, Mg
 3. **Outer core**: 2900km - 5140 km
@@ -127,11 +129,12 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
   * Rich: K, Na, Si, Al
   * Lighter-coloured
   * **Rhyolite**: continental crust
-  * thick, sticky lava: silica traps more gasses
-  * eruptions are extremely volatile
+  * thick, sticky lava, i.e. more viscous
+    * silica traps more gasses
+  * eruptions are extremely volatile because of Silica
 * **Intermediate**:
   * lava between runny and explosive
-* **Mafic**: ocean crust, mid-ocean ridges
+* **Mafic**: ocean crust, mid-ocean ridges, hotspots
   * creates runny lava (think: maple syrup): lower silica content
   * Rich: Mg, Fe, Ca
   * Poor: K, Na, Si
@@ -149,11 +152,15 @@ Characteristics:
 
 **Ash**: a grain size
 
-**Pyroclastics**: older, crushed ash rocks (are they mafic or felsic?)
+**Pyroclastics**: older, crushed ash, superhot rocks (are they mafic or felsic?), mixed with gas
+
+**Lahar**: flow??
 
 **Mantle Plume**:
 
 Shild vs composite volcanoes
+
+
 
 ### Textures
 
@@ -187,7 +194,8 @@ Silica-rich: partially melt
 
 * Body:
   * P: faster
-  * S
+  * **Shear (S)**:
+    * don't go through liquids
 * Surface:
   * love
   * rally​
@@ -396,6 +404,7 @@ Types:
 |       |      | Anthropocene |
 |       |      | Holocene     |
 |       |      |              |
+|       |      |              |
 
 ###Techniques
 
@@ -403,7 +412,7 @@ Usually you use many dating methods on the same sample
 
 **Stratigraphic Correlation**: if a fossil is found above another in one region, you'll know the relative age and that if you find it in another region, it will still have the same relative age
 
-**Index Fossil**: existed for short time interval, but wide geographic distribution
+**Index Fossil**: existed for short time interval, but wide geographic distribution	
 
 **Faunal Succession**: 
 
@@ -474,6 +483,7 @@ Plants take in ^14^C during photosynthesis
 
 ###Locating
 
+**Permeability**: how connected rock pores are
 * We can determine what is under the ground by how waves bounce underground when we bang it
 * Since it is buoyant, rises
 * Gets trapped under impermeable layers (**seal rock**) in porous rocks (**reservoir rock**)
@@ -616,7 +626,20 @@ Pure water picks up more sediments since less saturated,
 * **Dendritic**: flat
 * **Trellis**: folded / tilted
 
-**Delta**: (a.k.a. **Alluvial Fan**)
+####Spreading
+
+**Delta**:
+
+* hitting flat base level
+* dumping water into still water body, i.e. lake, ocean, etc.
+* so sediment is distributed
+
+**Alluvial Fan**:
+
+* same shape as delta
+* lots of sediment
+* hitting lower gradient, not necessarily flat
+* dumps into valley, NOT water body
 
 **Braided Stream**: channels constantly moving because of sediments, commonly found near glaciers
 
@@ -639,6 +662,12 @@ Pure water picks up more sediments since less saturated,
 * **Effluent**: streams fed by groundwater
 * **Influent**: streams above the water table
   * arid regions
+
+**Recharge area**:
+
+**Discharge area**:
+
+**Cone of depression**:
 
 ####Pollution
 
@@ -717,9 +746,9 @@ Surface current vs deep water current
 Deep water:
 
 * cold
-	* i.e. more oxygen rich
-	* i.e. nutrient rich
-	* around poles
+  * i.e. more oxygen rich
+  * i.e. nutrient rich
+  * around poles
 
 ##Glaciers
 
@@ -728,21 +757,22 @@ Deep water:
 Significance:
 
 * Glacial Deposits
-	* Groundwater goes through it
+  * Groundwater goes through it
+  * Water colour is cool because of light wavelength
 * Glacial Erosion
-	* **Cirque**: bowl-like valleys carved out
-	* **Arête**: ridge between cirques where ice sheets meet
-	* If there's an uneven surface like a bump, the glacier will crack it and break it down over time
-	* U-Shaped valley, NOT V-shaped valley (i.e. rivers/streams)
-		* **Hanging Valleys**:
-		* Waterfalls 
+  * **Cirque**: bowl-like valleys carved out
+  * **Arête**: ridge between cirques where ice sheets meet
+  * If there's an uneven surface like a bump, the glacier will crack it and break it down over time
+  * U-Shaped valley, NOT V-shaped valley (i.e. rivers/streams)
+  * **Hanging Valleys**:
+  * Waterfalls
 
 ###History
 
 * Analyze pollen because it lasts longer
 * Old borders due to water trapped in ice on land
 * Snow --> ice is like sediment --> ice, i.e. both require *compression*
-* black dots on microscope represents air bubbles that form between crystals as ice formed 
+* black dots on microscope represents air bubbles that form between crystals as ice formed
 
 ###Formation
 
@@ -753,12 +783,11 @@ Significance:
 * *Advance*: if accumulation > ablation
 * *Retreat*: if accumulation < ablation
 * Snow is darker when it starts melting
-	* Darker snow is affected by **Albedo effect**, i.e. reflection of light and melts *even faster*
+  * Darker snow is affected by **Albedo effect**, i.e. reflection of light and melts *even faster*
 
 ###Movement
 
 * fastest in the middle
 * **Wet glacier**: meltwater at bottom makes it flow really fast
-
 
 
