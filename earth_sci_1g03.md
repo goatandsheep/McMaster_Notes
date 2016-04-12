@@ -562,6 +562,8 @@ Plants take in ^14^C during photosynthesis
 * Gets trapped under impermeable layers (**seal rock**) in porous rocks (**reservoir rock**)
   * If no *seal rock*, it rises up to the surface and usually catches fire and doesn't stop burning for years
 
+**Porosity**: percentage of rock's volume that is openings
+
 ###Coal Mining
 
 **Strip mining**:
@@ -648,23 +650,33 @@ Note:
 > place when two rock layers meet
 
 * **Strike**: line across a plane at a constant elevation
-  * **Strike angle**angle from North to the *strike* line
-  * take all points at a given elevation at rock contacts
-  * connect points with line
-    * label with elevation, contact name
+	* **Strike angle**angle from North to the *strike* line
+	* take all points at a given elevation at rock contacts
+	* connect points with line
+	* label with elevation, contact name
 * **Dip**: line that goes directly along the slope without deviation
-  * **Dip angle**: downwards angle compared to a straight plane
+	* **Dip angle**: downwards angle compared to a straight plane
 * Defined by 3 points in space
 * From a given vantage point, the apparent distance between heights determines the angle
 * Assumption:
-  * North is 0deg
-  * East is $\frac{\pi}{2}$
-  * South is $\pi$
-  * West is $\frac{3\pi}{2}$
+	* North is 0deg
+	* East is $\frac{\pi}{2}$
+	* South is $\pi$
+	* West is $\frac{3\pi}{2}$
 * `Strike / dip direction`
-  * `_ _ _ / _ _  _ _`
-  * `315deg / 15deg NW`
-    *
+	* `_ _ _ / _ _  _ _`
+	* `315deg / 15deg NW`
+
+###Cross Section
+
+You need to draw the dip angle at each divide between two rock types. This is how:
+
+1. make two lines along the fault perpendicular to the line
+2. find the height at the points where the lines meet your cross section area
+3. d = distance between two points
+4. h = height difference between two points
+5. tan(dip angle) = h/d
+6. Draw a line from the division point down to the bottom with the calculated dip angle.
 
 ##Mining
 
@@ -696,12 +708,30 @@ Acid mining, acid rain from smelting
 
 **Base level**: limiting level below which stream can not erode
 
-Pure water picks up more sediments since less saturated,
+Pure water picks up more sediments since less saturated
 
 * **Dendritic**: flat
 * **Trellis**: folded / tilted
 
-####Spreading
+**Conductivity**: measured in siemens (s)
+
+**Salinity**: saltiness, measured in units of Parts Per Million (PPM)
+
+**Total Dissolved Solvents (TDS)**: measured in units of Parts Per Mission (PPM)
+
+**Discharge** [Q]: the amount of water a stream is outputting at a given point
+
+* measured in (m^3 / s)
+* Q = Cross-sectional-Area * velocity
+* Different parts of a stream can have different amounts of discharge, so be weary to find the velocity in 3 parts of a stream
+
+**Cutting Bank**: faster, outside part of a stream where sediments are generally deposited
+
+**Door-side**: right
+
+**Window-side**: left
+
+###Spreading
 
 **Delta**:
 
@@ -730,34 +760,44 @@ Pure water picks up more sediments since less saturated,
 
 **Floodplain**: 
 
-###Groundwater
+###Flow
+
+Important thing is average velocity, not each incremental velocity
+
+##Groundwater
 
 **Springs**: discharge of groundwater
 
-* **Effluent**: streams fed by groundwater
+* **Effluent**: streams fed by surrounding groundwater
+	* i.e. gaining water
 * **Influent**: streams above the water table
   * arid regions
+  * i.e. losing water
 
-**Recharge area**:
+**Recharge area**: areas where water table is gaining water
 
-**Discharge area**:
+**Discharge area**: areas where water table is losing water
 
-**Cone of depression**:
+**Cone of depression**: 
 
-####Pollution
+**Aquifers**: permeable sediment where groundwater pools
 
-* pollution is best placed on non-permeable substances, such as clay
+**Aquitard**: fine-grained sediments / rock with low permability, such as clay, preventing flow of contaminants into groundwater
+
+###Pollution
+
+* pollution is best placed on aquitards
 * some of it floats / sinks
 * salt meets fresh leads to sulfate smells (it's safe, though)
 * Ph/N/K: algal blooms
 
-#####Phosphorus
+####Phosphorus
 
 1. Algal bloom
 2. fungi, bacteria eat up algae, requiring oxygen
 3. Oxygen in water decreases, suffocating fish
 
-####Overmining
+###Overmining
 
 * Pore space collapses
   * causes ground to lower
@@ -766,10 +806,6 @@ Pure water picks up more sediments since less saturated,
   * **stalactite**: top
   * **stalagmite**: bottom
   * creates **sinkhole** when collapses
-
-###Flow
-
-Important thing is average velocity, not each incremental velocity
 
 ##Landslides
 
@@ -813,6 +849,7 @@ Important thing is average velocity, not each incremental velocity
 * sprinklers raise water table
 * rocky soil
 * plateau roads create artificial cliffs, I.e. steeper slopes
+* Lighter layers movement supporting heavier layers
 
 **Leda clay**:
 
@@ -821,6 +858,11 @@ Important thing is average velocity, not each incremental velocity
 * salt concentration < 1g/L makes a liquid
 * (a.k.a. **quick clay**)
 
+**Angle of Repose**: angle of free moving material before collapsing at gravitational equilibrium
+
+* particle size
+* sorting
+* angularity
 
 ###Minimizing effects
 
