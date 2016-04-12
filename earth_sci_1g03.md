@@ -157,7 +157,7 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
 	* Rich: Mg, Fe, Ca
 	* Poor: K, Na, Si
 	* **Basalt**:
-		* **Flood basalts**: flat terrain causes columnar joints so looks rectangular
+		* **Flood basalts**: flat terrain causes columnar joints so looks cubic
 		* **pahoehoe**: flows easily, re-entry into old lava tube
 		* **aa**: "ah-ah", blocky texture
 
@@ -264,6 +264,8 @@ Silica-rich: partially melt
 * Signs of oil, coal, natural gas, etc., water
 
 **fissile**: has fine layers
+
+**Stratum**: (plural: **strata**) layers of sedimentary rock or sediments with distinct, consistent characteristics
 
 **Clast**: fragments of mineral grains
 
@@ -695,6 +697,10 @@ Acid mining, acid rain from smelting
 
 **Dissolved Load**: dissolved ions (usually 35% concentration of suspended load)
 
+**Salinity**: saltiness, measured in units of Parts Per Million (PPM)
+
+**Total Dissolved Solvents (TDS)**: measured in units of Parts Per Mission (PPM)
+
 **Suspended Load**: suspended particles
 
 **Bed Load**: particles dragged along bottom of stream
@@ -706,18 +712,21 @@ Acid mining, acid rain from smelting
   * more stuff overall
   * i.e. when dams slow down streams, they dump sediment
 
-**Base level**: limiting level below which stream can not erode
+**Long Profile**: cross section along channel highlighting changing gradients from source to mouth
+
+**Base level**: limiting level below which stream can not erode, usually a non-moving water body
 
 Pure water picks up more sediments since less saturated
 
+Types of drainage patterns:
+
 * **Dendritic**: flat
-* **Trellis**: folded / tilted
+* **Trellis**: a series of synclines, where each fold has its own tributaries
+* **Rectangular**: caused by faults
+* **Radial**: central elevated point, such as volcano
+* **Parallel**: synclines parallel to river
 
 **Conductivity**: measured in siemens (s)
-
-**Salinity**: saltiness, measured in units of Parts Per Million (PPM)
-
-**Total Dissolved Solvents (TDS)**: measured in units of Parts Per Mission (PPM)
 
 **Discharge** [Q]: the amount of water a stream is outputting at a given point
 
@@ -736,7 +745,7 @@ Pure water picks up more sediments since less saturated
 **Delta**:
 
 * hitting flat base level
-* dumping water into still water body, i.e. lake, ocean, etc.
+* dumps water into still water body at the end, i.e. lake, ocean, etc.
 * so sediment is distributed
 
 **Alluvial Fan**:
