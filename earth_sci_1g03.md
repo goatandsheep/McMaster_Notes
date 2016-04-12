@@ -21,7 +21,7 @@
 
 Since north part of magnet points the northern magnetic pole, the northern magnetic pole actually has *southern* polarity
 
-**Isochron Dating**: how old are minerals
+**Isochron Dating**: how old are minerals, relative using common lines
 
 **Abyssal plain**: flat oceanic area without ridges
 
@@ -45,7 +45,7 @@ Rates of motion
 
 ###Layers
 
-**Isostasy**: crust floats on mantle
+**Isostasy**: crust floats on mantle, but if heavier, then sink lower
 
 1. **Crust**: think apple skin
    1. Continental: 20-40km
@@ -70,16 +70,17 @@ How to differentiate?
 3. **Lustre**: crystal light reflection
 4. Hardness
 5. **Crystal Habit**: directions and stuff of crystal growth
-6. **Cleavage**: ability to break along certain directions / planes
-
-More:
-
-* **Fracture**: breaking without cleavage constraint
-* **Magnetism**:
+6. **Cleavage Planes**: ability to break along certain directions
+	1. Differentiate from *crystal habit* because *cleavage planes* are repeated
+7. **Fracture**: breaking without cleavage constraint
+	1. **Irregular**: shattered, crumbly
+	2. **Conchoidal**: flat, clean
+		1. e.g. quartz
+8. **Magnetism**:
 
 ####Colour
 
-* **Black**: Fe, Mg
+* Black: Fe, Mg
 * Light: Felsic
 
 ####Lustre
@@ -101,6 +102,9 @@ Moh's Hardness scale
 5. Apatite (Masonry nail ~5.5)
 6. Orthoclase (streak plate 6-6.5)
 7. Quartz
+8. Topaz
+9. Corundum
+10. Diamond
 
 ####Habit
 
@@ -112,11 +116,24 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
 
 ### Intrusive
 
-**Intrusive**: magma that doesn't make it to the surface
+**Intrusive**: magma that doesn't make it to the surface, a.k.a. **plutonic**
 
-**Dikes** can form between **sill**, older rocks. ![Sill vs dike](https://upload.wikimedia.org/wikipedia/commons/f/f1/The_difference_between_a_sill_and_a_dike.jpg)
+* **Dikes**: cuts across old rock layers
+* **Sill**: pushes between 2 rock layers
+
+![Sill vs dike](https://upload.wikimedia.org/wikipedia/commons/f/f1/The_difference_between_a_sill_and_a_dike.jpg)
 
 ### Igneous
+
+**Extrusive**: cools outside
+
+* crystals form quickly
+* crystals are too small to see, i.e. *aphanitic*
+* If multiple lava types, scattered *phenocrysts* in *porphyritic* rocks
+* If gassy, becomes *frothy*
+* If extremely fast, no crystals form at all, i.e. *glassy*
+
+![component](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mineralogy_igneous_rocks_EN.svg/2000px-Mineralogy_igneous_rocks_EN.svg.png)
 
 | Composition  | Extrusive           | Intrusive  |
 | ------------ | ------------------- | ---------- |
@@ -129,18 +146,20 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
   * Rich: K, Na, Si, Al
   * Lighter-coloured
   * **Rhyolite**: continental crust
+	  * quartz
   * thick, sticky lava, i.e. more viscous
     * silica traps more gasses
   * eruptions are extremely volatile because of Silica
 * **Intermediate**:
   * lava between runny and explosive
 * **Mafic**: ocean crust, mid-ocean ridges, hotspots
-  * creates runny lava (think: maple syrup): lower silica content
-  * Rich: Mg, Fe, Ca
-  * Poor: K, Na, Si
-  * **Basalt**:
-  * **pahoehoe**: flows easily, re-entry into old lava tube
-  * **aa**: "ah-ah", blocky texture
+	* creates runny lava (think: maple syrup): lower silica content
+	* Rich: Mg, Fe, Ca
+	* Poor: K, Na, Si
+	* **Basalt**:
+		* **Flood basalts**: flat terrain causes columnar joints so looks rectangular
+		* **pahoehoe**: flows easily, re-entry into old lava tube
+		* **aa**: "ah-ah", blocky texture
 
 Characteristics:
 
@@ -154,25 +173,32 @@ Characteristics:
 
 **Pyroclastics**: older, crushed ash, superhot rocks (are they mafic or felsic?), mixed with gas
 
-**Lahar**: flow??
+**Lahar**: pyroclastic flow
 
 **Mantle Plume**:
 
-Shild vs composite volcanoes
-
-
+* **Shield volcanoes**:
+	* Mafic
+	* large, but shallow
+* **Composite volcanoes**:
+	* Felsic
+	* small, but steep
 
 ### Textures
 
 Texture determines in/extrusive
 
-**Phenocryst**: 
+**Phenocryst**: large crystals
 
 Types:
 
 * **Phaneritic**: intrusive
 * **Aphanitic**: too small to see, extrusive
-* **Porphyritic**: mix of 2 distinct sizes
+* **Porphyritic**: mix of 2 distinct sizes of the same/different minerals
+* **Glassy**: no crystals, e.g. obsidian
+* **Frothy**: contains vesicles / gas bubbles
+	* e.g. pumice
+	* a.k.a. **cellular**
 
 ####Fractional crystalization
 
@@ -181,6 +207,7 @@ Silica-rich: partially melt
 1. Olivene (52% silica): pulls metals out of magma
 2. (52%)
 3. Hornblend
+4. Biotite: requires Fe, mica
 
 ## Earthquakes
 
@@ -195,7 +222,8 @@ Silica-rich: partially melt
 * Body:
   * P: faster
   * **Shear (S)**:
-    * don't go through liquids
+    * don't go through 
+    * liquids
 * Surface:
   * love
   * rally​
@@ -237,33 +265,63 @@ Silica-rich: partially melt
 
 **fissile**: has fine layers
 
-Types:
-
-* **Biochemical** : Carbonate rocks: found primarily in ocean
-  * **Limestone**: calcite
-  * **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
-  * Fizzes when scraping with nail
-* **Clastic**: made up of older rocks
-  * Identification
-  * (CU): Coarse
-  * (M): Medium
-  * **Conglomerate**: smooth
-  * **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks)
-  * **Siltstone**: glistening in sunlight, more gritty
-* **Chemical**: usually similar to the other two, but was altered
+**Clast**: fragments of mineral grains
 
 ###Characteristics
 
 * **Angularity**: angular --> rounded, rough --> smooth
-  * more transportation --> smoother
+	* more transportation --> smoother
+* **Sphericity**: how closely *clast* represents sphere
 * **Sorting**: consistency of grain sizes
-  * more transportation --> more sorted
-  * brittleness unrelated
-* **Chert**: biochemical & chemical
-  * can be from silica shells of fossils
-* **Ripples**:
+	* more transportation --> more sorted
+	* brittleness unrelated
+	* Glaciers highly unsorted
+* **Grain Size**:
+	* deposition location is dependent on water energy
+	* high energy --> course
+	* low energy --> fine
+	* Sizes:
+		* Gravel
+		* Sand
+		* Silt
+		* Clay
+* **Packing**: arrangement of clasts
+	* **Framework-supported**: large clasts in contact with each other and smaller clasts in the holes
+	* **Matrix-supported**: large clasts not necessarily touching
+* **Vugs**: small to medium-sized cavities inside rock
+	* can be caused by reduction in volume after chemical reaction
 
-	Can sand act where water is currently being used?
+###Types
+
+* **Clastic**: made up of older rocks
+	* Identification
+	* (CU): Coarse
+	* (M): Medium
+	* Examples:
+		* Rock fragments:
+			* **Conglomerate**: rounded
+			* **Breccia**: angular
+		* **Sandstone**: quartz, feldspar sand
+		* Mudstone: silty
+			* **Siltstone**: glistening in sunlight, more gritty
+			* **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks), mainly clay
+* **Chemical**: usually similar to the other two, but was altered
+	* formed from precipitate in solution
+	* **Limestone**: calcite
+	* Fizzes when powder + HCl
+	* Examples:
+		* **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
+		* **Chert**: biochemical & chemical
+			* can be from silica shells of fossils
+			* forms when water washes through rock, leaving behind minerals, like Si
+			* extremely hard
+			* conchoidal fracture
+* **Biochemical**: chemical with fossil
+	* found primarily in ocean
+	* Examples:
+		* **Coquina**: poorly cemented shells
+		* **Chalk**: fine, soft microfossils
+		* **Fossiliferous Limestone**: well-cemented visible fossil shells
 
 ###Lithification
 
@@ -273,49 +331,72 @@ Types:
 * heat comes from poor heat distribution
 * **Compaction**: reduction in volume
 * **Cementation**: precipitates bind the grains of sediment together
+* Mostly formed in water
+* Also forms from:
+	* **Aeolian**: wind
+	* Glacial
+		* poorly sorted sediments
 
 ##Metamorphic Rocks
 
-Experienced heat, pressure, or fluids
+Formed with:
 
-**Protolith**: always change a solid rock, despite conditions
+* Heat: not enough to melt
+	* **Contact**: formed with heat by touching magma in magma chambers
+		* Close to surface, so low pressure
+* Pressure
+	* **Regional**: pressure from tectonic plates
+		* usually foliated
+		* deep underground
+	* Glaciers cannot form metamorphic rocks
+		* lack of heat
+		* Not as much pressure as a continental collision
+* Fluids
 
-**P-T Diagram**: although pressure is on y-axis, negative to match depth of Earth
+**Protolith**: the solid rocks that form a metamorphic rock
 
-Low pressure, high temperature happens in magma chambers
-
-	Can glaciers have low temp, high pressure?
-
-Not as much pressure as a continental collision.
-
-**Contact**: formed with heat by touching magma
-
-**Regional**: pressure from tectonic plates
+**Pressure-Temperature (P-T) Diagram**: although pressure is on y-axis, negative to match depth of Earth
 
 ###Foliated rocks
 
 **Foliation**: compression that causes platy elongation from dragging, shearing, etc., i.e. look for long streaks
 
-Forces, stress perpendicular to stretch
+* planar texture
+* Forces, stress perpendicular to stretch
+* Different magnitudes of stress for each axis
 
-###Examples
+####Types
 
-* Slate: shiny, hard, crystals ring when hit
-* Schist: 
-* Phylite: 
-* Migmatite: 
-* Biotite: requires Fe
-* Gneiss:
+Different metamorphism stages:
+
+1. Slaty: microscopic, extremely fine
+	* Slate: shiny, hard, crystals ring when hit
+	* Precursor: shale
+2. Phyllitic: fine
+	* Phyllite:
+	* wavy
+3. Schistose: medium
+	* parallel foliation
+	* Schist: variable composition
+4. Gneissic: course
+	* alternating layers of parallel foliation because so much pressure
+	* Gneiss:
+	* Migmatite: gneiss + granite
+5. Melting
 
 ###Non-foliated
 
-Sources:
+> **Non-foliated**: No preferential grain alignment due to uniform stress
 
-* Limestone:
-  * e.g. Marble
-* Sandstone:
-  * e.g. Quartzite: cleavage not along boundaries between different rocks
-* **Mafic**: Amphibolite
+* Named after mineral composition
+
+####Examples
+
+* Quartzite: quartz sandstone
+	* cleavage not along boundaries between different rocks
+* Ampibolite: basalt, gabbro 
+* Meta-conglomerate: conglomerate
+* Marble: limestone, dolostone
 
 ##Stress
 
@@ -399,12 +480,12 @@ Types:
 
 ###Ranges
 
-| Range | Era  | Epoch        |
-| ----- | ---- | ------------ |
-|       |      | Anthropocene |
-|       |      | Holocene     |
-|       |      |              |
-|       |      |              |
+| Range |      Era    | Epoch        |
+| ----- | ----------- | ------------ |
+| 65.5M | Cenozoic    | Anthropocene |
+| 251M  | Mesozoic    | Holocene     |
+| 542M  | Paleozoic   |              |
+| 4.6B  | Precambrian |              |
 
 ###Techniques
 
@@ -450,14 +531,6 @@ Difficulties:
 Plants take in ^14^C during photosynthesis
 
 **Bracketing**: radiometric dating + cross-cutting
-
-###Ranges
-
-| Years | Era  |      |
-| ----- | ---- | ---- |
-|       |      |      |
-|       |      |      |
-|       |      |      |
 
 ##Resources
 
@@ -567,6 +640,8 @@ Note:
 * the scales need to be in fraction form first, i.e. 1cm/whatever
 
 **Gradient**: actual slope, i.e. rise/run = d~vertical/d~horizontal
+
+**Verbal Scale**: relationship between distance on map vs real life
 
 ###Planes
 
@@ -725,6 +800,27 @@ Important thing is average velocity, not each incremental velocity
   * since mine didn't collapse, mining was not cause of slide
   * people survived, got out thru ventilation shaft
   * could have been dynamite or an earthquake
+* *Rissa Landslide*: Norway
+	* when collapses into water, creates splash and disturbs surrounding land
+	* fresh water lake reduces salt concentration
+	* no basement, low rise, mostly fields, blast sediment
+
+###Hazards
+
+* shallow roots from no trees
+* heavy buildings
+* meandering streams against foot of slope
+* sprinklers raise water table
+* rocky soil
+* plateau roads create artificial cliffs, I.e. steeper slopes
+
+**Leda clay**:
+
+* from ancient marine sediments
+* quick clay has higher water content and usually has regular clay underneath it
+* salt concentration < 1g/L makes a liquid
+* (a.k.a. **quick clay**)
+
 
 ###Minimizing effects
 
@@ -789,5 +885,7 @@ Significance:
 
 * fastest in the middle
 * **Wet glacier**: meltwater at bottom makes it flow really fast
+
+##Global Change
 
 
