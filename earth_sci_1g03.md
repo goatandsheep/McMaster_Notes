@@ -15,6 +15,8 @@
 
 **Continental Drift**:
 
+**Paleontologic Evidence**: similar fossils
+
 **Paleomagnetic Evidence**: when magnetite freezes, it is aligned with the particles of the north pole. We know that the rocks were moving because the direction of the north pole as we dig deeper shows it changing.
 
 **Magnetic Reversal**: Earth goes through sudden shifts in polarity of North Pole and south pole. Alignments of rocks are symmetric on American side of mid-ocean ridge in Atlantic Ocean with European side
@@ -48,14 +50,15 @@ Rates of motion
 **Isostasy**: crust floats on mantle, but if heavier, then sink lower
 
 1. **Crust**: think apple skin
-   1. Continental: 20-40km
-   2. Oceanic: 2-10km
-   3. Asthenosphere: 
-   4. Lithosphere:
+       1. Continental: 20-40km
+           1. Oceanic: 2-10km
+              1. Asthenosphere: 
+              2. Lithosphere:
 2. **Mantle**: 40-2890km
    1. Fe, Mg
 3. **Outer core**: 2900km - 5140 km
    1. Liquid Fe, Si
+   2. Responsible for magnetic shift
 4. **Inner core**: 5140 km - 6370 km
    1. Solid Fe, Ni
 
@@ -66,16 +69,16 @@ Rates of motion
 How to differentiate?
 
 1. Colour
-2. Streak
+2. **Streak**: colour of powder that comes when scratched on porcelain plate
 3. **Lustre**: crystal light reflection
 4. Hardness
 5. **Crystal Habit**: directions and stuff of crystal growth
 6. **Cleavage Planes**: ability to break along certain directions
-	1. Differentiate from *crystal habit* because *cleavage planes* are repeated
+   1. Differentiate from *crystal habit* because *cleavage planes* are repeated
 7. **Fracture**: breaking without cleavage constraint
-	1. **Irregular**: shattered, crumbly
-	2. **Conchoidal**: flat, clean
-		1. e.g. quartz
+   1. **Irregular**: shattered, crumbly
+   2. **Conchoidal**: flat, clean
+      1. e.g. quartz
 8. **Magnetism**:
 
 ####Colour
@@ -118,8 +121,10 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
 
 **Intrusive**: magma that doesn't make it to the surface, a.k.a. **plutonic**
 
-* **Dikes**: cuts across old rock layers
-* **Sill**: pushes between 2 rock layers
+**Batholiths**: huge features obvious at crustal level
+
+* **Dikes**: cuts across old rock layers (a.k.a. **discordant**)
+* **Sill**: pushes between 2 rock layers (a.k.a.  **concordant**)
 
 ![Sill vs dike](https://upload.wikimedia.org/wikipedia/commons/f/f1/The_difference_between_a_sill_and_a_dike.jpg)
 
@@ -146,20 +151,22 @@ There's a chart of shapes, like blocky, hexagonal pyramid, etc.
   * Rich: K, Na, Si, Al
   * Lighter-coloured
   * **Rhyolite**: continental crust
-	  * quartz
+    * quartz
   * thick, sticky lava, i.e. more viscous
     * silica traps more gasses
   * eruptions are extremely volatile because of Silica
 * **Intermediate**:
   * lava between runny and explosive
+  * andesitic (sedimentary + basaltic) found at subduction zones
+  * granitic (sedimentary + igneous + metamorphic) on continents
 * **Mafic**: ocean crust, mid-ocean ridges, hotspots
-	* creates runny lava (think: maple syrup): lower silica content
-	* Rich: Mg, Fe, Ca
-	* Poor: K, Na, Si
-	* **Basalt**:
-		* **Flood basalts**: flat terrain causes columnar joints so looks cubic
-		* **pahoehoe**: flows easily, re-entry into old lava tube
-		* **aa**: "ah-ah", blocky texture
+  * creates runny lava (think: maple syrup): lower silica content
+  * Rich: Mg, Fe, Ca
+  * Poor: K, Na, Si
+  * **Basalt**:
+    * **Flood basalts**: flat terrain causes columnar joints so looks cubic
+    * **pahoehoe**: flows easily, re-entry into old lava tube
+    * **aa**: "ah-ah", blocky texture
 
 Characteristics:
 
@@ -175,14 +182,23 @@ Characteristics:
 
 **Lahar**: pyroclastic flow
 
-**Mantle Plume**:
+**Mantle Plume**: an area of high magma pressure on the core
+
+**Hot Spot**: area of volcanic activity produced by mantle plume
+
+Ocean volcanoes:
+
+* **Seamounts**: volcanoes below sea level
+* **Guyots**: flat, eroded top
+
+Types of volcanoes:
 
 * **Shield volcanoes**:
-	* Mafic
-	* large, but shallow
+  * Mafic
+  * large, but shallow
 * **Composite volcanoes**:
-	* Felsic
-	* small, but steep
+  * Felsic
+  * small, but steep
 
 ### Textures
 
@@ -197,8 +213,8 @@ Types:
 * **Porphyritic**: mix of 2 distinct sizes of the same/different minerals
 * **Glassy**: no crystals, e.g. obsidian
 * **Frothy**: contains vesicles / gas bubbles
-	* e.g. pumice
-	* a.k.a. **cellular**
+  * e.g. pumice
+  * a.k.a. **cellular**
 
 ####Fractional crystalization
 
@@ -213,6 +229,10 @@ Silica-rich: partially melt
 
 * Crust usually breaks in 3 cracks of ~$\frac{3\pi}{4}$
 
+**Foreshocks**: early quakes as rocks begin to fracture
+
+**Aftershocks**: after the quake, rocks along the fault adjust and transfer strain
+
 **Epicentre**:
 
 **Focus**:
@@ -220,13 +240,14 @@ Silica-rich: partially melt
 ### Types of Waves
 
 * Body:
-  * P: faster
-  * **Shear (S)**:
-    * don't go through 
-    * liquids
-* Surface:
-  * love
-  * rally​
+  * **Primary (P)**: parallel with transport
+    *  faster
+  * **Secondary (S)**: perpendicular to transport
+    * don't go through liquids
+    * a.k.a. **shear waves**
+* Surface: most of damage
+  * Love: horizontal, like snake
+  * Rally: vertical, like ocean
 
 ### Measuring
 
@@ -244,6 +265,8 @@ Silica-rich: partially melt
 
 * In California, if a building isn't up to code, you must have a sign up that says the building isn't up to code
 * **Liquefaction**: when sediments / soil temporarily acts like liquid because the particles break contacts with each other
+  * can be caused by earthquakes
+
 * Control dams
 
 ### Tsunamis
@@ -269,65 +292,73 @@ Silica-rich: partially melt
 
 **Clast**: fragments of mineral grains
 
+**Sediments**: mineral particles
+
+*  Sources:
+  * mechanically transported
+  * chemicaly precipitated
+  * secreted by organisms
+* Deposited in loose layers on Earth's surface
+
 ###Characteristics
 
 * **Angularity**: angular --> rounded, rough --> smooth
-	* more transportation --> smoother
+  * more transportation --> smoother
 * **Sphericity**: how closely *clast* represents sphere
 * **Sorting**: consistency of grain sizes
-	* more transportation --> more sorted
-	* brittleness unrelated
-	* Glaciers highly unsorted
+  * more transportation --> more sorted
+  * brittleness unrelated
+  * Glaciers highly unsorted
 * **Grain Size**:
-	* deposition location is dependent on water energy
-	* high energy --> course
-	* low energy --> fine
-	* Sizes:
-		* Gravel
-		* Sand
-		* Silt
-		* Clay
+  * deposition location is dependent on water energy
+  * high energy --> course
+  * low energy --> fine
+  * Sizes:
+    * Gravel
+    * Sand
+    * Silt
+    * Clay
 * **Packing**: arrangement of clasts
-	* **Framework-supported**: large clasts in contact with each other and smaller clasts in the holes
-	* **Matrix-supported**: large clasts not necessarily touching
+  * **Framework-supported**: large clasts in contact with each other and smaller clasts in the holes
+  * **Matrix-supported**: large clasts not necessarily touching
 * **Vugs**: small to medium-sized cavities inside rock
-	* can be caused by reduction in volume after chemical reaction
+  * can be caused by reduction in volume after chemical reaction
 
 ###Types
 
 * **Clastic**: made up of older rocks
-	* Identification
-	* (CU): Coarse
-	* (M): Medium
-	* Examples:
-		* Rock fragments:
-			* **Conglomerate**: rounded
-			* **Breccia**: angular
-		* **Sandstone**: quartz, feldspar sand
-		* Mudstone: silty
-			* **Siltstone**: glistening in sunlight, more gritty
-			* **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks), mainly clay
+  * Identification
+  * (CU): Coarse
+  * (M): Medium
+  * Examples:
+    * Rock fragments:
+      * **Conglomerate**: rounded
+      * **Breccia**: angular
+    * **Sandstone**: quartz, feldspar sand
+    * Mudstone: silty
+      * **Siltstone**: glistening in sunlight, more gritty
+      * **Shale**: fissile, breaks into fine layers (~3/4 of sedimentary rocks), mainly clay
 * **Chemical**: usually similar to the other two, but was altered
-	* formed from precipitate in solution
-	* **Limestone**: calcite
-	* Fizzes when powder + HCl
-	* Examples:
-		* **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
-		* **Chert**: biochemical & chemical
-			* can be from silica shells of fossils
-			* forms when water washes through rock, leaving behind minerals, like Si
-			* extremely hard
-			* conchoidal fracture
+  * formed from precipitate in solution
+  * **Limestone**: calcite
+  * Fizzes when powder + HCl
+  * Examples:
+    * **Dolostone**: dolomite $(CaMg)_2 (CO_3)_2$
+    * **Chert**: biochemical & chemical
+      * can be from silica shells of fossils
+      * forms when water washes through rock, leaving behind minerals, like Si
+      * extremely hard
+      * conchoidal fracture
 * **Biochemical**: chemical with fossil
-	* found primarily in ocean
-	* Examples:
-		* **Coquina**: poorly cemented shells
-		* **Chalk**: fine, soft microfossils
-		* **Fossiliferous Limestone**: well-cemented visible fossil shells
+  * found primarily in ocean
+  * Examples:
+    * **Coquina**: poorly cemented shells
+    * **Chalk**: fine, soft microfossils
+    * **Fossiliferous Limestone**: well-cemented visible fossil shells
 
 ###Lithification
 
-**Lithification**: conversion from sediments to rock
+> conversion from sediments to rock
 
 * requires heat
 * heat comes from poor heat distribution
@@ -335,24 +366,24 @@ Silica-rich: partially melt
 * **Cementation**: precipitates bind the grains of sediment together
 * Mostly formed in water
 * Also forms from:
-	* **Aeolian**: wind
-	* Glacial
-		* poorly sorted sediments
+  * **Aeolian**: wind
+  * Glacial
+    * poorly sorted sediments
 
 ##Metamorphic Rocks
 
 Formed with:
 
 * Heat: not enough to melt
-	* **Contact**: formed with heat by touching magma in magma chambers
-		* Close to surface, so low pressure
+  * **Contact**: formed with heat by touching magma in magma chambers
+    * Close to surface, so low pressure
 * Pressure
-	* **Regional**: pressure from tectonic plates
-		* usually foliated
-		* deep underground
-	* Glaciers cannot form metamorphic rocks
-		* lack of heat
-		* Not as much pressure as a continental collision
+  * **Regional**: pressure from tectonic plates
+    * usually foliated
+    * deep underground
+  * Glaciers cannot form metamorphic rocks
+    * lack of heat
+    * Not as much pressure as a continental collision
 * Fluids
 
 **Protolith**: the solid rocks that form a metamorphic rock
@@ -372,18 +403,18 @@ Formed with:
 Different metamorphism stages:
 
 1. Slaty: microscopic, extremely fine
-	* Slate: shiny, hard, crystals ring when hit
-	* Precursor: shale
+   * Slate: shiny, hard, crystals ring when hit
+   * Precursor: shale
 2. Phyllitic: fine
-	* Phyllite:
-	* wavy
+   * Phyllite:
+   * wavy
 3. Schistose: medium
-	* parallel foliation
-	* Schist: variable composition
+   * parallel foliation
+   * Schist: variable composition
 4. Gneissic: course
-	* alternating layers of parallel foliation because so much pressure
-	* Gneiss:
-	* Migmatite: gneiss + granite
+   * alternating layers of parallel foliation because so much pressure
+   * Gneiss:
+   * Migmatite: gneiss + granite
 5. Melting
 
 ###Non-foliated
@@ -395,7 +426,7 @@ Different metamorphism stages:
 ####Examples
 
 * Quartzite: quartz sandstone
-	* cleavage not along boundaries between different rocks
+  * cleavage not along boundaries between different rocks
 * Ampibolite: basalt, gabbro 
 * Meta-conglomerate: conglomerate
 * Marble: limestone, dolostone
@@ -482,7 +513,7 @@ Types:
 
 ###Ranges
 
-| Range |      Era    | Epoch        |
+| Range | Era         | Epoch        |
 | ----- | ----------- | ------------ |
 | 65.5M | Cenozoic    | Anthropocene |
 | 251M  | Mesozoic    | Holocene     |
@@ -590,8 +621,8 @@ Plants take in ^14^C during photosynthesis
 To draw *cross-sections*:
 
 1. Method 1: easier, but impossible to change horizontal scale
-   1. Take a piece of paper, and line it up with the line
-   2. Make notches at every elevation change
+       1. Take a piece of paper, and line it up with the line
+           1. Make notches at every elevation change
 2. Method 2:
    1. Take a ruler and measure the distance between each change and the beginning of the line
    2. Multiply this distance by the scale and put that on your graph
@@ -652,22 +683,22 @@ Note:
 > place when two rock layers meet
 
 * **Strike**: line across a plane at a constant elevation
-	* **Strike angle**angle from North to the *strike* line
-	* take all points at a given elevation at rock contacts
-	* connect points with line
-	* label with elevation, contact name
+  * **Strike angle**angle from North to the *strike* line
+  * take all points at a given elevation at rock contacts
+  * connect points with line
+  * label with elevation, contact name
 * **Dip**: line that goes directly along the slope without deviation
-	* **Dip angle**: downwards angle compared to a straight plane
+  * **Dip angle**: downwards angle compared to a straight plane
 * Defined by 3 points in space
 * From a given vantage point, the apparent distance between heights determines the angle
 * Assumption:
-	* North is 0deg
-	* East is $\frac{\pi}{2}$
-	* South is $\pi$
-	* West is $\frac{3\pi}{2}$
+  * North is 0deg
+  * East is $\frac{\pi}{2}$
+  * South is $\pi$
+  * West is $\frac{3\pi}{2}$
 * `Strike / dip direction`
-	* `_ _ _ / _ _  _ _`
-	* `315deg / 15deg NW`
+  * `_ _ _ / _ _  _ _`
+  * `315deg / 15deg NW`
 
 ###Cross Section
 
@@ -778,7 +809,7 @@ Important thing is average velocity, not each incremental velocity
 **Springs**: discharge of groundwater
 
 * **Effluent**: streams fed by surrounding groundwater
-	* i.e. gaining water
+  * i.e. gaining water
 * **Influent**: streams above the water table
   * arid regions
   * i.e. losing water
@@ -846,9 +877,9 @@ Important thing is average velocity, not each incremental velocity
   * people survived, got out thru ventilation shaft
   * could have been dynamite or an earthquake
 * *Rissa Landslide*: Norway
-	* when collapses into water, creates splash and disturbs surrounding land
-	* fresh water lake reduces salt concentration
-	* no basement, low rise, mostly fields, blast sediment
+  * when collapses into water, creates splash and disturbs surrounding land
+  * fresh water lake reduces salt concentration
+  * no basement, low rise, mostly fields, blast sediment
 
 ###Hazards
 
