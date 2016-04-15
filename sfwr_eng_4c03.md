@@ -6,37 +6,23 @@ Winter 2016
 
 [TOC]
 
-## Internet Architecture
-
-**Datagram**: basic transfer unit, essentially a packet
+## Packet Delay
 
 bit (b)
 
+bits per second (bps)
+
 byte (B)
 
-* **Application Layer**: 
-  * e.g.
-* **Transport Layer**: 
-  * e.g.
-* **Network layer**: routing of *datagrams* from source to destination
-  * e.g.
-* **Data Layer**: data transfer between neighbouring network elements
-  * a.k.a. **Link layer**
-  * e.g.
-
-**Bits per second (bps)**:
-
-**Packet Switches**: forward packets
-
-**Router**: connector between layers of intranets
-
-## Packet Delay
+Note: entire packet must arrive before it can be transmitted to next link
 
 Sources:
 
 * queue in router buffers
 * arrival rate > output rate
 * read queue
+
+**Arrival Rate** [a]: (packet/s) average packet arrival rate
 
 **Link bandwidth** [R]: (bps)
 
@@ -46,12 +32,58 @@ Sources:
 
 **Propagation speed** [s]: medium (~3 * 10^8^ m/sec for optic fibre)
 
-1. Processing delay [d~proc~]: negligible
-2. Queuing delay [d~queue~]: 
-3. Transmission delay [d~trans~]: time to send bits into link = L/R
-4. Propagation delay [d~prop~]: p/s
+Types of delay:
+
+1. **Processing delay** [d~proc~]: computational
+   * negligible
+   * check bit errors
+   * from computing output link
+2. **Queuing delay** [d~queue~]: time waiting at output for transmission
+   * congestion level of router
+3. **Transmission delay** [d~trans~]: time to send bits into link = L/R
+4. **Propagation delay** [d~prop~]: p/s
 
 **Nodal delay** [d~nodal~]:  d~proc~ +  d~queue~ +  d~trans~ +  d~prop~
+
+**Traffic Intensity**: a * d~trans~
+
+## Internet Architecture
+
+**Datagram**: basic transfer unit, essentially a packet
+
+**public Network Access Point (NAP)**:
+
+**Internet Service Provider (ISP)**: end systems across internet, made up of tiers:
+
+1. Tier-1: interconnect NAPs
+2. Tier-2:
+   - connected directly to a main Tier-1
+   - connected to other Tier-1 through NAP
+   - connected privately to other Tier-2
+3. Tier-3/Local: connected to Tier-2
+
+**Traceroute**: identifies the routers on the path of a packet from source to destination
+
+- sends 3 packets per router
+- each router returns packets
+
+**Service**: indicates purpose of a layer
+
+**Service interface**: how to access a service
+
+Layers:
+
+- [Application Layer](##Application%20Layer)
+- [Transport Layer](##Transport%20Layer)
+- [Network layer](##Network%20Layer)
+- [Data Layer](##Data%20Layer)
+- Physical Layer
+
+**Bits per second (bps)**:
+
+**Packet Switches**: forward packets
+
+**Router**: connector between layers of intranets, a.k.a. **gateway**
 
 ##Packet Capturing
 
@@ -66,11 +98,16 @@ Sources:
 * Message semantics
 * Rules: when, how processes send, receive
 
+### Standards
+
+* **Requests For Comments (RFC)**:
+* **Internet Engineering Task Force (IETF)**:
+
 ### Architectures
 
-1. Client-server
-2. Peer-to-peer (P2P)
-3. Hybrid
+1. Client-server: clients don't communicate directly
+2. Peer-to-peer (P2P): no always-on server
+3. Hybrid: servers provide authentication and 
 
 ###Persistent
 
@@ -87,6 +124,7 @@ todo
 * used for messaging services, streaming
 * Multiplexor / Demultiplexor
 * 16-word checksum
+* **Unicast**: communication between a single sender and a single receiver over a network
 
 ####Checksum
 
@@ -110,12 +148,16 @@ To determine the checksum:
   * Flow Control: throttled by receiver, so sender reacts
   * Data flows in order
   * Congestion Control: Adjusts transmission rate based on congestion signal
+  * Connection-oriented: setup required
 * Both sides must "tear down connection" before either is allowed to stop receiving from the other side
+
+**Socket**: connection between application layer and transport layer
 
 ## Security
 
 * **Transport Layer Security (TLS)**: an encryption layer on top of the above protocols
   * Deprecated version: **Secure Socket Layer (SSL)**
+  * Application layer
   * can happen simultaneously with UDP
 
 ## DNS
@@ -343,9 +385,14 @@ Congestion Control Phases:
 5. **S** FIN, SeqC
 6. **C** ACK, SeqC+1
 
-##Internet Protocol
+##Network Layer
 
-> **Internet Protocol (IP)**: representation of an *interface* NOT a *device*, since you can route to multiple devices with one interface / address
+> * routing of *datagrams* from source to destination
+> * a.k.a. **IP Layer**
+
+**Internet Protocol (IP)**: unreliable, non-realtime, insecure end-to-end unicast datagram service
+
+**IP Address**: representation of an *interface* NOT a *device*, since you can route to multiple devices with one interface / address
 
 **IPv4**: 32-bit number
 
@@ -380,8 +427,6 @@ Types:
 Size of *subnet* [`10.0.0/24`]: 24 bits for representing an address 
 
 **Broadcast Domain**:
-
-**Gateway Router**:
 
 **Dynamic Host Configuration Protocol (DHCP)**: allocates the IP addresses for each
 
@@ -439,9 +484,10 @@ D~v~(y): shortest distance from `v` to `y`
 * Topology map at each node
 * computes route using D
 
-##Data Link Layer
+##Data Layer
 
-> **Data Link Layer**: transfers frames from one node to an adjacent node over a link
+> * transfers frames from one node to an adjacent node over a link
+> * a.k.a. **Link Layer**
 
 **Frame**:
 
@@ -701,14 +747,14 @@ Routers
 * Isolates intranet from internet
 * Prevents DOS from SYN flooding
 * Types:
-	* Packet-filtering
-		* SYN-ACK
-		* Prevent traceroute:
-			* TTL=0
-			* filter ICMP message
-	* Application Level:
-		* Doesn't directly inspect
-			* Proxy for different types of data
+  * Packet-filtering
+    * SYN-ACK
+    * Prevent traceroute:
+      * TTL=0
+      * filter ICMP message
+  * Application Level:
+    * Doesn't directly inspect
+      * Proxy for different types of data
 
 **Packet filtering**: based on header
 
