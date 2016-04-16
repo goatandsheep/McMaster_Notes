@@ -85,18 +85,27 @@ Layers:
 
 **Router**: connector between layers of intranets, a.k.a. **gateway**
 
+### Protocol
+
+- Types of messages
+- Message syntax
+- Message semantics
+- Rules: when, how processes send, receive
+
 ##Packet Capturing
 
 **Promiscuous mode**: captures other people's traffic
 
 ## Application Layer
 
-### Protocol
+### Methods
 
-* Types of messages
-* Message syntax
-* Message semantics
-* Rules: when, how processes send, receive
+* GET: request object specified by URL
+* POST: request server accept entity within request
+* HEAD: asks server to leave requested object out of response
+* PUT: uploads file / resource in entity body to path specified in URL field
+  * HTTP/1.1 only
+* DELETE: HTTP/1.1 only
 
 ### Standards
 
@@ -109,9 +118,17 @@ Layers:
 2. Peer-to-peer (P2P): no always-on server
 3. Hybrid: servers provide authentication and 
 
-###Persistent
+###Persistency
 
-todo
+|  **Attribute**  | **Persistent** | **Non-persistent** |
+| :-------------: | :------------: | :----------------: |
+|  HTTP Version   |      1.0       |        1.1         |
+| Objects per TCP |       1        |        many        |
+
+**Pipelining**: RTTs used for multiple referenced objects
+
+* default in persistent HTTP
+* client sends requests as soon as it encounters a referenced object instead of waiting for ACK
 
 ### Transport Protocols
 
@@ -153,27 +170,58 @@ To determine the checksum:
 
 **Socket**: connection between application layer and transport layer
 
-## Security
+### Security
 
-* **Transport Layer Security (TLS)**: an encryption layer on top of the above protocols
-  * Deprecated version: **Secure Socket Layer (SSL)**
-  * Application layer
-  * can happen simultaneously with UDP
+- **Transport Layer Security (TLS)**: an encryption layer on top of the above protocols
+  - Deprecated version: ****Secure Socket Layer (SSL)****
+  - can happen simultaneously with UDP
+
+### Web Caching
+
+Utilization (%) 
+
+delay = d~internet~ + d~access~ + d~LAN~
+
+d~internet~ is generally the only significant delay
+
+You can reduce delay by increasing bandwidth of access link OR install a local cache
+
+**Cache hit rate**: dependent on how much you store on the servers
+
+delay = miss rate * ? + hit rate * ?
+
+**Conditional GET**: don't send object if cache has up-to-date cached version (304 Not Modified)
 
 ## DNS
 
-**Domain Name Server (DNS)**:
+**Domain Name Server (DNS)**: hostname to IP translation
 
 * Name servers cache the mappings
 * Messages are not sent directly, but rather through multiple DNS first. This is good because
   * You can cache the page instead of bothering the server each request
   * You use an optimal map
+* distributed database with hierarchy of many nameservers
 * blackadder, baldric.cis.mcmaster.ca
 * [dig](https://toolbox.googleapps.com/apps/dig/)
 * Thought: could one spoof a server, then send unlimited messages from the IP address they're spoofing
+* Types:
+  * **Root Name Server**:
+  * **Top Level Domain (TLD)**: `.com`
+  * **Authoritative DNS**:
+  * **Local Name Server**: for ISPs
+
 
 **Time To Live (TTL)**: number of hops until it dies
 * Error messages can be dropped. They are sent by the router at which the TTL goes to 0
+
+### Security
+
+Attacks:
+
+* **Man-in-middle**: intercept queries and send wrong page
+* **DNS Poisoning**: sending fake sites that are cached
+* **DNS Amplification**: spoof source IP for target IP
+  * used for DDoS
 
 ## Socket Programming
 
@@ -194,6 +242,8 @@ Internet protocols including UDP and TCP
 ### Functions
 
 #### Multiplexing/Demultiplexing
+
+> gathering data from multiple sockets, enveloping data with header (later used for de-multiplexing) 
 
 1. 32 bits for source port # + destination port #, i.e. 16 bits each, i.e. 2^16 ports
 2. Other header fields
@@ -249,6 +299,8 @@ total delay   = Internet delay + access delay + LAN delay
 
 ##### Loss Detection
 
+> When a packet is missing
+
 Causes:
 
 * buffer overflow
@@ -259,12 +311,14 @@ Methods:
   * Could one spoof the server IP, then send only 1, 3, and 4? The server will send a message to itself and it will start looking for the message.
 * **Fin package**: concludes the transmission
 * Respond to sender:
-  * **Negative ACK (NACK)**: 
+  * **Negative ACK (NACK)**: packet is missing
   * **Positive ACK (ACK)**: associated with a unique sequence number
 
 ##Congestion Control
 
 **Flow Control**: telling the sender to stop if recipient is receiving too much and/or overwhelming the network
+
+**Network-assisted congestion control**: routers tell server when to stop
 
 **Output Link Capacity** [R]:
 
@@ -279,7 +333,7 @@ Methods:
 **Data sent** [$\lambda'_{in}$]: $\lambda_{in} + \lambda_{Tr}$
 
 * If infinite buffer, linear increase until R/2
-* In reality, it tapers off because re-transmission of data is necessary
+* In reality, more and more re-transmission of data is necessary as more congestion
 * The difference between the two functions is the amount of re-transmitted data.
 * If you have a matrix of multiple routers in a row, you need to be careful as to not cause *deadlock* if you fill up the buffers
 
