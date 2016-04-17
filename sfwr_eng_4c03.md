@@ -125,6 +125,8 @@ Layers:
 |  HTTP Version   |      1.0       |        1.1         |
 | Objects per TCP |       1        |        many        |
 
+**Round Trip Time (RTT)**: time for packet: client --> server --> client
+
 **Pipelining**: RTTs used for multiple referenced objects
 
 * default in persistent HTTP
@@ -188,7 +190,7 @@ You can reduce delay by increasing bandwidth of access link OR install a local c
 
 **Cache hit rate**: dependent on how much you store on the servers
 
-delay = miss rate * ? + hit rate * ?
+delay = miss rate * delay to interwebs + hit rate * delay to cache
 
 **Conditional GET**: don't send object if cache has up-to-date cached version (304 Not Modified)
 
@@ -326,9 +328,9 @@ Methods:
 
 **Flow conservation**: when you don't lose any packets. This occurs because everything has a finite buffer size
 
-**Original Data** [$\lambda_{in}$]:
+**Original Data** [$\lambda_{in}]$:
 
-**Re-transmitted data** [$\lambda_{Tr}$]:
+**Re-transmitted data** [$\lambda_{Tr}]$:
 
 **Data sent** [$\lambda'_{in}$]: $\lambda_{in} + \lambda_{Tr}$
 
@@ -343,24 +345,41 @@ Methods:
 
 * What if the `ACK` gets lost? Wait for timeout and try again, until you can't or connection is closed.
 
-t_transmission = L/R
+### Stop-n-Wait
 
-t_ACK arrives = RTT + t_transmission
+> wait for ACK before transmitting next packet
 
-**Bandwidth Delay Product (BDP)**: BW * RTT = CW * L
+t~transmission~ = L/R
+
+t~ACK~ arrives = RTT + t~transmission~
+
+### Pipelining
+
+> sending packets consecutively, disregarding possibility of corruption
 
 **Contention Window (CW)**: maximum packets in the pipe
 
-	u_sender= (L/R)/(RTT + (L/R))
-			= (CW * L / BW) / RTT
+**Bandwidth Delay Product (BDP)**: BW * RTT = CW * L
 
-**Window**: a.k.a. buffer
+```python
+u_sender = (L/R)/(RTT + (L/R))
+		= (CW * L / BW) / RTT
+```
+
+### Sliding Window
+
+> * if a packet that is not at the beginning of the queue is acknowledged, you can either move it out or simply mark it as acknowledged and wait before removing it, depending on the importance of the order of arrival
+>
+>
+> * queue slides when first packet is ACK'd
+
+**Window**: a.k.a. buffer that works as a queue
+
+**Window size** [n]: can send up to n packets at a time
 
 **Sender Window (SW)**: doesn't move until the first packet in the window has been ACK'd
 
 **Receiver Window (RW)**:
-
-**Sliding Window Protocol**: if a packet that is not at the beginning of the queue is acknowledged, you can either move it out or simply mark it as acknowledged and wait before removing it, depending on the importance of the order of arrival 
 
 **Selective Repeat (SR)**:
 
@@ -474,7 +493,15 @@ Types:
 
 **Fragmentation**: splitting up packets into smaller parts
 
-**Subnet**: 
+**Subnet**:
+
+* lowest possible starting range
+
+
+* flip mask to find range size
+* range starts at power of 2
+
+
 
 `Subnet_address` = `IP_Address` + `Subnet_mask`
 
