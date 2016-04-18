@@ -120,10 +120,10 @@ Layers:
 
 ###Persistency
 
-|  **Attribute**  | **Persistent** | **Non-persistent** |
-| :-------------: | :------------: | :----------------: |
-|  HTTP Version   |      1.0       |        1.1         |
-| Objects per TCP |       1        |        many        |
+|  **Attribute**  | **Non-persistent** | **Persistent** |
+| :-------------: | :----------------: | :------------: |
+|  HTTP Version   |        1.0         |      1.1       |
+| Objects per TCP |         1          |      many      |
 
 **Round Trip Time (RTT)**: time for packet: client --> server --> client
 
@@ -196,7 +196,7 @@ delay = miss rate * delay to interwebs + hit rate * delay to cache
 
 ## DNS
 
-**Domain Name Server (DNS)**: hostname to IP translation
+**Domain Name System (DNS)**: hostname to IP translation
 
 * Name servers cache the mappings
 * Messages are not sent directly, but rather through multiple DNS first. This is good because
@@ -280,7 +280,7 @@ total delay   = Internet delay + access delay + LAN delay
 	1 1 1 1 0 | 0
 	0 1 1 0 1 | 1
 	--------------
-	0 0 1 0 1 | 0
+	0 0 1 1 0 | 0
 
 * Helps identify which bit is correct.
 * Corner bit is 1 if they are different
@@ -607,7 +607,7 @@ D~v~(y): shortest distance from `v` to `y`
     * [generally similar for vendors](macvendorlookup.com)
   * **Broadcast Address**:
 
-**Address Resolution Protocol (ARP)**: `sudo arp -a -d`
+**Address Resolution Protocol (ARP)**: `sudo arp -a -d` based on MAC Address, gets IP address
 
 ##Addressing
 
